@@ -1,5 +1,7 @@
 import mysql.connector
 from mysql.connector import errorcode
+import csv
+
 
 config_template = {
   'user': 'root',
@@ -18,6 +20,8 @@ config_template = {
 # Create new user: CREATE USER 'sam'@'localhost' IDENTIFIED BY '321';
 # CREATE DATABASE db_recomendaciones;
 
+
+# 
 config = {
   'user': 'root',
   'password': '321', 
@@ -58,15 +62,43 @@ def create_db(name):
 		print(err)
 
 
+def create_table(name, fields):
+	stmt = "CREATE TABLE " + name + " (dept_no char(4) NOT NULL, dept_name varchar(40) NOT NULL, PRIMARY KEY (dept_no)) ENGINE=InnoDB" 
+	cursor.execute(stmt)
+	cursor.execute("show tables")
+	print cursor.fetchall()
+
+
+def load_csv(csv_file):
+	'load csv file to list of dictionaries'
+	try:
+		data = []
+		raw_data = csv.DictReader(open(csv_file))
+		print "Data loaded!" 
+		for each_row in raw_data:
+			data.append(each_row)
+		return data
+	except ValueError:
+		print "Error: " + ValueError	
+		return []
+
+
+
+def test():
+	create_table('lol', [['field', 'type']])
+
 
 
 
 cnx, cursor = start_mysql_conn(config)
+cursor.execute("use db_recomendaciones")
+cursor.execute("show tables")
+print cursor.fetchall()
+cursor.execute("describe lol")
+print cursor.fetchall()
 
-create_db('db_recomendaciones')
 
 
-cursor.close()
 cnx.close()
 
 	
