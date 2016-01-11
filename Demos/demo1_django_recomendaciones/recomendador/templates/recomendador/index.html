@@ -1,0 +1,26 @@
+
+<h1>Listado de productos recomendados para ti</h1>
+
+{% if product_list %}
+	<table>
+		<tr>
+			<td><strong> Imagen </strong></td>
+			<td><strong> Categoria </strong></td>
+			<td><strong> Nombre </strong></td>
+			<td><strong> CP </strong></td>
+		</tr>
+
+	    
+	    {% for product in product_list %}
+	    <tr>
+	    	<td> <img src="/Users/sam/Github/Recommender-platform/Datos/imagenes/user.jpg"/> </td>
+	    	<td>{{ product.Categoria }}</td>
+	    	<td>{{ product.Nombre }}</td>
+	    	<td>{{ product.CP }}</td>
+	    </tr>
+	    {% endfor %}
+	    
+	</table>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
