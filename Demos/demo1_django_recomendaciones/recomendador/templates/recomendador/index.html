@@ -1,8 +1,11 @@
 
-<h1>Listado de productos para Pepe</h1>
 
-{% if product_list %}
-	<table>
+
+{% if product_list and metadatos_usuario %}
+
+<h1>Listado de productos para {{ metadatos_usuario }}</h1>
+
+	<table style="width:60%">
 		<tr>
 			<td><strong> Nombre </strong></td>
 			<td><strong> Categoria </strong></td>

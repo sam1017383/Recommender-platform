@@ -14,13 +14,14 @@ perfiles_usuarios = {
 'check_up_fumadores': {'perfil' : ['todos'],
                   'necesidades':['cuidar_corazon_circulacion', 'cuidar_pulmones_garganta']},
 
-'check_up_tercera_edad': {'perfil' : ['adulto_mayor', 'anciano'],
+'check_up_tercera_edad': {'perfil' : [ 'anciano'],
                   'necesidades':['cuidar_vejez']},
 }
 
 
 necesidades_satisfechas = {
-'cuidar_ninos':['pediatras', 'ginecologos', 'med_familiar'],
+'cuidar_ninos':['pediatras', 'med_familiar'],
+'cuidar_madre':['ginecologos'],
 'cuidar_corazon_circulacion':['cardiologos', 'angiologos'],
 'cuidar_pulmones_garganta':['otorrinos', 'neumologos'],
 'cuidar_vejez':['geriatras'],
@@ -55,7 +56,8 @@ def recomendacion_por_reglas(usuario):
 	necesidades_usuario_actual = necesidades_usuario(perfil_usuario_actual)
 	consulta_productos_recomendados = consulta_productos_necesarios(necesidades_usuario_actual)
 	productos_recomendados = eval(consulta_productos_recomendados)
-	return productos_recomendados
+	metadatos_recomendacion = {'nombre_usuario': 'Samuel V', 'perfil':perfil_usuario_actual}
+	return productos_recomendados, metadatos_recomendacion
 
 
 def consulta_productos_necesarios(necesidades_usuario_actual):
