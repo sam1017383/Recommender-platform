@@ -1,17 +1,8 @@
-# -*- coding: utf-8 -*-
 import mysql.connector
 from mysql.connector import errorcode
 import csv
 import re
 
-
-config_template = {
-  'user': 'root',
-  'password': 'sBO62MYytL+K',
-  'host': '127.0.0.1',
-  'database': 'employees',
-  'raise_on_warnings': True,
-}
 
 
 # To run the first time and create a database:
@@ -130,53 +121,6 @@ def load_dicts_to_sql_table(table_name, data_dict):
 	cnx.commit()
 
 
-
-
-
-def load_dicts_to_sql_comments(table_name, data_dict):
-	'load a list of dictionaries containing data from csv file to a table'
-
-	#Al crear la tabla, el campo con nombre id_xxx se asigna como entero y llave primaria
-	#el resto de campos se asignan como cadena
-	stmt = "CREATE TABLE " + table_name + " (id int(11), calificacion_producto int(11), "
-	stmt +=	"comentario longtext, fecha date, hora time, productx_id int(11), userx_id int(11), "
-	stmt += 'PRIMARY KEY(id))'
-	print "Sentencia para creacion de tabla: ", stmt
-	#cursor.execute(stmt)
-	cursor.execute("show tables")
-	print "Tablas en la base de datos: ", cursor.fetchall()
-	cursor.execute("describe " + table_name)
-	print "descripcion de la tabla " + table_name + ": ", cursor.fetchall()
-
-	# Itera la lista de diccionarios con llaves iguales a las columnas de la tabla
-	# insertando cada valor en su correspondiente columna
-	
-	for each_row in data_dict:
-		fields = ""
-		values = ""
-		for each_column in data_dict[0].keys():
-			fields += each_column + ", "
-			texto = re.sub('"', "'", each_row[each_column])
-			values += '"' + texto + '", '
-
-
-		fields = fields[0:len(fields)-2]
-		values = values[0:len(values)-2]
-		stmt_insert = "INSERT INTO " + table_name + "(" + fields + ") VALUES (" + values + ")"
-		print "Sentencia insert: ", stmt_insert
-		cursor.execute(stmt_insert)
-		
-	
-	#cursor.execute("DROP TABLE " + table_name)''
-	#cursor.execute("show tables")
-	#print "show without new table: ",cursor.fetchall()
-	
-	# Guarda de persistentemente
-	cnx.commit()
-
-
-
-
 def print_select(query):
 	cursor.execute(query)
 	data = cursor.fetchall()
@@ -186,8 +130,12 @@ def print_select(query):
 
 
 
-def test():
-	create_table('lol', [['field', 'type']])
+def limpiar_rango(tabla, campo_id, campo, minimo, maximo, defecto):
+	query = "select " + campo_id + ", " + campo + " from " + tabla + ";"
+	cursor.execute(query)
+	data = cursor.fetchall()
+	for cada_elemento in data:
+		print cada_elemento
 
 
 
@@ -197,24 +145,22 @@ cursor.execute("use xti_recomendaciones")
 cursor.execute("show tables")
 print cursor.fetchall()
 
-#data_dict_usuarios = load_csv('usuarios.csv')
-#data_dict_productos = load_csv('productos.csv')
-data_dict_comentarios = load_csv('comentarios.csv')
-
-#load_dicts_to_sql_table('usuarios', data_dict_usuarios)
-#load_dicts_to_sql_table('productos', data_dict_productos)
-load_dicts_to_sql_comments('comentarios', data_dict_comentarios)
-
-print "USUARIOS: _______"
-#print_select("select * from usuarios where id_usuario<10")
-
-print "PRODUCTOS: _______"
-#print_select("select * from productos where id_producto<10")
+# limpiar base de datos de usuario
+limpiar_rango("usuarios", "id_usuario" "CP", 1, 20000, 14050)
+#limpiar_rango("usuarios", "Hijos", 0, 4, 0)
+#limpiar_rango("usuarios", "Hijos", 0, 4, 0)
+#limpiar_opciones("usuarios", "Genero", ["m", "f"], "f")
+#limpiar_opciones("usuarios", "Estado_civil", ["c", "s", "ul", "d"], "s")
+#limpiar_texto("usarios", "Apellido_p")
+#limpiar_texto("usarios", "Apellido_m")
+#limpiar_texto("usarios", "Nombre")
+#limpiar_texto("usarios", "Ciudad")
+#limpiar_correo("usarios", "Ciudad")
+#remover_nulos("usuarios", "Contacto")
 
 
 
 cnx.close()
 
 	
-
 
