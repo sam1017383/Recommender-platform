@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_recomendaciones',
         'USER': 'root',
-        'PASSWORD': '321',
+        'PASSWORD': '123',
     }
 }
 

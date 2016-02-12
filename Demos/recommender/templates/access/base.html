@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}My amazing site{% endblock %}</title>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery-1.12.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

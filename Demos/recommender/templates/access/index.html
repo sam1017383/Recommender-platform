@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% load staticfiles %}
+you are inn! <a href="{% url 'xti:logout' %}">salir</a> lol
+<div id="images">
+    <div id="div1"><img src="{% static 'img/test.png' %}"></div>
+    <div id="div2"><img src="{% static 'img/test.png' %}"></div>
+    <div id="div3"><img src="{% static 'img/test.png' %}"></div>
+</div>
+<script>
+$().ready(function() {
+    $( window ).scroll(function() {
+        var totalDivs = $('#images > div');
+        if(elementInScroll(totalDivs[totalDivs.length-1]))
+        {
+            $('#images').append('<div id="div1"><img src="{% static 'img/test.png' %}"></div><div id="div1"><img src="{% static 'img/test.png' %}"></div><div id="div1"><img src="{% static 'img/test.png' %}"></div>');
+            console.log($('#images > div').length);
+        }
+    });
+})
+
+function elementInScroll(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+</script>
+{% endblock %}

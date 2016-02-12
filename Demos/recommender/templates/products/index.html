@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Recomendador</title>
+<link href="/static/css/estilos_go.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/static/css/demo.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen" />
+
+<!-- Estrellas Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/static/js/star-rating.min.js" type="text/javascript"></script>
+    <!-- optionally if you need translation for your language then include locale file as mentioned below -->
+    <script src="/static/js/star-rating_locale_es.js"></script>
+    
+    <script type="text/javascript">
+    // with plugin options
+    $("#input-id").rating({'size':'xs'});
+    </script>
+<!-- FIN Estrellas Bootstrap -->
+
+</head>
+
+<body>
+<div id="contenedor">
+  <div id="wrapper">
+    <div id="header">
+     <a href="#">LOGO</a>
+      <form action="" method="get">
+        <a href="{% url 'access:logout' %}">
+        <input type="button" value="Cerrar Sesión" name="btn-logout" class="btn-sesion">
+        </a>
+        <div class="search">
+          <input name="" type="text" value="¿Qué estás buscando?">
+          <span> <img src="/static/image/icp_lupa.png"> </span></div>
+      </form>
+      <h1 class="t-centro">Cátalogo de productos</h1>
+    </div>
+    <div id="contenido"> 
+      <!--Inicio carrusel FARMACIAS-->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico">
+            <h2>Farmacias</h2>
+          </div>
+
+          <div class="flexslider carousel">
+            <ul class="slides">
+{% for Product in latest_productos_list %}
+            <li class="bg-col"> 
+            <img src="/static/image/farmacia01.jpg" />
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  <div class="estrellas">
+                  <input id="input1-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input1-id{{ Product.id }}').rating('update', 2);
+                  </script>
+                  </div>
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+{% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel---> 
+      <!--Inicio carrusel LABORATORIOS CLÍNICOS-->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico-lab">
+            <h2>Laboratorios clínicos</h2>
+          </div>
+          <div class="flexslider carousel">
+            <ul class="slides">
+{% for Product in latest_productos_list2 %}
+            <li class="bg-col"> 
+            <img src="/static/image/farmacia01.jpg" />
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  <div class="estrellas">
+                  <input id="input2-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input2-id{{ Product.id }}').rating('update', 2);
+                  </script>
+                  </div>
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+{% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel---> 
+       <!--Inicio carrusel CONSULTORIOS DENTALES-->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico-dental">
+            <h2>Consultorios dentales</h2>
+          </div>
+          <div class="flexslider carousel">
+            <ul class="slides">
+{% for Product in latest_productos_list3 %}
+            <li class="bg-col"> 
+            <img src="/static/image/farmacia01.jpg" />
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  <div class="estrellas">
+                  <input id="input3-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input3-id{{ Product.id }}').rating('update', 2);
+                  </script>
+                  </div>
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+{% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel---> 
+       <!--Inicio carrusel CONSULTORIO DE MEDICOS ESPECIALISTAS-->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico-medicos">
+            <h2>Consultorio de médicos especialistas</h2>
+          </div>
+          <div class="flexslider carousel">
+            <ul class="slides">
+{% for Product in latest_productos_list4 %}
+            <li class="bg-col"> 
+            <img src="/static/image/farmacia01.jpg" />
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  <div class="estrellas">
+                  <input id="input4-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input4-id{{ Product.id }}').rating('update', 2);
+                  </script>
+                  </div>
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+{% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel--> 
+    </div>
+  </div>
+  <div id="footer"><span class="derechos"> © Copyright 2016. Go4it| Aviso Legal | Aviso de Privacidad</span></div>
+</div>
+</div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/static/js/jquery-1.9.1.min.js">\x3C/script>')</script>
+<!-- FlexSlider -->
+<script defer src="/static/js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 210,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 4,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</html>

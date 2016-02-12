@@ -1,0 +1,338 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+* {
+	margin: 0;
+}
+html, body, #contenedor {
+	height: 100%;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+	width: 100%;
+}
+html > body #contenedor {
+	background: #E9EAEC;
+	height: auto;
+}
+#contenedor {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif !important;
+	height: 100%;
+	color: #666666;
+	font-size: 13px;
+}
+.clear {
+	clear: both;
+}
+#header {
+	padding-top: 17px;
+}
+h1 {
+	font-size: 30px;
+	font-weight: 100;
+	color: #395066;
+}
+h2 {
+	font-size: 26px;
+	font-weight: 100;
+	color: #395066;
+}
+#wrapper {
+	margin: auto;
+	width: 80%;
+}
+#wrapper #contenido {
+	margin-bottom: 95px;
+}
+#footer {
+	height: 55px;
+	background-color: #000000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+span.derechos {
+	color: #ffffff;
+	float: right;
+	font-size: 11px;
+	text-align: center;
+	padding-top: 18px;
+}
+/*Usuario*/
+
+
+
+.registro {
+	background: #dadde1 none repeat scroll 0 0;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	height: 195px;
+	margin: 37px auto 67px;
+	padding-top: 92px;
+	text-align: center;
+}
+form input {
+	width: 55%;
+	background: #5F7184;
+	padding: 7px 10px;
+	color: #ffffff;
+	margin-bottom: 23px;
+	border-radius: 8px;
+}
+.sesion {
+	width: 320px;
+}
+/*Fin usuario*/
+/*Slider*/
+.carrusel {
+	background: #DADDE1 none repeat scroll 0 0;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	margin: 30px auto;
+}
+.ico {
+	background: rgba(0, 0, 0, 0) url("../image/ico_farmacias.png") no-repeat scroll 0 0;
+	height: 58px;
+	left: 8px;
+	position: relative;
+}
+
+.ico-lab {
+    background: rgba(0, 0, 0, 0) url("../image/ico_laboratorios.png") no-repeat scroll 0 0;
+    height: 49px;
+    left: 8px;
+    padding-left: 50px;
+    padding-top: 12px;
+    position: relative;
+}
+.ico-dental {
+	background: rgba(0, 0, 0, 0) url("../image/ico_dental.png") no-repeat scroll 0 0;
+    height: 49px;
+    left: 8px;
+    padding-left: 50px;
+    padding-top: 12px;
+    position: relative;
+}
+.ico-medicos {
+	background: rgba(0, 0, 0, 0) url("../image/ico_medicos.png") no-repeat scroll 0 0;
+    height: 49px;
+    left: 8px;
+    padding-left: 50px;
+    padding-top: 12px;
+    position: relative;
+}
+.ico-productos {
+	background: rgba(0, 0, 0, 0) url("../image/ico-productos.png") no-repeat scroll 0 0;
+    height: 49px;
+    left: 8px;
+    padding-left: 50px;
+    padding-top: 12px;
+    position: relative;
+}
+.ico h2 {
+	margin: 0 0 0 55px;
+	padding-top: 10px;
+}
+.bg-col {
+	background: #e9eaec none repeat scroll 0 0;
+	box-shadow: 2px 2px 2px #cccccc;
+	padding: 20px;
+
+}
+.btn-detalle {
+    background: #d96d00 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    float: right;
+    height: 28px;
+    margin: 8px 14px 15px 8px;
+    padding-bottom: 1px;
+}
+.btn {
+	background: #d96d00 none repeat scroll 0 0;
+	border-radius: 8px;
+	color: #ffffff;
+	margin: 8px;
+	width: 100px;
+	border: none;
+}
+.btn-guardar {
+    background: #d96d00 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    float: right;
+    height: 32px;
+    margin: 7px 29px 23px 8px;
+    padding-bottom: 1px;
+}
+.btn-detalle:hover {
+	background: #BB5E00;
+}
+.btn:hover {
+	background: #BB5E00;
+}
+.btn-guardar:hover {
+	background: #BB5E00;
+}
+
+.resize {
+	width: 98px !important;
+	margin: 12px 10px;
+}
+.search {
+	text-align: center;
+}
+.search img {
+	left: -29px;
+	position: relative;
+	top: 2px;
+}
+.col-detalle {
+	background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(230, 230, 230, 1) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 53%, rgba(230, 230, 230, 1) 100%) repeat scroll 0 0;
+	margin: 16px auto;
+	width: 97%;
+}
+.col-izq {
+	width: 44%;
+	float: left;
+}
+.col-img {
+	background-color: #e9eaec;
+	box-shadow: 2px 2px 2px #cccccc;
+	margin: 15px;
+	padding: 3px;
+
+}
+
+
+.col-img > img {
+    display: block;
+    width: 100%;
+}
+.nombre-detalle {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 17px 0 0 21px;
+}
+.col-der {
+    float: left;
+    padding: 59px 0 0 29px;
+    width: 44%;
+}
+
+textarea {
+    height: 129px;
+    margin-bottom: 23px;
+    margin-top: 9px;
+    width: 351px;
+}
+.bg-col {
+    height: 325px!important;
+}
+
+.ico-lab {
+    background: rgba(0, 0, 0, 0) url("../image/ico_laboratorios.png") no-repeat scroll 0 0;
+    height: 58px;
+    left: 8px;
+    position: relative;
+}
+
+.ico-dental {
+    background: rgba(0, 0, 0, 0) url("../image/ico_dental.png") no-repeat scroll 0 0;
+    height: 58px;
+    left: 8px;
+    position: relative;
+}
+
+.ico-medicos {
+   background: rgba(0, 0, 0, 0) url("../image/ico_medicos.png") no-repeat scroll 0 0;
+   height: 58px;
+   left: 8px;
+   position: relative;
+}
+
+.ico-productos {
+   background: rgba(0, 0, 0, 0) url("../image/ico-productos.png") no-repeat scroll 0 0;
+   height: 58px;
+   left: 8px;
+   position: relative;
+}
+
+.ico-lab h2 {
+    margin: 0 0 0 6px;
+}
+
+.ico-dental h2 {
+    margin: 0 0 0 6px;
+}
+
+.ico-medicos h2 {
+     margin: 0 0 0 6px;
+}
+
+.ico-productos h2 {
+    margin: 0 0 0 6px;
+}
+
+.boton {
+    float: right;
+    margin-top: 26px;
+    clear: both;
+}
+
+.nombre {
+    color: #395066;
+    font-size: 13px;
+    font-weight: bold;
+    height: 42px;
+    line-height: 15px;
+    padding: 11px 0 11px 11px;
+    margin-bottom: 14px;
+
+}
+
+.categoria {
+    clear: both;
+    color: #395066;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 0 3px 11px;
+}
+
+.estrellas {
+    clear: both;
+    float: left;
+}
+
+.nombre-categoria {
+    float: left;
+    padding-left: 5px;
+}
+
+.detalle-categ {
+    color: #666666;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.btn-sesion {
+    background: #d96d00 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    float: right;
+    height: 34px;
+    margin: -28px 14px 10px 5px;
+    position: relative;
+    width: 107px;
+}

@@ -158,6 +158,8 @@ def limpiar_texto(tabla, campo_id, campo):
 
 		texto = re.sub("SIN NOMBRE", "", texto)
 		texto = re.sub("INGRESA TU NOMBRE", "", texto)
+		texto = re.sub("INGRESA TU APELLIDO MATERNO", "", texto)
+		texto = re.sub("INGRESA TU APELLIDO PATERNO", "", texto)
 
 		texto = re.sub("DF", "DISTRITO FEDERAL", texto)
 		texto = re.sub("MEXICO DF", "DISTRITO FEDERAL", texto)

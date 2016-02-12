@@ -141,8 +141,8 @@ def load_dicts_to_sql_comments(table_name, data_dict):
 	stmt = "CREATE TABLE " + table_name + " (id int(11), calificacion_producto int(11), "
 	stmt +=	"comentario longtext, fecha date, hora time, productx_id int(11), userx_id int(11), "
 	stmt += 'PRIMARY KEY(id))'
-	print "Sentencia para creacion de tabla: ", stmt
-	#cursor.execute(stmt)
+	exitprint "Sentencia para creacion de tabla: ", stmt
+	cursor.execute(stmt)
 	cursor.execute("show tables")
 	print "Tablas en la base de datos: ", cursor.fetchall()
 	cursor.execute("describe " + table_name)
