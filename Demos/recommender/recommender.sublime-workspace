@@ -159,6 +159,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "templates/products/catalogo.html",
+			"settings":
+			{
+				"buffer_size": 49974,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/products/index.html",
+			"settings":
+			{
+				"buffer_size": 11531,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "products/recomendaciones_conocimiento.py",
+			"settings":
+			{
+				"buffer_size": 3839,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "products/views.py",
+			"settings":
+			{
+				"buffer_size": 4826,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -318,7 +350,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
@@ -354,8 +386,120 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "templates/products/catalogo.html",
+					"settings":
+					{
+						"buffer_size": 49974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12809,
+								12809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/products/index.html",
+					"settings":
+					{
+						"buffer_size": 11531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7473,
+								7473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 434.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "products/recomendaciones_conocimiento.py",
+					"settings":
+					{
+						"buffer_size": 3839,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								892,
+								892
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 873.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "products/views.py",
+					"settings":
+					{
+						"buffer_size": 4826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4619,
+								4619
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

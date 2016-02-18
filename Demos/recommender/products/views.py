@@ -10,30 +10,61 @@ import recomendaciones_conocimiento
 import datetime
 
 # Create your views here.
+
+#- Medatados del usuario
+#  - productos_busqueda - Resultados de búsqueda
+#  - productos_calificados - Mis productos calificados
+#  - productos_similares - Productos similares a los que me han gustado
+#  - productos_perfil - Recomendaciones a mi perfil
+#  - productos_contenido - A usuarios similares les ha gustado
+#  - productos_fc - Los productos mejor apreciados
+
+
 def index(request):
-    product_list = Product.objects.all()[1:3]
-    usuario = Users.objects.all()[0]
-    latest_productos_list, metadatos_recomendacion = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+
+    if request.user.is_authenticated():
+        usuario = Users.objects.get(pk=request.user.id)
+        nombre_usuario = usuario.Nombre +  " " + usuario.Apellido_p
+    else:
+        usuario = Users.objects.all()[3]
+        nombre_usuario = "Usuario anónimo"
+
+
+
+    productos_busqueda = Product.objects.order_by('?')[1:20]
     
-    usuario2 = Users.objects.all()[0]
-    latest_productos_list2, metadatos_recomendacion2 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario2)
+    calificaciones = Calificaciones.objects.filter(users=usuario.id)
 
-    usuario3 = Users.objects.all()[0]
-    latest_productos_list3, metadatos_recomendacion3 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario3)
+    consulta  = ""
+    for each in calificaciones:
+        consulta = consulta + "Product.objects.filter(pk=" + str(each.product.id) + ") | "
+    consulta = consulta[:len(consulta)-2]
+    productos_calificados = eval(consulta)
 
-    usuario4 = Users.objects.all()[0]
-    latest_productos_list4, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario4)
+    productos_similares, metadatos_recomendacion3 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+
+    
+    productos_perfil, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+
+    
+    productos_contenido, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+
+    
+    productos_fc, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
 
     template = loader.get_template('products/index.html')
+    
+    perfil_usuario = recomendaciones_conocimiento.perfil_usuario(usuario)
+
     context = {
-        'latest_productos_list': latest_productos_list[:100],
-        'metadatos_usuario': metadatos_recomendacion,
-        'latest_productos_list2': latest_productos_list2[:100],
-        'metadatos_usuario2': metadatos_recomendacion2,
-        'latest_productos_list3': latest_productos_list3[:100],
-        'metadatos_usuario3': metadatos_recomendacion3,
-        'latest_productos_list4': latest_productos_list4[:100],
-        'metadatos_usuario4': metadatos_recomendacion4
+        'nombre_usuario_saludo': nombre_usuario,
+        'perfil': perfil_usuario,
+        'productos_busqueda': productos_busqueda,
+        'productos_calificados': productos_calificados,
+        'productos_similares': productos_similares[:100],
+        'productos_perfil': productos_perfil[:100],
+        'productos_contenido': productos_similares[:100],
+        'productos_fc': productos_similares[:100]
     }
     return HttpResponse(template.render(context, request))
 
@@ -41,8 +72,7 @@ def detail(request, product_id):
 
     #Buscar Lista de Productos recomendados para el usuario
     valorCalificacion = 0
-    usuario_activo = request.user
-    usuario = Users.objects.get(pk=usuario_activo.id)
+    usuario = Users.objects.get(pk=request.user.id)
     product_list = Product.objects.all()[1:3]
     latest_productos_list, metadatos_recomendacion = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
     
@@ -88,7 +118,7 @@ def detail(request, product_id):
         'latest_productos_list': latest_productos_list[:150],
         'metadatos_usuario': metadatos_recomendacion,
         'Producto': Producto,
-        'id_user': usuario_activo.id,
+        'id_user': usuario.id,
         'calificacionExistente': calificacionExistente,
         'comentario': comentario,
         'valorCalificacion': valorCalificacion

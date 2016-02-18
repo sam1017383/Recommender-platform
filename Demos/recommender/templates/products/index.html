@@ -21,6 +21,18 @@
     </script>
 <!-- FIN Estrellas Bootstrap -->
 
+<!-- Parámetros del template
+  1 usuario, 1 busqueda, 5 listas
+
+  - Medatados del usuario
+  - productos_busqueda - Resultados de búsqueda
+  - productos_calificados - Mis productos calificados
+  - productos_similares - Productos similares a los que me han gustado
+  - productos_perfil - Recomendaciones a mi perfil
+  - productos_contenido - A usuarios similares les ha gustado
+  - productos_fc - Los productos mejor apreciados
+-->
+
 </head>
 
 <body>
@@ -36,63 +48,40 @@
           <input name="" type="text" value="¿Qué estás buscando?">
           <span> <img src="/static/image/icp_lupa.png"> </span></div>
       </form>
-      <h1 class="t-centro">Cátalogo de productos</h1>
+      <h2 class="t-centro">Hola {{ nombre_usuario_saludo }}</h2>
+     <!-- <h3 class="t-centro">Perfil: {{ perfil }}</h3>-->
     </div>
     <div id="contenido"> 
-      <!--Inicio carrusel FARMACIAS-->
+
+
+      <!--Inicio carrusel BUSQUEDA-->
       <div class="carrusel">
         <section class="slider">
           <div class="ico">
-            <h2>Farmacias</h2>
+            <h2>Resultados de búsqueda</h2>
           </div>
-
           <div class="flexslider carousel">
             <ul class="slides">
-{% for Product in latest_productos_list %}
+{% for Product in productos_busqueda %}
             <li class="bg-col"> 
             <img src="/static/image/farmacia01.jpg" />
             <div class="datos">
                   <div class="nombre">{{ Product.Nombre }}</div>
                   <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
-                  <div class="estrellas">
-                  <input id="input1-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
-                  <script type="text/javascript">
-                      $('#input1-id{{ Product.id }}').rating('update', 2);
-                  </script>
-                  </div>
-                  <div class="boton">
-                    <a href="{% url 'detail' Product.id %}">
-                    <input class="btn-detalle" name="" type="button" value="ver detalle">
-                    </a>
-                  </div>
-            </div>
-            </li>
-{% endfor %}
-            </ul>
-          </div>
-        </section>
-      </div>
-      <!--Fin carrusel---> 
-      <!--Inicio carrusel LABORATORIOS CLÍNICOS-->
-      <div class="carrusel">
-        <section class="slider">
-          <div class="ico-lab">
-            <h2>Laboratorios clínicos</h2>
-          </div>
-          <div class="flexslider carousel">
-            <ul class="slides">
-{% for Product in latest_productos_list2 %}
-            <li class="bg-col"> 
-            <img src="/static/image/farmacia01.jpg" />
-            <div class="datos">
-                  <div class="nombre">{{ Product.Nombre }}</div>
-                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  
+                   {% if Product.Calificable == 1 %}
                   <div class="estrellas">
                   <input id="input2-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
                   <script type="text/javascript">
                       $('#input2-id{{ Product.id }}').rating('update', 2);
                   </script>
                   </div>
+                  {% else %}
+                  
+                  <div class="clear"></div>
+                  
+                  {% endif %}
+                  
                   <div class="boton">
                     <a href="{% url 'detail' Product.id %}">
                     <input class="btn-detalle" name="" type="button" value="ver detalle">
@@ -106,26 +95,76 @@
         </section>
       </div>
       <!--Fin carrusel---> 
-       <!--Inicio carrusel CONSULTORIOS DENTALES-->
+
+
+
+      <!--Inicio carrusel PRODCTOS CALIFICADOS-->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico-lab">
+            <h2>Mis productos calificados</h2>
+          </div>
+          <div class="flexslider carousel">
+            <ul class="slides">
+{% for Product in productos_calificados %}
+            <li class="bg-col"> 
+            <img src="/static/image/farmacia01.jpg" />
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  {% if Product.Calificable == 1 %}
+                  <div class="estrellas">
+                  <input id="input2-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input2-id{{ Product.id }}').rating('update', 2);
+                  </script>
+                  </div>
+                  {% else %}
+                  
+                  <div class="clear"></div>
+                  
+                  {% endif %}
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+{% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel---> 
+
+
+       <!--Inicio carrusel PRODUCTOS SIMILARES-->
       <div class="carrusel">
         <section class="slider">
           <div class="ico-dental">
-            <h2>Consultorios dentales</h2>
+            <h2>Productos similares a los que te han gustado</h2>
           </div>
           <div class="flexslider carousel">
             <ul class="slides">
-{% for Product in latest_productos_list3 %}
+{% for Product in productos_similares %}
             <li class="bg-col"> 
             <img src="/static/image/farmacia01.jpg" />
             <div class="datos">
                   <div class="nombre">{{ Product.Nombre }}</div>
                   <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  {% if Product.Calificable == 1 %}
                   <div class="estrellas">
-                  <input id="input3-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <input id="input2-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
                   <script type="text/javascript">
-                      $('#input3-id{{ Product.id }}').rating('update', 2);
+                      $('#input2-id{{ Product.id }}').rating('update', 2);
                   </script>
                   </div>
+                  {% else %}
+                  
+                  <div class="clear"></div>
+                  
+                  {% endif %}
                   <div class="boton">
                     <a href="{% url 'detail' Product.id %}">
                     <input class="btn-detalle" name="" type="button" value="ver detalle">
@@ -139,26 +178,35 @@
         </section>
       </div>
       <!--Fin carrusel---> 
-       <!--Inicio carrusel CONSULTORIO DE MEDICOS ESPECIALISTAS-->
+
+
+
+       <!--Inicio carrusel RECOMENDACIONES POR PERFIL-->
       <div class="carrusel">
         <section class="slider">
           <div class="ico-medicos">
-            <h2>Consultorio de médicos especialistas</h2>
+            <h2>Productos recomendados a tu perfil</h2>
           </div>
           <div class="flexslider carousel">
             <ul class="slides">
-{% for Product in latest_productos_list4 %}
+{% for Product in productos_perfil %}
             <li class="bg-col"> 
             <img src="/static/image/farmacia01.jpg" />
             <div class="datos">
                   <div class="nombre">{{ Product.Nombre }}</div>
                   <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  {% if Product.Calificable == 1 %}
                   <div class="estrellas">
-                  <input id="input4-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <input id="input2-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
                   <script type="text/javascript">
-                      $('#input4-id{{ Product.id }}').rating('update', 2);
+                      $('#input2-id{{ Product.id }}').rating('update', 2);
                   </script>
                   </div>
+                  {% else %}
+                  
+                  <div class="clear"></div>
+                  
+                  {% endif %}
                   <div class="boton">
                     <a href="{% url 'detail' Product.id %}">
                     <input class="btn-detalle" name="" type="button" value="ver detalle">
@@ -172,9 +220,102 @@
         </section>
       </div>
       <!--Fin carrusel--> 
+
+
+
+
+       <!--Inicio carrusel -->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico-medicos">
+            <h2>Usuarios similares también les gusta</h2>
+          </div>
+          <div class="flexslider carousel">
+            <ul class="slides">
+{% for Product in productos_contenido %}
+            <li class="bg-col"> 
+            <img src="/static/image/farmacia01.jpg" />
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  {% if Product.Calificable == 1 %}
+                  <div class="estrellas">
+                  <input id="input2-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input2-id{{ Product.id }}').rating('update', 2);
+                  </script>
+                  </div>
+                  {% else %}
+                  
+                  <div class="clear"></div>
+                  
+                  {% endif %}
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+{% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel--> 
+
+
+
+
+       <!--Inicio carrusel -->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico-medicos">
+            <h2>Productos que te pueden interesar</h2>
+          </div>
+          <div class="flexslider carousel">
+            <ul class="slides">
+{% for Product in productos_fc %}
+            <li class="bg-col"> 
+            <img src="/static/image/farmacia01.jpg" />
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div>                  
+                  {% if Product.Calificable == 1 %}
+                  <div class="estrellas">
+                  <input id="input2-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input2-id{{ Product.id }}').rating('update', 2);
+                  </script>
+                  </div>
+                  {% else %}
+                  
+                  <div class="clear"></div>
+                  
+                  {% endif %}
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+{% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel--> 
+
+
+
+
+
+
+
     </div>
   </div>
-  <div id="footer"><span class="derechos"> © Copyright 2016. Go4it| Aviso Legal | Aviso de Privacidad</span></div>
+  <div id="footer"><span class="derechos"> © Copyright 2016. X-ti| Aviso Legal | Aviso de Privacidad</span></div>
 </div>
 </div>
 </body>

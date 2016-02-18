@@ -8,6 +8,9 @@ perfiles_usuarios = {
 'familia_joven': {'perfil' : ['joven', 'con_hijos', 'casado_union_libre'],
                   'necesidades':['cuidar_ninos', 'cuidar_madre']},
 
+'padre_soltero': {'perfil' : ['soltero', 'con_hijos'],
+                  'necesidades':['cuidar_ninos']},
+
 'posible_abuelo': {'perfil' : ['adulto_mayor', 'con_hijos'],
                   'necesidades':['cuidar_ninos']},
 
@@ -33,9 +36,12 @@ tipos_usuarios = {
 'adulto' : "extraer_edad(usuario.Nacimiento) >= 21 and extraer_edad(usuario.Nacimiento) < 60",
 'adulto_mayor' : "extraer_edad(usuario.Nacimiento) >= 60 and extraer_edad(usuario.Nacimiento) < 80",
 'anciano' : "extraer_edad(usuario.Nacimiento) >= 80",
-
 'casado_union_libre' : "usuario.Estado_civil == 'ul' or usuario.Estado_civil == 'c'",
 'soltero' : "usuario.Estado_civil == 's'",
+'con_hijos' : "usuario.Hijos != '0'",
+'sin_hijos' : "usuario.Hijos == '0'",
+'hombre' : "usuario.Genero == 'm'",
+'mujer' : "usuario.Genero == 'f'",
 'todos': "True"
 }
 
@@ -57,6 +63,7 @@ def recomendacion_por_reglas(usuario):
 	consulta_productos_recomendados = consulta_productos_necesarios(necesidades_usuario_actual)
 	productos_recomendados = eval(consulta_productos_recomendados)
 	metadatos_recomendacion = {'nombre_usuario': 'Samuel V', 'perfil':perfil_usuario_actual}
+	productos_recomendados = productos_recomendados.filter(Q(Estado=usuario.Ciudad) | Q(Municipio=usuario.Ciudad))
 	return productos_recomendados, metadatos_recomendacion
 
 
