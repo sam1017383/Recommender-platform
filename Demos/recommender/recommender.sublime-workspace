@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"pro",
+				"productos_recomendados"
+			],
+			[
+				"cal",
+				"calificaciones"
+			],
+			[
+				"ca",
+				"calificaciones"
+			],
+			[
 				"De",
 				"Descripcion"
 			],
@@ -40,10 +52,6 @@
 				"request"
 			],
 			[
-				"cal",
-				"calificacionExistente"
-			],
-			[
 				"calif",
 				"calificacionExistente"
 			],
@@ -54,10 +62,6 @@
 			[
 				"v",
 				"valorCalificacion"
-			],
-			[
-				"ca",
-				"calificacion_producto"
 			],
 			[
 				"cali",
@@ -110,10 +114,6 @@
 			[
 				"Pro",
 				"Producto"
-			],
-			[
-				"pro",
-				"product_id"
 			],
 			[
 				"prod",
@@ -171,7 +171,7 @@
 			"file": "templates/products/index.html",
 			"settings":
 			{
-				"buffer_size": 11531,
+				"buffer_size": 12788,
 				"line_ending": "Unix"
 			}
 		},
@@ -179,7 +179,7 @@
 			"file": "products/recomendaciones_conocimiento.py",
 			"settings":
 			{
-				"buffer_size": 3839,
+				"buffer_size": 4063,
 				"line_ending": "Unix"
 			}
 		},
@@ -187,7 +187,31 @@
 			"file": "products/views.py",
 			"settings":
 			{
-				"buffer_size": 4826,
+				"buffer_size": 4881,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "products/models.py",
+			"settings":
+			{
+				"buffer_size": 1913,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/products/detalle.html",
+			"settings":
+			{
+				"buffer_size": 15884,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/products/detail.html",
+			"settings":
+			{
+				"buffer_size": 7552,
 				"line_ending": "Unix"
 			}
 		}
@@ -350,7 +374,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 		]
@@ -386,7 +410,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -412,7 +436,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 324.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -422,15 +446,15 @@
 					"file": "templates/products/index.html",
 					"settings":
 					{
-						"buffer_size": 11531,
+						"buffer_size": 12788,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7473,
-								7473
+								2093,
+								2093
 							]
 						],
 						"settings":
@@ -440,7 +464,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 434.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -450,15 +474,15 @@
 					"file": "products/recomendaciones_conocimiento.py",
 					"settings":
 					{
-						"buffer_size": 3839,
+						"buffer_size": 4063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								892,
-								892
+								626,
+								650
 							]
 						],
 						"settings":
@@ -467,7 +491,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 873.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -477,15 +501,43 @@
 					"file": "products/views.py",
 					"settings":
 					{
-						"buffer_size": 4826,
+						"buffer_size": 4881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4619,
-								4619
+								1421,
+								1445
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 69.0,
+						"translation.y": 414.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "products/models.py",
+					"settings":
+					{
+						"buffer_size": 1913,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1157,
+								1157
 							]
 						],
 						"settings":
@@ -495,7 +547,63 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 59.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "templates/products/detalle.html",
+					"settings":
+					{
+						"buffer_size": 15884,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1944,
+								1944
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1709.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "templates/products/detail.html",
+					"settings":
+					{
+						"buffer_size": 7552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3079,
+								3079
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 19.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

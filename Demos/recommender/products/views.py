@@ -5,8 +5,12 @@ from django.conf.urls.static import static
 from django.http import Http404, HttpResponse
 from django.template import Context, loader
 from products.models import *
+from django.db.models import Q
 
 import recomendaciones_conocimiento
+import busqueda
+import clasificador_k_vecinos
+
 import datetime
 
 # Create your views here.
@@ -29,44 +33,130 @@ def index(request):
         usuario = Users.objects.all()[3]
         nombre_usuario = "Usuario anónimo"
 
-
-
-    productos_busqueda = Product.objects.order_by('?')[1:20]
+    # Carrusel de resultados de busqueda
+    productos_busqueda = busqueda.coincidencia("toriello guerra")
     
-    calificaciones = Calificaciones.objects.filter(users=usuario.id)
+    # Carrusel de productos que te han gustado
+    calificaciones = Calificaciones.objects.filter(users=usuario.id).values_list('pk', flat=True)
+    productos_calificados = Product.objects.filter(pk__in=list(calificaciones))
 
-    consulta  = ""
-    for each in calificaciones:
-        consulta = consulta + "Product.objects.filter(pk=" + str(each.product.id) + ") | "
-    consulta = consulta[:len(consulta)-2]
-    productos_calificados = eval(consulta)
+    # Carrusel de productos similares
+    productos_similares = clasificador_k_vecinos.k_vecinos_lista_productos(productos_calificados, 15)
 
-    productos_similares, metadatos_recomendacion3 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
-
-    
+    # Recomendaciones por perfil
     productos_perfil, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
 
-    
-    productos_contenido, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
-
-    
-    productos_fc, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+    # Recomendaciones de usuarios similares
+    recomendaciones_usuarios_similares = clasificador_k_vecinos.recomendaciones_usuarios_similares(usuario)
+        
+    # Recomendaciones productos_fc
+    productos_fc = clasificador_k_vecinos.recomendaciones_fc(usuario)
 
     template = loader.get_template('products/index.html')
-    
     perfil_usuario = recomendaciones_conocimiento.perfil_usuario(usuario)
 
     context = {
         'nombre_usuario_saludo': nombre_usuario,
         'perfil': perfil_usuario,
-        'productos_busqueda': productos_busqueda,
+        'productos_busqueda': productos_busqueda[:100],
         'productos_calificados': productos_calificados,
         'productos_similares': productos_similares[:100],
         'productos_perfil': productos_perfil[:100],
-        'productos_contenido': productos_similares[:100],
-        'productos_fc': productos_similares[:100]
+        'productos_contenido': recomendaciones_usuarios_similares[:100],
+        'productos_fc': productos_fc[:100]
     }
     return HttpResponse(template.render(context, request))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def index_busqueda(request):
+
+    texto_busqueda = ""
+
+    if request.GET.get('busqueda_main') is not None: 
+        texto_busqueda = request.GET.get('busqueda_main')
+        print texto_busqueda
+
+    if request.user.is_authenticated():
+        usuario = Users.objects.get(pk=request.user.id)
+        nombre_usuario = usuario.Nombre +  " " + usuario.Apellido_p
+    else:
+        usuario = Users.objects.all()[3]
+        nombre_usuario = "Usuario anónimo"
+
+    # Carrusel de resultados de busqueda
+    productos_busqueda = busqueda.coincidencia("toriello guerra")
+    
+    # Carrusel de productos que te han gustado
+    calificaciones = Calificaciones.objects.filter(users=usuario.id).values_list('pk', flat=True)
+    productos_calificados = Product.objects.filter(pk__in=list(calificaciones))
+
+    # Carrusel de productos similares
+    productos_similares = clasificador_k_vecinos.k_vecinos_lista_productos(productos_calificados, 15)
+
+    # Recomendaciones por perfil
+    productos_perfil, metadatos_recomendacion4 = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+
+    # Recomendaciones de usuarios similares
+    recomendaciones_usuarios_similares = clasificador_k_vecinos.recomendaciones_usuarios_similares(usuario)
+        
+    # Recomendaciones productos_fc
+    productos_fc = clasificador_k_vecinos.recomendaciones_fc(usuario)
+
+    template = loader.get_template('products/index.html')
+    perfil_usuario = recomendaciones_conocimiento.perfil_usuario(usuario)
+
+    context = {
+        'nombre_usuario_saludo': nombre_usuario,
+        'perfil': perfil_usuario,
+        'productos_busqueda': productos_busqueda[:50],
+        'productos_calificados': productos_calificados,
+        'productos_similares': productos_similares[:50],
+        'productos_perfil': productos_perfil[:50],
+        'productos_contenido': recomendaciones_usuarios_similares[:50],
+        'productos_fc': productos_fc[:50]
+    }
+    return HttpResponse(template.render(context, request))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def detail(request, product_id):
 
@@ -74,10 +164,19 @@ def detail(request, product_id):
     valorCalificacion = 0
     usuario = Users.objects.get(pk=request.user.id)
     product_list = Product.objects.all()[1:3]
-    latest_productos_list, metadatos_recomendacion = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+    
     
     #Busca el producto seleccionado
     Producto = get_object_or_404(Product, pk=product_id)
+
+    
+    
+    latest_productos_list, metadatos_recomendacion = recomendaciones_conocimiento.recomendacion_por_reglas(usuario)
+
+    latest_productos_list = clasificador_k_vecinos.k_vecinos_productos(product_id, 20)
+
+    print "In views detail: product count: ", len(latest_productos_list) 
+
 
     #Busca objeto de Producto con calificacion para el usuario
     try:
@@ -115,7 +214,7 @@ def detail(request, product_id):
     #Construcción del template y envío de Respuesta
     template = loader.get_template('products/detail.html')
     context = {
-        'latest_productos_list': latest_productos_list[:150],
+        'latest_productos_list': latest_productos_list[:100],
         'metadatos_usuario': metadatos_recomendacion,
         'Producto': Producto,
         'id_user': usuario.id,

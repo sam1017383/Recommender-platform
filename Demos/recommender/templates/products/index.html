@@ -44,11 +44,27 @@
         <a href="{% url 'access:logout' %}">
         <input type="button" value="Cerrar Sesión" name="btn-logout" class="btn-sesion">
         </a>
-        <div class="search">
-          <input name="" type="text" value="¿Qué estás buscando?">
-          <span> <img src="/static/image/icp_lupa.png"> </span></div>
       </form>
+
       <h2 class="t-centro">Hola {{ nombre_usuario_saludo }}</h2>
+      
+
+
+
+
+
+      <form id="buscarForm" name="buscarForm" action="{% url 'index_busqueda' %}" method="get">
+        <div class="search">
+          <input name="busqueda_main" id="busqueda_main" type="text" value="¿Qué estás buscando?">
+          <span> <img src="/static/image/icp_lupa.png"> </span></div>
+          <button class="btn-buscar" name="btn-buscar" type="Submit" value="Buscar">Buscar</button>
+      </form>
+
+
+
+
+
+
      <!-- <h3 class="t-centro">Perfil: {{ perfil }}</h3>-->
     </div>
     <div id="contenido"> 

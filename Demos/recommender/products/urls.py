@@ -8,4 +8,5 @@ urlpatterns = [
 	url(r'^$', views.index, name='index'),
 #	url(r'^detalle/(?P<product_id>\d+)/$', views.detail, name='detail'),
     url(r'^(?P<product_id>\d+)/$', views.detail, name='detail'),
+    url(r'^busqueda/$', views.index_busqueda, name='index_busqueda'),
 ]

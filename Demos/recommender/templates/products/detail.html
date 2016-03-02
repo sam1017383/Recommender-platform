@@ -21,14 +21,23 @@
 <div id="contenedor">
   <div id="wrapper">
     <div id="header"> <a href="#">LOGO</a>
+      
+
+
+
       <form action="" method="get">
         <a href="{% url 'access:logout' %}">
         <input type="button" value="Cerrar Sesión" name="btn-logout" class="btn-sesion">
         </a>
-        <div class="search">
-          <input name="" type="text" value="¿Qué estás buscando?">
-          <span> <img src="/static/image/icp_lupa.png"> </span></div>
       </form>
+
+      <form id="buscarForm" name="buscarForm" action="{% url 'index_busqueda' %}" method="get">
+        <div class="search">
+          <input name="busqueda_main" id="busqueda_main" type="text" value="¿Qué estás buscando?">
+          <span> <img src="/static/image/icp_lupa.png"> </span></div>
+          <button class="btn-buscar" name="btn-buscar" type="Submit" value="Buscar">Buscar</button>
+      </form>
+
      
     </div>
     <div id="contenido">
@@ -65,6 +74,8 @@
                 <tr>
                   <td style="padding:10px; line-height:19px;">{{ Producto.Estado }} {{ Producto.Municipio }} {{ Producto.Direccion }}</td>
                 </tr>
+
+
                 <form id="califForm" name="califForm" action="{% url 'detail' Producto.id %}" method="post">
                 <input type="hidden" name="calificacion" id="calificacion" value={{ valorCalificacion }}>
                 {% csrf_token %}
@@ -98,6 +109,34 @@
           <div class="clear"></div>
         </div>
       </div>
+
+<!-- INICIA DESPLIEGUE DE COMENTARIOS -->
+      <div class="carrusel">
+      <h2>Comentarios</h2>
+      {% if not comentariosExistentes %}
+        <div class="block texto">
+          No hay comentarios registrados por el momento...
+        </div>
+      {% else %}
+        {% for comentarioExistente in comentariosExistentes %}
+        <div>
+              <div class="estrellas">
+              <input type="hidden" id="input-val{{ comentarioExistente.id }}" value="{{ comentarioExistente.calificacion_producto }}">
+              <input id="input-id{{ comentarioExistente.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+              <script type="text/javascript">
+                  $('#input-id{{ comentarioExistente.id }}').rating('update', $('#input-val{{ comentarioExistente.id }}').val());
+              </script>
+              </div>
+              <div class="fecha">{{ comentarioExistente.fecha }}</div>
+              <div class="usuario"> Escrito por Usuario: <span class="name"> {{comentarioExistente.users.Nombre}} {{comentarioExistente.users.Apellido_p}} {{comentarioExistente.users.Apellido_m}}</span></div>
+              <div class="block-texto">{{ comentarioExistente.comentario }}<br><br></div>
+        </div>
+        {% endfor %}
+      {% endif %}
+      </div>
+      <!-- TERMINA DESPLIEGUE DE COMENTARIOS -->
+
+
 
       <!--Inicio carrusel PRODUCTOS RELACIONADOS-->
       <div class="carrusel">
