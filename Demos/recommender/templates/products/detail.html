@@ -45,7 +45,7 @@
         <div class="col-detalle">
           <div class="col-izq">
             <h2 class="nombre-detalle">Nombre</h2>
-            <div class="col-img"><img src="/static/image/img-detalle.gif"></div>
+            <div class="col-img"><img src = {{ Producto.ref_imagen }}></div>
           </div>
           <div class="col-der">
             <table width="100%" border="0">
@@ -58,8 +58,8 @@
                 <td style="color:#395066;padding: 10px; font-weight: bold;" >{{ Producto.Categoria }}</td>
               </tr>
               <tr>
-                <td style="color:#395066; padding: 10px;">Alias:</td>
-                <td style="color:#395066;padding: 10px; font-style:italic;" >{{ Producto.Alias }}</td>
+                <td style="color:#395066; padding: 10px;">Nombre:</td>
+                <td style="color:#395066;padding: 10px; font-style:italic;" >{{ Producto.Nombre }}</td>
               </tr>
               <table width="100%" cellpadding="5" cellspacing="5">
                 <tr>
@@ -74,6 +74,25 @@
                 <tr>
                   <td style="padding:10px; line-height:19px;">{{ Producto.Estado }} {{ Producto.Municipio }} {{ Producto.Direccion }}</td>
                 </tr>
+
+
+
+                <tr>
+                  <td style="color:#395066;padding: 10px; font-weight: bold;">Precio:</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px; line-height:19px;">{{ Producto.ref_precio }}</td>
+                </tr>
+
+                <tr>
+                  <td style="color:#395066;padding: 10px; font-weight: bold;">Descuento X-ti:</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px; line-height:19px;">{{ Producto.ref_descuento }}</td>
+                </tr>
+
+              
+
 
 
                 <form id="califForm" name="califForm" action="{% url 'detail' Producto.id %}" method="post">
@@ -148,7 +167,7 @@
             <ul class="slides">
 {% for Product in latest_productos_list %}
             <li class="bg-col"> 
-            <img src="/static/image/farmacia01.jpg" />
+            <img src="/static/image/menu_xti.png" />
             <div class="datos">
                   <div class="nombre">{{ Product.Nombre }}</div>
                   <div class="categoria">Categoria: </br><span class="detalle-categ">{{ Product.Categoria }}</span></div> 

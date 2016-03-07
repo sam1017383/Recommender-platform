@@ -40,7 +40,7 @@ def k_vecinos_productos(product_id, k):
     mejor_consulta_exacta = Product.objects.get(pk=product_id)
     mejor_consulta_cercana = Product.objects.get(pk=product_id)
 
-    #itera en tres circulos de cercania
+    #itera en circulos de cercania
     
     for circulo_actual in range(1,numero_circulos):
     	intervalo_latitud_min = float(producto_latitud) - paso * circulo_actual
@@ -127,7 +127,11 @@ def recomendaciones_fc(usuario):
         usuarios_similares += list(Calificaciones.objects.filter(Q(product=cada_producto_calificado.product.id)).exclude(users=usuario.id))
         print "now in fc:: usuarios que tambien calificaron length: ", len(usuarios_similares)
         for cada_usuario_similar in usuarios_similares:
-            calificaciones_fc = Calificaciones.objects.filter(users=cada_usuario_similar.id).exclude(product=cada_producto_calificado.product.id).values_list('pk', flat=True)
+            #calificaciones_fc = Calificaciones.objects.filter(users=cada_usuario_similar.id).exclude(product=cada_producto_calificado.product.id).values_list('product_id', flat=True)
+            calificaciones_fc = Calificaciones.objects.filter(users=cada_usuario_similar.users_id).exclude(product=cada_producto_calificado.product.id).values_list('product_id', flat=True)
+            print "id usuario similar: ", cada_usuario_similar.id
+            print "calificaciones relevantes: ", len(calificaciones_fc)
+            print calificaciones_fc
             productos_fc += Product.objects.filter(pk__in=list(calificaciones_fc))
             print "now in fc:: productos  length: ", len(productos_fc)
     return productos_fc

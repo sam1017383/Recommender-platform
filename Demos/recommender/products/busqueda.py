@@ -8,11 +8,11 @@ import re
 
 
 busqueda_esquema = {
-'nombre' : "Product.objects.filter(Nombre__icontains = 'ABCDEFG' )",
-'categoria' : "Product.objects.filter(Categoria__icontains = 'ABCDEFG' )",
-'estado' : "Product.objects.filter(Estado__icontains = 'ABCDEFG' )",
-'municipio' : "Product.objects.filter(Municipio__icontains = 'ABCDEFG' )",
-'colonia' : "Product.objects.filter(Colonia__icontains = 'ABCDEFG' )",
+'nombre' : "Q(Nombre__icontains = 'ABCDEFG' )",
+'categoria' : "Q(Categoria__icontains = 'ABCDEFG' )",
+'estado' : "Q(Estado__icontains = 'ABCDEFG' )",
+'municipio' : "Q(Municipio__icontains = 'ABCDEFG' )",
+'colonia' : "Q(Colonia__icontains = 'ABCDEFG' )",
 
 }
 
@@ -20,18 +20,30 @@ busqueda_esquema = {
 
 def coincidencia(texto_entrada):
 
+	
+	
 	print "texto entrada ::", texto_entrada
 	
 	if texto_entrada != "":
-		consulta = ""
-		for cada_restriccion in busqueda_esquema:
-			consulta += busqueda_esquema[cada_restriccion] + " | "
-		consulta = re.sub("ABCDEFG", texto_entrada, consulta)
-		#print "consulta de busqueda ::", consulta[:len(consulta)-2]
-		productos_buscados = eval(consulta[:len(consulta)-2])
-		return productos_buscados
+		
+		sentencia = "" 
+		terminos_busqueda = texto_entrada.split(' ')
+		for cada_termino in terminos_busqueda:
+			consulta = "" 
+			for cada_restriccion in busqueda_esquema:
+				consulta += busqueda_esquema[cada_restriccion] + " | "
+			consulta = re.sub("ABCDEFG", cada_termino, consulta)
+			consulta = consulta[:len(consulta)-2]
+			sentencia += "Product.objects.filter("+consulta+") & "
+		
+		productos_encontrados = eval(sentencia[:len(sentencia)-2])
+			
+		return productos_encontrados
+	
 	else:
-		return False
+		return []
+
+
 
 
 

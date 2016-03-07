@@ -40,8 +40,51 @@ class Product(models.Model):
     def __unicode__(self):
         return '%s %s' % (self.categoria, self.latitud)
 
+    def _get_calificacion(self):
+        "Regresa la calificacion promedio del producto en la tabla product_extras"
+        extras_producto = Product_extras.objects.get(Product=self.id)
+        return str(extras_producto.Calificacion)
+
+    def _get_precio(self):
+        "Regresa el precio del producto en la tabla product_extras"
+        extras_producto = Product_extras.objects.get(Product=self.id)
+        return str(extras_producto.Precio)
+
+    def _get_descuento(self):
+        "Regresa el decuento del producto en la tabla product_extras"
+        extras_producto = Product_extras.objects.get(Product=self.id)
+        return str(extras_producto.Descuento)
+
+    def _get_imagen(self):
+        "Regresa la ruta de imagen del producto en la tabla product_extras"
+        extras_producto = Product_extras.objects.get(Product=self.id)
+        return str(extras_producto.Imagen_fuente)
+
+
+    ref_calificacion = property(_get_calificacion)
+    ref_precio = property(_get_precio)
+    ref_descuento = property(_get_descuento)
+    ref_imagen = property(_get_imagen)
+
+
     class Meta:
     	db_table = 'product'
+
+class Product_extras(models.Model):
+    Product = models.ForeignKey(Product)
+    Imagen_fuente = models.CharField(max_length=255)
+    Calificacion = models.FloatField()
+    Precio = models.FloatField()
+    Descuento = models.FloatField()
+    id = models.AutoField(primary_key=True)
+    Fecha = models.DateField(auto_now_add=True)
+    
+    def __unicode__(self):
+        return '%s %s' % (self.product, self.Calificacion)
+
+    class Meta:
+        db_table = 'product_extras'
+
 
 class Calificaciones(models.Model):
     product = models.ForeignKey(Product)

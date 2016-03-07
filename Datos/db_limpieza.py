@@ -19,7 +19,7 @@ import re
 # 
 config = {
   'user': 'root',
-  'password': '321', 
+  'password': '123', 
   'database': 'db_recomendaciones',
 }
 
@@ -222,39 +222,77 @@ def remover_nulos(tabla, campo_id, campo):
 	# Guarda de persistentemente
 	cnx.commit()
 
+def insertar_extras(producto_id, imagen_url, calificacion, precio, descuento):
+	query = "INSERT INTO product_extras (Fecha, Imagen_fuente, Calificacion, Precio, Descuento, Product_id) " 
+	query += "VALUES(NOW(), " + imagen_url + ", " + calificacion + ", " + precio + ", " + descuento + ", " + producto_id + ");"
+	print "QUERY: ", query
+	cursor.execute(query)
+	# Guarda de persistentemente
+	cnx.commit()
+
+def cargar_extras_default():
+	query = "select id from product;"
+	cursor.execute(query)
+	productos_id = cursor.fetchall()
+	for cada_id in productos_id:
+		insertar_extras(str(cada_id[0]), "'/static/image/doctor_general.jpg'", '3.5', '99.9', '20.5')
+
+def actualizar_imagen_por_categoria(categoria, nueva_imagen):
+	query = "select id from product where Categoria = '" + categoria + "';"
+	cursor.execute(query)
+	productos_id = cursor.fetchall()
+	print "cambios a realizar: ", len(productos_id)
+	for cada_id in productos_id:
+		query = "update product_extras SET Imagen_fuente= '" + nueva_imagen +"' WHERE Product_id=" + str(cada_id[0]) + ";"
+		cursor.execute(query)
+	
+	cnx.commit()
+
+def actualizar_imagen_por_nombre_like(nombre, nueva_imagen):
+	query = "select id from product where Nombre LIKE '%" + nombre + "%';"
+	cursor.execute(query)
+	productos_id = cursor.fetchall()
+	print "cambios a realizar: ", len(productos_id)
+	for cada_id in productos_id:
+		query = "update product_extras SET Imagen_fuente= '" + nueva_imagen +"' WHERE Product_id=" + str(cada_id[0]) + ";"
+		cursor.execute(query)
+	
+	cnx.commit()
+	
+
 
 
 cnx, cursor = start_mysql_conn(config)
-cursor.execute("use xti_recomendaciones")
+cursor.execute("use recommender")
 cursor.execute("show tables")
 print cursor.fetchall()
 
-# limpiar base de datos de usuario
-limpiar_rango("usuarios", "id_usuario", "CP", 1, 99000, 0)
-limpiar_rango("usuarios", "id_usuario", "Hijos", 0, 4, 0)
-limpiar_opciones("usuarios", "id_usuario", "Genero", ["m", "f"], "n")
-limpiar_opciones("usuarios", "id_usuario", "Estado_civil", ["c", "s", "ul", "d"], "s")
-limpiar_texto("usuarios", "id_usuario", "Nombre")
-limpiar_texto("usuarios", "id_usuario", "Apellido_m")
-limpiar_texto("usuarios", "id_usuario", "Apellido_p")
-limpiar_texto("usuarios", "id_usuario", "Ciudad")
-limpiar_correo("usuarios", "id_usuario", "Contacto")
-remover_nulos("usuarios", "id_usuario", "Contacto")
+# # limpiar base de datos de usuario
+# limpiar_rango("usuarios", "id_usuario", "CP", 1, 99000, 0)
+# limpiar_rango("usuarios", "id_usuario", "Hijos", 0, 4, 0)
+# limpiar_opciones("usuarios", "id_usuario", "Genero", ["m", "f"], "n")
+# limpiar_opciones("usuarios", "id_usuario", "Estado_civil", ["c", "s", "ul", "d"], "s")
+# limpiar_texto("usuarios", "id_usuario", "Nombre")
+# limpiar_texto("usuarios", "id_usuario", "Apellido_m")
+# limpiar_texto("usuarios", "id_usuario", "Apellido_p")
+# limpiar_texto("usuarios", "id_usuario", "Ciudad")
+# limpiar_correo("usuarios", "id_usuario", "Contacto")
+# remover_nulos("usuarios", "id_usuario", "Contacto")
 
-#limpiar_rango("productos", "id_producto", "CP", 1, 99000, 0)
-limpiar_rango_float("productos", "id_producto", "Latitud", 14.0, 33.0, 0)
-limpiar_rango_float("productos", "id_producto", "Longitud", -117.0, -85.0, 0)
-limpiar_texto("productos", "id_producto", "Categoria")
-limpiar_texto("productos", "id_producto", "Colonia")
-limpiar_texto("productos", "id_producto", "Alias")
-limpiar_texto("productos", "id_producto", "Nombre")
-limpiar_texto("productos", "id_producto", "Descripcion")
-limpiar_texto("productos", "id_producto", "Estado")
-limpiar_texto("productos", "id_producto", "Municipio")
+# #limpiar_rango("productos", "id_producto", "CP", 1, 99000, 0)
+# limpiar_rango_float("productos", "id_producto", "Latitud", 14.0, 33.0, 0)
+# limpiar_rango_float("productos", "id_producto", "Longitud", -117.0, -85.0, 0)
+# limpiar_texto("productos", "id_producto", "Categoria")
+# limpiar_texto("productos", "id_producto", "Colonia")
+# limpiar_texto("productos", "id_producto", "Alias")
+# limpiar_texto("productos", "id_producto", "Nombre")
+# limpiar_texto("productos", "id_producto", "Descripcion")
+# limpiar_texto("productos", "id_producto", "Estado")
+# limpiar_texto("productos", "id_producto", "Municipio")
 
+#cargar_extras_default()
 
-
-
+actualizar_imagen_por_nombre_like("CHOPO", "/static/image/laboratorios_chopo.png")
 cnx.close()
 
 	

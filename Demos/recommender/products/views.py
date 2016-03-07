@@ -26,6 +26,12 @@ import datetime
 
 def index(request):
 
+    texto_busqueda = ""
+
+    if request.GET.get('busqueda_main') is not None: 
+        texto_busqueda = request.GET.get('busqueda_main')
+        print texto_busqueda
+
     if request.user.is_authenticated():
         usuario = Users.objects.get(pk=request.user.id)
         nombre_usuario = usuario.Nombre +  " " + usuario.Apellido_p
@@ -34,10 +40,11 @@ def index(request):
         nombre_usuario = "Usuario anónimo"
 
     # Carrusel de resultados de busqueda
-    productos_busqueda = busqueda.coincidencia("toriello guerra")
+    productos_busqueda = busqueda.coincidencia(texto_busqueda)
     
     # Carrusel de productos que te han gustado
-    calificaciones = Calificaciones.objects.filter(users=usuario.id).values_list('pk', flat=True)
+    calificaciones = Calificaciones.objects.filter(users=usuario.id).values_list('product_id', flat=True)
+    print "lista:: ", calificaciones
     productos_calificados = Product.objects.filter(pk__in=list(calificaciones))
 
     # Carrusel de productos similares
@@ -102,10 +109,11 @@ def index_busqueda(request):
         nombre_usuario = "Usuario anónimo"
 
     # Carrusel de resultados de busqueda
-    productos_busqueda = busqueda.coincidencia("toriello guerra")
+    productos_busqueda = busqueda.coincidencia(texto_busqueda)
     
     # Carrusel de productos que te han gustado
-    calificaciones = Calificaciones.objects.filter(users=usuario.id).values_list('pk', flat=True)
+    calificaciones = Calificaciones.objects.filter(users=usuario.id).values_list('product_id', flat=True)
+    print "lista:: ", calificaciones
     productos_calificados = Product.objects.filter(pk__in=list(calificaciones))
 
     # Carrusel de productos similares
