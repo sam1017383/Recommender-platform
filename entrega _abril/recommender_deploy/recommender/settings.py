@@ -37,12 +37,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7n2vv!!#0tjwr=y2bas333i1t^!r3913(uzc-qxm3+c9z_2mj*'
+with open('k.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -97,16 +98,45 @@ WSGI_APPLICATION = 'recommender.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'xti', # Or path to database file if using sqlite3.
-        'USER': 'root', # Not used with sqlite3.
-        'PASSWORD': '123', # Not used with sqlite3.
-        'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '', # Set to empty string for default. Not used with sqlite3.
+# [START db_setup]
+import os
+if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+    # Running on production App Engine, so use a Google Cloud SQL database.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'xtidb',
+            'USER': 'root',
+            'PASSWORD': 'djangosamtest',
+            'HOST': '/cloudsql/sam101-1244:sam101-sql'
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'xtidb',
+            'USER': 'admin',
+            'PASSWORD': 'admin',
+            'HOST': '173.194.80.66',
+            'PORT': '3306',
+        }
+    }
+
+
+
+# [END db_setup]
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+#         'NAME': 'xti', # Or path to database file if using sqlite3.
+#         'USER': 'root', # Not used with sqlite3.
+#         'PASSWORD': '123', # Not used with sqlite3.
+#         'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
+#         'PORT': '', # Set to empty string for default. Not used with sqlite3.
+#     }
+# }
 
 
 # Password validation
