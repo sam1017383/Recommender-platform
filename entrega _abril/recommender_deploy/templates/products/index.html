@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+{% load static from staticfiles %}
+<title>Recomendador</title>
+<link href="/static/css/estilos_go.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/static/css/demo.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen" />
+
+<!-- Estrellas Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/static/js/star-rating.min.js" type="text/javascript"></script>
+    <!-- optionally if you need translation for your language then include locale file as mentioned below -->
+    <script src="/static/js/star-rating_locale_es.js"></script>
+<!-- FIN Estrellas Bootstrap -->
+
+<!-- Parámetros del template
+  1 usuario, 1 busqueda, 5 listas
+
+  - Medatados del usuario
+  - productos_busqueda - Resultados de búsqueda
+  - productos_calificados - Mis productos calificados
+  - productos_similares - Productos similares a los que me han gustado
+  - productos_perfil - Recomendaciones a mi perfil
+  - productos_contenido - A usuarios similares les ha gustado
+  - productos_fc - Los productos mejor apreciados
+-->
+
+
+</head>
+
+<body>
+<div id="contenedor">
+  <div id="wrapper">
+    <div id="header">
+     <a href="http://www.xti.com.mx">www.xti.com.mx</a>
+      <form action="" method="get">
+        <a href="{% url 'access:logout' %}">
+        <input type="button" value="Cerrar Sesión" name="btn-logout" class="btn-sesion">
+        </a>
+      </form>
+
+      <p>&nbsp; </p>
+      <h4 class="t-centro" align="right">{{ nombre_usuario }}</h4>
+      <h6 class="t-centro" align="right">{{ contacto_usuario }}</h6>
+      <h6 class="t-centro" align="right">{{ ciudad_usuario }}</h6>
+
+      <form id="buscarForm" name="buscarForm" action="{% url 'index_busqueda' %}" method="get">
+        <input type="hidden" name="recomendadores_cache" id="recomendadores_cache" value='echo one'>
+
+        <div class="search">
+          <input name="busqueda_main" id="busqueda_main" type="text" value="">
+          <span> <img src="/static/image/icp_lupa.png"> </span></div>
+          <p align="center">
+          <button class="btn-buscar" name="btn-buscar" type="Submit" value="Buscar">Buscar</button>
+          </p>
+      </form>
+
+
+
+    </div>
+    <div id="contenido"> 
+
+
+{% for recomendacion in recomendaciones %}
+      <!--Inicio carrusel -->
+      <div class="carrusel">
+        <section class="slider">
+          <div >
+            <h2> {{ recomendacion.titulo }} </h2>
+          </div>
+
+          <div class="flexslider carousel">
+            <ul class="slides">
+  {% for Product in recomendacion.productos %}
+            <li class="bg-col"> 
+            {% with 'image/carrusel/'|add:Product.ref_imagen as carrusel_imagen %}
+            <img src="{% static carrusel_imagen %}">
+            {% endwith %}
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div> 
+                  {% if Product.Calificable == 1 %}                 
+                  <div class="estrellas">
+                  <input type="hidden" name="calificacion{{ Product.id }}" id="calificacion{{ Product.id }}" value={{ Product.ref_calificacion }}>
+                  <input id="input1-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input1-id{{ Product.id }}').rating('update', $('#calificacion{{ Product.id }}').val());
+                  </script>
+                  </div>
+                  {% else %}
+                  <div class="clear"></div>
+                  {% endif %}
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+  {% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel---> 
+
+{% endfor %}
+
+
+
+
+
+    </div>
+  </div>
+  <div id="footer"><span class="derechos"> © Copyright 2016. Xti| Aviso Legal | Aviso de Privacidad</span></div>
+</div>
+</div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/static/js/jquery-1.9.1.min.js">\x3C/script>')</script>
+<!-- FlexSlider -->
+<script defer src="/static/js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 210,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 5,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</html>

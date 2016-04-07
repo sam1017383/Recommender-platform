@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="/static/css/estilos_go.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="contenedor">
+  <div id="wrapper">
+    <div id="header"> <a href="#">Logo</a>
+      <h1 class="t-centro">Inicio de sesión</h1>
+    </div>
+    <div id="contenido">
+      <div class="registro">
+
+
+<form id="loginForm" name="loginForm" action="{% url 'access:login' %}" method="post">
+    {% csrf_token %}
+        <div>
+        <input class="sesion" name="usuario" id="usuario" type="text" placeholder="Correo electrónico"></div>
+        <div>
+         <input class="sesion" name="pw" id="pw" type="password" placeholder="Contraseña">
+        </div>
+        <span class="alert-danger">
+        {% if errorMessage %}
+        <p>
+        <strong>Correo Electr&oacute;nico y/o Contrase&ntilde;a incorrecto(s) !<BR>
+        *Ambos campos son OBLIGATORIOS.
+        </strong>
+        </p>
+        {% endif %}
+        </span>
+        <input class="btn" name="login" type="submit" value="Iniciar sesión">
+</form>
+
+      </div>
+    </div>
+  </div>
+  <div id="footer"><span class="derechos"> © Copyright 2016. Go4it| Aviso Legal | Aviso de Privacidad</span></div>
+</div>
+</body>
+</html>

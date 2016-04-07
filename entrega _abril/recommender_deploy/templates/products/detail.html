@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rating</title>
+<meta content="charset=utf-8">
+{% load static from staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/estilos_go.css' %}" >
+<link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >
+<link rel="stylesheet" type="text/css" href="{% static 'css/star-rating.min.css' %}" media="all" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{% static 'js/star-rating.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/star-rating_locale_es.js' %}"></script>
+</head>
+
+<body>
+
+<input type="hidden" id="calif" name="calif" value="0">
+<div id="contenedor">
+  <div id="wrapper">
+    <div id="header"> 
+      <a href="http://www.xti.com.mx">www.xti.com.mx</a>
+      <form action="" method="get">
+        <a href="{% url 'access:logout' %}">
+        <input type="button" value="Cerrar Sesión" name="btn-logout" class="btn-sesion">
+        </a>
+      </form>
+      
+      <p>&nbsp; </p>
+      <h4 class="t-centro" align="right">{{ nombre_usuario }}</h4>
+      <h6 class="t-centro" align="right">{{ contacto_usuario }}</h6>
+      <h6 class="t-centro" align="right">{{ ciudad_usuario }}</h6>
+
+      <form id="buscarForm" name="buscarForm" action="{% url 'index_busqueda' %}" method="get">
+        <input type="hidden" name="recomendadores_cache" id="recomendadores_cache" value='echo one'>
+
+        <div class="search">
+          <input name="busqueda_main" id="busqueda_main" type="text" value="">
+          <span> <img src="/static/image/icp_lupa.png"> </span></div>
+          <p align="center">
+          <button class="btn-buscar" name="btn-buscar" type="Submit" value="Buscar">Buscar</button>
+          </p>
+      </form>     
+    </div>
+    <div id="contenido">
+      <div class="carrusel">
+        <div class="col-detalle">
+          <div class="col-izq">
+            <h2 class="nombre-detalle">{{ Producto.Nombre }}</h2>
+            {% with 'image/detail/'|add:Producto.ref_imagen as detail_imagen %}
+            <div class="col-img"><img src="{% static detail_imagen %}"></div>
+            {% endwith %}
+            <div class="precio">
+              <table width="70%" border="0">
+                <tr>
+                  <td style="color:#d96d00; padding: 10px; font-size:20px; font-weight: bold;">Precio:</td>
+                  {% load humanize %}
+                  <td style="color:#d96d00;padding: 10px; font-weight: bold; font-size:20px;" >$ {{ Producto.ref_precio|intcomma }} M.N. </td>
+                </tr>
+                <tr>
+                  <td style="color:#395066; padding: 10px;">Descuento:</td>
+                  <td style="color:#d96d00;padding: 10px; font-weight: bold; font-size:18px;" >{{ Producto.ref_descuento}} %</td>
+                </tr>
+              </table>
+            </div>
+          </div>         
+          <div class="col-der">
+            <table width="100%" border="0">
+              <tr>
+                <td width="23%" style="color:#395066; padding: 10px;">ID Producto:</td>
+                <td width="53%" style="color:#395066; padding: 10px; font-weight: bold;" >{{ Producto.id }}</td>
+              </tr>
+              <tr>
+                <td style="color:#395066; padding: 10px;">Categoría:</td>
+                <td style="color:#395066;padding: 10px; font-weight: bold;" >{{ Producto.Categoria }}</td>
+              </tr>
+              <tr>
+                <td style="color:#395066; padding: 10px;">Alias:</td>
+                <td style="color:#395066;padding: 10px; font-style:italic;" >{{ Producto.Alias }}</td>
+              </tr>
+              <tr>
+                <td style="color:#395066; padding: 10px;">Estado:</td>
+                <td style="color:#395066;padding: 10px; font-style:italic;" >{{ Producto.Estado }}</td>
+              </tr>
+              <tr>
+                <td style="color:#395066; padding: 10px;">Municipio:</td>
+                <td style="color:#395066;padding: 10px; font-style:italic;" >{{ Producto.Municipio }}</td>
+              </tr>
+              <tr>
+                <td style="color:#395066; padding: 10px;">Dirección:</td>
+                <td style="color:#395066;padding: 10px; font-style:italic;" >{{ Producto.Direccion }}</td>
+              </tr>
+              <tr>
+                <table width="100%" cellpadding="5" cellspacing="5">
+                  <tr>
+                    <td style="color:#395066;padding: 10px; font-weight: bold;">Características:</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px; line-height:19px;">{{ Producto.Descripcion }}</td>
+                  </tr>
+                  <form id="califForm" name="califForm" action="{% url 'detail' Producto.id %}" method="post">
+                  <input type="hidden" name="calificacion" id="calificacion" value={{ valorCalificacion }}>
+                  {% csrf_token %}
+                  <tr>
+                    {% if Producto.Calificable == 1 %}
+                    <td style="color:#395066;padding-top: 28px; padding-bottom: 21px; padding-left: 10px; padding-right:5px;   font-weight: bold;">Formulario de Calificación</td>
+                  </tr>
+                  <tr>
+                    <td style="padding-bottom:34px; padding-left: 10px">
+                    <input id="Calificacion-id" name="Calificacion-id" class="rating" width="98" height="18" type="number" data-show-caption="false" min=0 max=5 step=1 data-size="sm" >
+                    </td>
+                    {% else %}
+                    <td>
+                    <div class="clear"></div>
+                    </td>
+                    {% endif %}
+                  </tr>
+                </table>
+              </tr>
+              <tr>
+                <table width="100%" border="0">
+                  <tr>
+                    <td><label style="color:#395066; padding: 10px; font-weight:bold;">Comentarios</label></td>
+                  </tr>
+                  <tr>
+                    <td><textarea name="comentario" cols="20" rows="10" maxlenght="1000">{{ calificacionExistente.comentario }}</textarea></td>
+                  </tr>
+                  <tr>
+                    <td><input class="btn-guardar" name="btn-guardar" type="Submit" value="Guardar comentario"></td>
+                  </tr>
+                </table>
+                </form>
+              </tr>
+            </table>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+
+      </div>
+
+      <!-- INICIA DESPLIEGUE DE COMENTARIOS -->
+      <div class="carrusel">
+        <h2>Comentarios</h2>
+        {% if not comentariosExistentes %}
+          <div class="block texto">
+            No hay comentarios registrados por el momento...
+          </div>
+        {% else %}
+          {% for comentarioExistente in comentariosExistentes %}
+          <div>
+                <div class="estrellas">
+                <input type="hidden" id="input-val{{ comentarioExistente.id }}" value="{{ comentarioExistente.calificacion_producto }}">
+                <input id="input-id{{ comentarioExistente.id }}" type="number" class="rating" min=0 max=5 step=1 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                <script type="text/javascript">
+                    $('#input-id{{ comentarioExistente.id }}').rating('update', $('#input-val{{ comentarioExistente.id }}').val());
+                </script>
+                </div>
+                <div class="fecha">{{ comentarioExistente.fecha }}</div>
+                <div class="usuario"> Escrito por Usuario: <span class="name"> {{comentarioExistente.users.Nombre}} {{comentarioExistente.users.Apellido_p}} {{comentarioExistente.users.Apellido_m}}</span></div>
+                <div class="block-texto">{{ comentarioExistente.comentario }}<br><br></div>
+          </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <!-- TERMINA DESPLIEGUE DE COMENTARIOS -->
+
+      <!--Inicio carrusel PRODUCTOS RELACIONADOS-->
+      <div class="carrusel">
+        <section class="slider">
+          <div class="ico-productos">
+            <h2>Productos relacionados</h2>
+          </div>
+          <div class="flexslider carousel">
+            <ul class="slides">
+              {% for Product in latest_productos_list %}
+                          <li class="bg-col"> 
+            {% with 'image/carrusel/'|add:Product.ref_imagen as carrusel_imagen %}
+            <img src="{% static carrusel_imagen %}">
+            {% endwith %}
+            <div class="datos">
+                  <div class="nombre">{{ Product.Nombre }}</div>
+                  <div class="categoria">Categoria:</br><span class="detalle-categ">{{ Product.Categoria }}</span></div> 
+                  {% if Product.Calificable == 1 %}                 
+                  <div class="estrellas">
+                  <input type="hidden" name="calificacion{{ Product.id }}" id="calificacion{{ Product.id }}" value={{ Product.ref_calificacion }}>
+                  <input id="input1-id{{ Product.id }}" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" readonly="true" data-show-caption="false" data-show-clear="false">
+                  <script type="text/javascript">
+                      $('#input1-id{{ Product.id }}').rating('update', $('#calificacion{{ Product.id }}').val());
+                  </script>
+                  </div>
+                  {% else %}
+                  <div class="clear"></div>
+                  {% endif %}
+                  <div class="boton">
+                    <a href="{% url 'detail' Product.id %}">
+                    <input class="btn-detalle" name="" type="button" value="ver detalle">
+                    </a>
+                  </div>
+            </div>
+            </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--Fin carrusel--> 
+
+      <div id="footer">
+        <span class="derechos"> © Copyright 2016. Xti| Aviso Legal | Aviso de Privacidad</span>
+      </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+
+    $('#Calificacion-id').val($('#calificacion').val());
+    $('#Calificacion-id').on('rating.change', function(event, value, caption) {
+        $('#calificacion').val(value);
+        $('#califForm').submit();
+    });
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/static/js/jquery-1.9.1.min.js">\x3C/script>')</script>
+<!-- FlexSlider -->
+<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 4,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</html>
