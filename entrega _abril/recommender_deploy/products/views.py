@@ -52,9 +52,9 @@ import re
 def recomendaciones_xti(usuario):
     #Se generan las lista que se van a presentar en el index
     
-    nombre_usuario = str(usuario.Nombre).lower().capitalize() +  " " + str(usuario.Apellido_p).lower().capitalize()
-    ciudad_usuario = str(usuario.Ciudad).lower().capitalize()
-    contacto_usuario = str(usuario.Contacto).lower()
+    nombre_usuario = usuario.Nombre.encode("utf-8").lower().capitalize() +  " " + usuario.Apellido_p.encode("utf-8").lower().capitalize()
+    ciudad_usuario = usuario.Ciudad.encode("utf-8").lower().capitalize()
+    contacto_usuario = usuario.Contacto.encode("utf-8").lower()
     listas_productos = []
 
      # Carrusel de productos que te han gustado
@@ -130,12 +130,10 @@ def index(request):
     #Se generan las lista que se van a generar en el index
     usuario_activo = request.user
     usuario = Users.objects.get(pk=usuario_activo.id)
-    nombre_usuario = str(usuario.Nombre).lower().capitalize() +  " " + str(usuario.Apellido_p).lower().capitalize()
-    ciudad_usuario = str(usuario.Ciudad).lower().capitalize()
-    contacto_usuario = str(usuario.Contacto).lower()
-    print "contacto_usuario: ", contacto_usuario
-    print "id_usuario: ", str(usuario_activo.id)
-
+    nombre_usuario = usuario.Nombre.encode("utf-8").lower().capitalize() +  " " + usuario.Apellido_p.encode("utf-8").lower().capitalize()
+    ciudad_usuario = usuario.Ciudad.encode("utf-8").lower().capitalize()
+    contacto_usuario = usuario.Contacto.encode("utf-8").lower()
+    
 
     
     
@@ -184,10 +182,10 @@ def index_busqueda(request):
     #Se generan las lista que se van a generar en el index
     usuario_activo = request.user
     usuario = Users.objects.get(pk=usuario_activo.id)
-    nombre_usuario = str(usuario.Nombre).lower().capitalize() +  " " + str(usuario.Apellido_p).lower().capitalize()
-    ciudad_usuario = str(usuario.Ciudad).lower().capitalize()
-    contacto_usuario = str(usuario.Contacto).lower()
-
+    nombre_usuario = usuario.Nombre.encode("utf-8").lower().capitalize() +  " " + usuario.Apellido_p.encode("utf-8").lower().capitalize()
+    ciudad_usuario = usuario.Ciudad.encode("utf-8").lower().capitalize()
+    contacto_usuario = usuario.Contacto.encode("utf-8").lower()
+    
     
 
     
@@ -246,9 +244,9 @@ def detail(request, product_id):
     valorCalificacion = 0
     usuario_activo = request.user
     usuario = Users.objects.get(pk=usuario_activo.id)
-    nombre_usuario = str(usuario.Nombre).lower().capitalize() +  " " + str(usuario.Apellido_p).lower().capitalize()
-    ciudad_usuario = str(usuario.Ciudad).lower().capitalize()
-    contacto_usuario = str(usuario.Contacto).lower()
+    nombre_usuario = usuario.Nombre.encode("utf-8").lower().capitalize() +  " " + usuario.Apellido_p.encode("utf-8").lower().capitalize()
+    ciudad_usuario = usuario.Ciudad.encode("utf-8").lower().capitalize()
+    contacto_usuario = usuario.Contacto.encode("utf-8").lower()
     productos_similares = recomendaciones_contenido.k_vecinos_productos(product_id, 6)
     #Busca el producto seleccionado
     Producto = get_object_or_404(Product, pk=product_id)
