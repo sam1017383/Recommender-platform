@@ -1,0 +1,113 @@
+@relation crimepredict
+
+@attribute state numeric
+@attribute county numeric
+@attribute community numeric
+@attribute communityname string
+@attribute 
+@attribute 
+@attribute 
+@attribute 
+@attribute 
+@attribute 
+@attribute 
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute  numeric
+@attribute PolicCars numeric
+@attribute PolicOperBudg numeric
+@attribute LemasPctPolicOnPatr numeric
+@attribute LemasGangUnitDeploy numeric
+@attribute LemasPctOfficDrugUn numeric
+@attribute PolicBudgPerPop numeric
+@attribute ViolentCrimesPerPop numeric
