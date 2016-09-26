@@ -1,0 +1,558 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Pro",
+				"Product_extras"
+			],
+			[
+				"P",
+				"Product_extras"
+			],
+			[
+				"Pr",
+				"Product"
+			],
+			[
+				"prod",
+				"producto"
+			],
+			[
+				"N",
+				"None"
+			],
+			[
+				"fecha",
+				"fechaActual"
+			],
+			[
+				"F",
+				"Fecha_calculo"
+			],
+			[
+				"pro",
+				"productoExtra"
+			],
+			[
+				"ex",
+				"extras_producto"
+			],
+			[
+				"califica",
+				"calificacion_promedio"
+			],
+			[
+				"produc",
+				"productoExtra"
+			],
+			[
+				"Produ",
+				"Product_extras"
+			],
+			[
+				"productoE",
+				"productoEvaluado"
+			],
+			[
+				"prod_",
+				"Product_extras"
+			],
+			[
+				"ca",
+				"Calificacion_promedio"
+			],
+			[
+				"D",
+				"DoesNotExist"
+			],
+			[
+				"califi",
+				"calificacion_promedio"
+			],
+			[
+				"calificacionE",
+				"calificacionesExistentes"
+			],
+			[
+				"la",
+				"latest_productos_list"
+			],
+			[
+				"product",
+				"producto"
+			],
+			[
+				"usu",
+				"usuariox"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"come",
+				"comentariosExistentes"
+			],
+			[
+				"De",
+				"Descripcion"
+			],
+			[
+				"Ca",
+				"Calificable"
+			],
+			[
+				"coment",
+				"comentario"
+			],
+			[
+				"us",
+				"usuariox"
+			],
+			[
+				"a",
+				"apellido_p"
+			],
+			[
+				"au",
+				"authent"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"cal",
+				"calificacionExistente"
+			],
+			[
+				"calif",
+				"calificacionExistente"
+			],
+			[
+				"da",
+				"django"
+			],
+			[
+				"v",
+				"valorCalificacion"
+			],
+			[
+				"cali",
+				"calificacion"
+			],
+			[
+				"calific",
+				"Calificacion-id"
+			],
+			[
+				"U",
+				"UsuarioActual"
+			],
+			[
+				"E",
+				"Estado"
+			],
+			[
+				"A",
+				"Alias"
+			],
+			[
+				"C",
+				"Colonia"
+			],
+			[
+				"L",
+				"Latitud"
+			],
+			[
+				"S",
+				"self"
+			],
+			[
+				"s",
+				"self"
+			],
+			[
+				"prue",
+				"pruebax"
+			],
+			[
+				"accou",
+				"account_id"
+			],
+			[
+				"model",
+				"models"
+			],
+			[
+				"prua",
+				"PruebaUsuarios"
+			],
+			[
+				"url",
+				"urlpatterns"
+			],
+			[
+				"b",
+				"BASE_DIR"
+			],
+			[
+				"H",
+				"Http404"
+			],
+			[
+				"p",
+				"pub_date"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "access/models.py",
+			"settings":
+			{
+				"buffer_size": 630,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/carlos/www/recommender"
+	],
+	"file_history":
+	[
+		"/home/carlos/www/recommender/products/recomendaciones_conocimiento.py",
+		"/home/carlos/www/recommender/recommender/wsgi.py",
+		"/home/carlos/www/recommender/recommender/settings.py",
+		"/home/carlos/www/recommender/recommender/urls.py",
+		"/home/carlos/www/recommender/access/tests.py",
+		"/home/carlos/www/recommender/access/views.py",
+		"/home/carlos/www/recommender/data/views.py",
+		"/home/carlos/www/recommender/products/views.py",
+		"/home/carlos/www/recommender/products/views___.py",
+		"/home/carlos/www/recommender/access/urls.py",
+		"/home/carlos/www/recommender/products/urls.py",
+		"/home/carlos/www/recommender/data/urls.py",
+		"/home/carlos/www/recommender/data/tests.py",
+		"/home/carlos/www/recommender/products/tests.py",
+		"/home/carlos/www/recommender/products/models.py",
+		"/home/carlos/www/recommender/access/models.py",
+		"/home/carlos/www/recommender/data/models.py",
+		"/home/carlos/www/recommender/access/apps.py",
+		"/home/carlos/www/recommender/data/apps.py",
+		"/home/carlos/www/recommender/products/apps.py",
+		"/home/carlos/www/recommender/access/admin.py",
+		"/home/carlos/www/recommender/data/admin.py",
+		"/home/carlos/www/recommender/products/admin.py",
+		"/home/carlos/www/recommender/access/__init__.py",
+		"/home/carlos/www/recommender/data/__init__.py",
+		"/home/carlos/www/recommender/recommender/__init__.py",
+		"/home/carlos/www/recommender/products/__init__.py",
+		"/home/carlos/www/recommender/templates/products/detail.html",
+		"/home/carlos/www/recommender/static/css/estilos_go.css",
+		"/home/carlos/www/recommender/templates/products/index.html",
+		"/home/carlos/recommender_10032016.sql",
+		"/home/carlos/recommender/data/models.py",
+		"/home/carlos/recommender/data/views.py",
+		"/home/carlos/recommender/products/views.py",
+		"/home/carlos/recommender/products/models.py",
+		"/home/carlos/recommender/templates/products/detail.html",
+		"/home/carlos/recommender/recommender/settings.py",
+		"/home/carlos/recommender/templates/products/index.html",
+		"/home/carlos/recommender/static/css/estilos_go.css",
+		"/home/carlos/recommender/static_cdn/css/estilos_go.css",
+		"/home/carlos/recommender/static_cdn/css/demo.css",
+		"/home/carlos/Descargas/Recommender-platform-master/Demos/recommender/products/models.py",
+		"/home/carlos/Escritorio/recommender/products/models.py",
+		"/home/carlos/recommender/products/views___.py",
+		"/home/carlos/recommender/access/views.py",
+		"/home/carlos/Descargas/Recursos mensajes/estilos_mensajes.css",
+		"/home/carlos/recommender/templates/access/login.html",
+		"/home/carlos/Descargas/Recursos mensajes/mensajes.html",
+		"/home/carlos/recommender/recommender/urls.py",
+		"/home/carlos/recommender/products/urls.py",
+		"/home/carlos/recommender/recommender/views.py",
+		"/home/carlos/recommender/comentarios.txt",
+		"/home/carlos/recommender/sql/tablas_restructuradas.sql",
+		"/home/carlos/recommender/sql/recolimpias.sql",
+		"/home/carlos/sql/product.sql",
+		"/home/carlos/sql/cargar.sql",
+		"/home/carlos/recomendaciones/sql/db_recomendaciones.sql",
+		"/home/carlos/recommender/sql/cargar.sql",
+		"/home/carlos/recommender/data/urls.py",
+		"/home/carlos/recomendaciones/recomendaciones/urls.py",
+		"/home/carlos/recommender/products/recomendaciones_conocimiento.py",
+		"/home/carlos/recomendaciones/recomendaciones/settings.py",
+		"/home/carlos/recomendaciones/pruebax/views.py",
+		"/home/carlos/recomendaciones/pruebax/models.py",
+		"/home/carlos/recommender/access/urls.py",
+		"/home/carlos/recomendaciones/xti/views.py",
+		"/home/carlos/recomendaciones/xti/models.py",
+		"/home/carlos/authent/drinker/apps.py",
+		"/home/carlos/authent/drinker/admin.py",
+		"/home/carlos/authent/drinker/urls.py",
+		"/home/carlos/authent/drinker/models.py",
+		"/home/carlos/authent/drinker/views.py",
+		"/home/carlos/authent/authent/settings.py",
+		"/home/carlos/authent/templates/drinker/index.html",
+		"/home/carlos/recomendaciones/respaldo04FEB2016.sql",
+		"/home/carlos/authent/sql/usuariosx.sql",
+		"/home/carlos/authent/authent/urls.py",
+		"/home/carlos/authent/drinker/forms.py",
+		"/home/carlos/authent/drinker/home.html",
+		"/home/carlos/recomendaciones/templates/xti/login.html",
+		"/home/carlos/xtip/xtip/settings.py",
+		"/home/carlos/xtip/xti/views.py",
+		"/home/carlos/xtip/xti/models.py",
+		"/home/carlos/data/data/settings.py",
+		"/home/carlos/recomendaciones/authen1/views.py",
+		"/home/carlos/recomendaciones/authen1/urls.py",
+		"/home/carlos/recomendaciones/authen1/models.py",
+		"/home/carlos/recomendaciones/authen1/admin.py",
+		"/home/carlos/recomendaciones/templates/authen1/login.html",
+		"/home/carlos/recomendaciones/static/js/star-rating.js",
+		"/home/carlos/recomendaciones/templates/pruebax/detail.html",
+		"/home/carlos/recomendaciones/templates/pruebax/index.html",
+		"/home/carlos/recomendaciones/static/css/estilos_go.css",
+		"/home/carlos/recomendaciones (copia)/templates/pruebax/index.html",
+		"/home/carlos/recomendaciones/templates/prueba/index.html",
+		"/home/carlos/recomendaciones/prueba/models.py",
+		"/home/carlos/recomendaciones/pruebax/views__.py",
+		"/home/carlos/recomendaciones/prueba/views.py",
+		"/home/carlos/recomendaciones/prueba/urls.py",
+		"/home/carlos/infotec/productos/models.py",
+		"/var/www/html/mysite/books/models.py",
+		"/var/www/html/mysite/blog/models.py",
+		"/var/www/html/mysite/polls/models.py",
+		"/home/carlos/recomendaciones__/productos/models.py",
+		"/home/carlos/recomendaciones/pruebax/urls.py",
+		"/home/carlos/recomendaciones/static/css/flexslider.css",
+		"/usr/local/lib/python2.7/dist-packages/Django-1.9.1-py2.7.egg/django/__main__.py",
+		"/usr/local/lib/python2.7/dist-packages/Django-1.9.1-py2.7.egg/django/__init__.py",
+		"/home/carlos/recomendaciones/xti/urls.py",
+		"/home/carlos/recomendaciones/templates/pruebax/detalle.html",
+		"/home/carlos/xtip/xti/templates/xti/index.html",
+		"/home/carlos/recomendaciones/templates/xti/index.html",
+		"/home/carlos/xtip/xti/templates/xti/login.html",
+		"/home/carlos/xtip/xti/templates/base.html",
+		"/home/carlos/xtip/xti/urls.py",
+		"/home/carlos/recomendaciones/static/js/star-rating_locale_es.js",
+		"/home/carlos/recomendaciones/templates/pruebax/catalogo.html",
+		"/home/carlos/recomendaciones/pruebax/recomendaciones_conocimiento.py",
+		"/media/carlos/76E6-7AFC/Recomendaciones/demo1_django_recomendaciones/recomendador/views.py",
+		"/media/carlos/76E6-7AFC/Recomendaciones/demo1_django_recomendaciones/recomendador/models.py",
+		"/home/carlos/recomendaciones__/recomendaciones/urls.py",
+		"/home/carlos/recomendaciones__/recomendaciones/settings.py",
+		"/home/carlos/recomendaciones__/productos/views.py",
+		"/home/carlos/recomendaciones__/productos/urls.py",
+		"/home/carlos/recomendaciones/pruebad/models.py",
+		"/home/carlos/recomendaciones/pruebac/models.py",
+		"/home/carlos/recomendaciones/pruebab/models.py",
+		"/home/carlos/Descargas/Recommender-platform-master/Demos/demo1_django_recomendaciones/recomendador/models.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"User",
+			"ico",
+			"input-id",
+			"15",
+			"Product",
+			"Categoria",
+			"'ŔIO TUXPAN 1'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Productosx",
+			"categoria"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "access/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "recommender.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

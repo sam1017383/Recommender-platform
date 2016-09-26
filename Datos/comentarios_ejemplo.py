@@ -126,21 +126,21 @@ cnx, cursor = start_mysql_conn(config)
 cursor.execute("use xti")
 
 # se colectan 1000 usuarios al azar
-cursor.execute("select * from users order by rand() limit 10")
+cursor.execute("select * from v_users order by rand() limit 1000")
 usuarios = cursor.fetchall()
 print "USUARIOS: _______"
 for each_row in usuarios:
 		print each_row
 
 # se colectan 1000 productos al azar
-cursor.execute("select * from product order by rand() limit 10")
+cursor.execute("select * from product order by rand() limit 1000")
 productos  = cursor.fetchall()
 print "PRODUCTOS: _______"
 for each_row in productos:
 		print each_row
 
 
-cargar_comentarios_azar(cursor, productos, usuarios, 3)
+cargar_comentarios_azar(cursor, productos, usuarios, 10)
 
 
 

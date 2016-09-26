@@ -156,6 +156,29 @@ def copy_auth_user_local2cloud(cursor_local, cursor_cloud, id_min, id_max):
 
 
 
+def crea_tabla_config(table_name, column_list, type_list):
+	'load a list of dictionaries containing data from csv file to a table'
+
+	#Al crear la tabla, el campo con nombre id_xxx se asigna como entero y llave primaria
+	#el resto de campos se asignan como cadena
+	stmt = "CREATE TABLE " + table_name + " ( id int, "
+	for each_field in range(0, len(column_list)):
+		stmt += column_list[each_field] + " " + type_list[each_field] + ", "
+	
+	stmt += 'PRIMARY KEY(id))'
+	print "Sentencia para creacion de tabla: ", stmt
+	cursor_cloud.execute(stmt)
+	cursor_cloud.execute("show tables")
+	print "Tablas en la base de datos: ", cursor_cloud.fetchall()
+	cursor_cloud.execute("describe " + table_name)
+	print "descripcion de la tabla " + table_name + ": ", cursor_cloud.fetchall()
+
+	
+	
+	# Guarda de persistentemente
+	# cnx.commit()
+
+
 
 	
 	#cursor.execute("DROP TABLE " + table_name)''
@@ -164,7 +187,20 @@ def copy_auth_user_local2cloud(cursor_local, cursor_cloud, id_min, id_max):
 	
 	
 
+def cargar_recomendadores_config(tabla, title_list, algorithm_list, longitud_max_list, param_list):
+	print "imprimiendo consulta:"
+	for cada_registro in range(0,len(title_list)):
+		
+		titulo = title_list[cada_registro]
+		algoritmo = algorithm_list[cada_registro]
+		long_max = longitud_max_list[cada_registro]
+		param = param_list[cada_registro]
 
+		fields = "titulo_interfaz, algoritmo_recomendador, longitud_max, param"
+		values = "'"+titulo+"','"+algoritmo+"','"+long_max+"','"+param+"'"
+		stmt_insert = "INSERT INTO "+tabla+" (" + fields + ") VALUES (" + values + ")"
+		print "Sentencia insert: ", stmt_insert.encode("utf8")
+		cursor_cloud.execute(stmt_insert)
 
 
 def print_select(query):
@@ -188,6 +224,48 @@ cursor_cloud.execute("use xtidb")
 #copy_product_extras_local2cloud(cursor_local, cursor_cloud, 101, 7049)
 #copy_auth_user_local2cloud(cursor_local, cursor_cloud, 101, 226185)
 
+#crea_tabla_config("recomendaciones_config", ["titulo", "algoritmo", "long_max", "parametro"], ["varchar(255)", "varchar(255)", "int", "int"])
+
+titulos = ["Productos que has calificado", 
+			"Lo más comentado en tu ciudad",
+			"Recomendaciones a tu pefil",
+			"Nuevas alianzas X-ti",
+			"Usuarios como tú recomiendan",
+			"Productos similares a los que te han gustado",
+			"Usuarios con gustos similares les han gustado",
+			"Productos interesantes para tí",
+			]
+
+algos = ["calificados", 
+			"comentados_ciudad",
+			"reglas_perfil",
+			"nuevos",
+			"usuario_similar_demografico",
+			"productos_similares_gustado",
+			"filtrado_colaborativo",
+			"hibrido",
+			]
+longs = ["15", 
+			"10",
+			"15",
+			"10",
+			"15",
+			"10",
+			"15",
+			"10",
+			]
+params = ["0", 
+			"90",
+			"0",
+			"90",
+			"0",
+			"0",
+			"0",
+			"0",
+			]
+
+
+# cargar_recomendadores_config("listas_recomendadores_config", titulos, algos, longs, params)
 # Guarda de persistentemente
 cnx_cloud.commit()
 

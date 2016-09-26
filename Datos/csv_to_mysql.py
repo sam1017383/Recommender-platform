@@ -203,7 +203,7 @@ data_dict_comentarios = load_csv('comentarios.csv')
 
 #load_dicts_to_sql_table('usuarios', data_dict_usuarios)
 #load_dicts_to_sql_table('productos', data_dict_productos)
-load_dicts_to_sql_comments('comentarios', data_dict_comentarios)
+load_dicts_to_sql_comments('comentarios', data_di ct_comentarios)
 
 print "USUARIOS: _______"
 #print_select("select * from usuarios where id_usuario<10")
