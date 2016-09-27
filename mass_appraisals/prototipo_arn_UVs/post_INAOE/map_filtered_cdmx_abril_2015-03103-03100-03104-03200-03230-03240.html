@@ -1,0 +1,3719 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>UVs go4it</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+function initMap() {
+
+  var myLatLng = {lat: 19.37620830, lng: -99.1616527};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: myLatLng
+  });
+		
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,700,133</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $21,594 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 78.73 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 28.46 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 80 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 4000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 100 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 100 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 100 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow0 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker0 = new google.maps.Marker({position: {lat: 19.3715781  , lng: 99.1736151 }, map: map, title: 'Pin X!'}); 
+
+
+	marker0.addListener('click', function() {
+    infowindow0.open(map, marker0);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,143,145</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,270 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 70.08 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 23.61 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1820 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 50 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 650 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 600 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 850 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 850 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 850 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 850 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow1 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker1 = new google.maps.Marker({position: {lat: 19.391979  , lng: 99.165975 }, map: map, title: 'Pin X!'}); 
+
+
+	marker1.addListener('click', function() {
+    infowindow1.open(map, marker1);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,150,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $38,270 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 82.36 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 1236.36 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 100 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 100 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 100 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow2 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker2 = new google.maps.Marker({position: {lat: 19.388184  , lng: -99.169899 }, map: map, title: 'Pin X!'}); 
+
+
+	marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,486,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $24,951 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 59.54 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 15.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 630 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 430 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 170 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 170 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 170 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 170 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 170 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 170 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow3 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker3 = new google.maps.Marker({position: {lat: 19.37957  , lng: 99.163259 }, map: map, title: 'Pin X!'}); 
+
+
+	marker3.addListener('click', function() {
+    infowindow3.open(map, marker3);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,945,312</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,900 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 127.68 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 200.8 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3200 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 200 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 4000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 4000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 4000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 4000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow4 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker4 = new google.maps.Marker({position: {lat: 19.3750669  , lng: -99.1759419 }, map: map, title: 'Pin X!'}); 
+
+
+	marker4.addListener('click', function() {
+    infowindow4.open(map, marker4);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,576,918</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,395 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 125.97 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 317.2 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 2 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 80 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 350 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 4000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 4000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 4000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 4000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow5 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker5 = new google.maps.Marker({position: {lat: 19.3717141  , lng: -99.1656533 }, map: map, title: 'Pin X!'}); 
+
+
+	marker5.addListener('click', function() {
+    infowindow5.open(map, marker5);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,059,365</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $23,134 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 89.15 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 24.24 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 300 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 150 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 150 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 150 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 150 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 150 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 150 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow6 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker6 = new google.maps.Marker({position: {lat: 19.396244  , lng: 99.167851 }, map: map, title: 'Pin X!'}); 
+
+
+	marker6.addListener('click', function() {
+    infowindow6.open(map, marker6);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,590,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $35,550 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 72.88 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 890.35 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 745 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 30 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 30 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 30 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 30 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 30 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 30 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow7 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker7 = new google.maps.Marker({position: {lat: 19.379684  , lng: -99.162363 }, map: map, title: 'Pin X!'}); 
+
+
+	marker7.addListener('click', function() {
+    infowindow7.open(map, marker7);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,153,400</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,299 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 67.62 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 18.07 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow8 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker8 = new google.maps.Marker({position: {lat: 19.3797194  , lng: 99.1623722 }, map: map, title: 'Pin X!'}); 
+
+
+	marker8.addListener('click', function() {
+    infowindow8.open(map, marker8);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,729,593</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $27,613 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 158.28 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 131.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 5 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow9 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker9 = new google.maps.Marker({position: {lat: 19.387484  , lng: 99.164954 }, map: map, title: 'Pin X!'}); 
+
+
+	marker9.addListener('click', function() {
+    infowindow9.open(map, marker9);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 5,439,462</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,068 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 169.62 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 61.13 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 800 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1600 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 880 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 880 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 880 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 880 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow10 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker10 = new google.maps.Marker({position: {lat: 19.383661  , lng: 99.164233 }, map: map, title: 'Pin X!'}); 
+
+
+	marker10.addListener('click', function() {
+    infowindow10.open(map, marker10);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,540,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $35,770 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 71.07 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 890.35 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 745 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 30 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 30 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 30 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 30 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 30 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 30 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow11 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker11 = new google.maps.Marker({position: {lat: 19.379684  , lng: -99.162363 }, map: map, title: 'Pin X!'}); 
+
+
+	marker11.addListener('click', function() {
+    infowindow11.open(map, marker11);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 152,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $12,666 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 12.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 2.12 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 0 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow12 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker12 = new google.maps.Marker({position: {lat: 19.382118  , lng: 99.171348 }, map: map, title: 'Pin X!'}); 
+
+
+	marker12.addListener('click', function() {
+    infowindow12.open(map, marker12);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,436,924</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $33,076 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 74.42 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 27.16 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 99 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 250 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 20 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 250 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 20 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 20 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 20 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 20 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow13 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker13 = new google.maps.Marker({position: {lat: 19.3795961  , lng: -99.1625231 }, map: map, title: 'Pin X!'}); 
+
+
+	marker13.addListener('click', function() {
+    infowindow13.open(map, marker13);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,245,060</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $19,431 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 228.62 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 47.15 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow14 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker14 = new google.maps.Marker({position: {lat: 19.382076  , lng: 99.171314 }, map: map, title: 'Pin X!'}); 
+
+
+	marker14.addListener('click', function() {
+    infowindow14.open(map, marker14);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,427,818</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,974 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 122.45 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 47.49 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 250 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 800 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 800 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 300 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 300 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow15 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker15 = new google.maps.Marker({position: {lat: 19.397122  , lng: 99.161099 }, map: map, title: 'Pin X!'}); 
+
+
+	marker15.addListener('click', function() {
+    infowindow15.open(map, marker15);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 152,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $12,666 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 0.45 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 1.77 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 0 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow16 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker16 = new google.maps.Marker({position: {lat: 19.382118  , lng: 99.171348 }, map: map, title: 'Pin X!'}); 
+
+
+	marker16.addListener('click', function() {
+    infowindow16.open(map, marker16);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,975,865</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $31,074 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 68.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 17.88 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 3 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 750 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 4000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 700 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 700 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 700 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 700 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow17 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker17 = new google.maps.Marker({position: {lat: 19.3963321  , lng: 99.1696631 }, map: map, title: 'Pin X!'}); 
+
+
+	marker17.addListener('click', function() {
+    infowindow17.open(map, marker17);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 830,104</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $22,886 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 36.27 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 11.54 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 1 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 100 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow18 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker18 = new google.maps.Marker({position: {lat: 19.401944  , lng: 99.162543 }, map: map, title: 'Pin X!'}); 
+
+
+	marker18.addListener('click', function() {
+    infowindow18.open(map, marker18);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,232,866</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,210 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 114.6 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 34.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 2 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 50 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 460 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1300 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 460 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 460 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 460 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 460 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow19 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker19 = new google.maps.Marker({position: {lat: 19.366302  , lng: -99.16896 }, map: map, title: 'Pin X!'}); 
+
+
+	marker19.addListener('click', function() {
+    infowindow19.open(map, marker19);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,241,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,576 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 106.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 28.8 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 5 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1600 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 100 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 850 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 850 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 850 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 850 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow20 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker20 = new google.maps.Marker({position: {lat: 19.394616  , lng: 99.164229 }, map: map, title: 'Pin X!'}); 
+
+
+	marker20.addListener('click', function() {
+    infowindow20.open(map, marker20);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,743,162</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $33,150 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 82.75 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 21.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 400 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1200 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 4000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 4000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 4000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 4000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow21 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker21 = new google.maps.Marker({position: {lat: 19.3924944  , lng: -99.1673611 }, map: map, title: 'Pin X!'}); 
+
+
+	marker21.addListener('click', function() {
+    infowindow21.open(map, marker21);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,952,900</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,950 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 102.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 503.35 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 5 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 800 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 200 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 400 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 400 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow22 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker22 = new google.maps.Marker({position: {lat: 19.3922297  , lng: -99.1655844 }, map: map, title: 'Pin X!'}); 
+
+
+	marker22.addListener('click', function() {
+    infowindow22.open(map, marker22);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,538,966</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $24,600 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 103.21 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 300.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 99 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 200 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 400 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 4000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 4000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 4000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 4000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow23 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker23 = new google.maps.Marker({position: {lat: 19.3776388  , lng: -99.1743055 }, map: map, title: 'Pin X!'}); 
+
+
+	marker23.addListener('click', function() {
+    infowindow23.open(map, marker23);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,968,292</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $26,300 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 74.84 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 970.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 150 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 400 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 600 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 600 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 600 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 600 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow24 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker24 = new google.maps.Marker({position: {lat: 19.4005447  , lng: -99.1661169 }, map: map, title: 'Pin X!'}); 
+
+
+	marker24.addListener('click', function() {
+    infowindow24.open(map, marker24);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 5,141,820</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,400 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 181.05 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 497.81 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 800 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 200 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow25 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker25 = new google.maps.Marker({position: {lat: 19.3970791  , lng: -99.1610316 }, map: map, title: 'Pin X!'}); 
+
+
+	marker25.addListener('click', function() {
+    infowindow25.open(map, marker25);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,515,289</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $23,670 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 190.76 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 55.88 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1800 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 70 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1100 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 100 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 100 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 100 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow26 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker26 = new google.maps.Marker({position: {lat: 19.374648  , lng: 99.176395 }, map: map, title: 'Pin X!'}); 
+
+
+	marker26.addListener('click', function() {
+    infowindow26.open(map, marker26);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,282,560</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $35,680 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 92.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 22.52 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1200 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 350 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1200 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1200 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1200 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1200 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1200 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow27 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker27 = new google.maps.Marker({position: {lat: 19.3977806  , lng: 99.1633861 }, map: map, title: 'Pin X!'}); 
+
+
+	marker27.addListener('click', function() {
+    infowindow27.open(map, marker27);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,444,866</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,560 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 167.55 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 28.65 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 200 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow28 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker28 = new google.maps.Marker({position: {lat: 19.393907  , lng: 99.170223 }, map: map, title: 'Pin X!'}); 
+
+
+	marker28.addListener('click', function() {
+    infowindow28.open(map, marker28);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,928,128</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,404 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 96.32 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 31.37 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 1 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 80 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow29 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker29 = new google.maps.Marker({position: {lat: 19.385604  , lng: 99.161398 }, map: map, title: 'Pin X!'}); 
+
+
+	marker29.addListener('click', function() {
+    infowindow29.open(map, marker29);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,572,103</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $25,826 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 99.59 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 40.08 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 200 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 100 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 200 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 600 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 200 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 200 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 200 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 200 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow30 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker30 = new google.maps.Marker({position: {lat: 19.3916361  , lng: 99.1664111 }, map: map, title: 'Pin X!'}); 
+
+
+	marker30.addListener('click', function() {
+    infowindow30.open(map, marker30);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,790,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,840 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 100.2 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 413.7 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3240 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 350 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 350 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 350 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 350 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow31 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker31 = new google.maps.Marker({position: {lat: 19.3674222  , lng: -99.1740111 }, map: map, title: 'Pin X!'}); 
+
+
+	marker31.addListener('click', function() {
+    infowindow31.open(map, marker31);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,150,720</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,080 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 71.5 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 20.59 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 50 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow32 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker32 = new google.maps.Marker({position: {lat: 19.374001  , lng: 99.176921 }, map: map, title: 'Pin X!'}); 
+
+
+	marker32.addListener('click', function() {
+    infowindow32.open(map, marker32);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,770,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $27,700 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 136.14 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 1746.55 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 620 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 25 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 240 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 800 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 240 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 240 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 240 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 240 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow33 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker33 = new google.maps.Marker({position: {lat: 19.391127  , lng: -99.161898 }, map: map, title: 'Pin X!'}); 
+
+
+	marker33.addListener('click', function() {
+    infowindow33.open(map, marker33);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,398,354</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,266 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 69.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 29.99 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 7 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 800 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 50 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow34 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker34 = new google.maps.Marker({position: {lat: 19.390729  , lng: 99.165441 }, map: map, title: 'Pin X!'}); 
+
+
+	marker34.addListener('click', function() {
+    infowindow34.open(map, marker34);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,903,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,000 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 67.96 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 13.01 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 950 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 30 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 560 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 850 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 560 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 560 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 560 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 560 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow35 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker35 = new google.maps.Marker({position: {lat: 19.377725  , lng: 99.169409 }, map: map, title: 'Pin X!'}); 
+
+
+	marker35.addListener('click', function() {
+    infowindow35.open(map, marker35);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,396,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,878 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 106.74 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 45.8 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 630 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 430 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 170 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 170 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 170 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 170 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 170 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 170 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow36 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker36 = new google.maps.Marker({position: {lat: 19.365371  , lng: 99.175674 }, map: map, title: 'Pin X!'}); 
+
+
+	marker36.addListener('click', function() {
+    infowindow36.open(map, marker36);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,351,444</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,815 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 91.92 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 29.81 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3104 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1800 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 400 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 50 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 50 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 50 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 50 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow37 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker37 = new google.maps.Marker({position: {lat: 19.367191  , lng: 99.172594 }, map: map, title: 'Pin X!'}); 
+
+
+	marker37.addListener('click', function() {
+    infowindow37.open(map, marker37);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,371,184</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,161 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 104.82 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 31.48 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 200 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 100 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 300 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 300 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 300 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow38 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker38 = new google.maps.Marker({position: {lat: 19.401026  , lng: 99.162827 }, map: map, title: 'Pin X!'}); 
+
+
+	marker38.addListener('click', function() {
+    infowindow38.open(map, marker38);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,441,321</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,387 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 86.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 45.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 250 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1250 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 800 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 800 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 800 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 800 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow39 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker39 = new google.maps.Marker({position: {lat: 19.388605  , lng: 99.16674 }, map: map, title: 'Pin X!'}); 
+
+
+	marker39.addListener('click', function() {
+    infowindow39.open(map, marker39);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,877,703</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $31,070 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 92.62 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 1932.4 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3104 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 3 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 96 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 120 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 900 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 4000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 4000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 4000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 4000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow40 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker40 = new google.maps.Marker({position: {lat: 19.3691583  , lng: -99.1704027 }, map: map, title: 'Pin X!'}); 
+
+
+	marker40.addListener('click', function() {
+    infowindow40.open(map, marker40);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,672,450</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $39,100 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 119.5 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 534.24 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 96 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 800 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 900 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 4000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 4000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 4000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 4000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow41 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker41 = new google.maps.Marker({position: {lat: 19.3831638  , lng: -99.1643305 }, map: map, title: 'Pin X!'}); 
+
+
+	marker41.addListener('click', function() {
+    infowindow41.open(map, marker41);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,652,640</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,587 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 123.4 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 33.52 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 80 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 900 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 200 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 200 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 200 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 200 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 200 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 200 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow42 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker42 = new google.maps.Marker({position: {lat: 19.363624  , lng: 99.170877 }, map: map, title: 'Pin X!'}); 
+
+
+	marker42.addListener('click', function() {
+    infowindow42.open(map, marker42);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,808,114</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $31,867 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 119.5 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 48.54 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 100 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 550 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 250 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 900 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 900 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 900 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 900 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow43 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker43 = new google.maps.Marker({position: {lat: 19.383205  , lng: 99.164182 }, map: map, title: 'Pin X!'}); 
+
+
+	marker43.addListener('click', function() {
+    infowindow43.open(map, marker43);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,610,252</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $27,128 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 170.12 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 59.62 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 80 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow44 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker44 = new google.maps.Marker({position: {lat: 19.383736  , lng: 99.164221 }, map: map, title: 'Pin X!'}); 
+
+
+	marker44.addListener('click', function() {
+    infowindow44.open(map, marker44);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,790,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,840 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 100.2 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 413.7 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3240 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 350 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 350 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 350 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 350 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow45 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker45 = new google.maps.Marker({position: {lat: 19.3674222  , lng: -99.1740111 }, map: map, title: 'Pin X!'}); 
+
+
+	marker45.addListener('click', function() {
+    infowindow45.open(map, marker45);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 7,405,200</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,551 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 242.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 95.66 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3 </h2>' +
+      '<h3> NUMERO_BANIOS: 4 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 900 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 80 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 350 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 100 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 100 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 100 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow46 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker46 = new google.maps.Marker({position: {lat: 19.38213  , lng: 99.17205 }, map: map, title: 'Pin X!'}); 
+
+
+	marker46.addListener('click', function() {
+    infowindow46.open(map, marker46);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,789,431</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,894 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 100.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 25.22 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3240 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 145 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 260 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 350 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 350 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 350 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 350 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow47 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker47 = new google.maps.Marker({position: {lat: 19.367403  , lng: 99.173958 }, map: map, title: 'Pin X!'}); 
+
+
+	marker47.addListener('click', function() {
+    infowindow47.open(map, marker47);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,498,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $34,290 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 72.85 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 28.49 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 240 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 30 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 30 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 30 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 30 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 30 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 30 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow48 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker48 = new google.maps.Marker({position: {lat: 19.379679  , lng: 99.162364 }, map: map, title: 'Pin X!'}); 
+
+
+	marker48.addListener('click', function() {
+    infowindow48.open(map, marker48);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,412,695</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $34,531 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 69.87 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 17.81 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 232 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 100 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 17 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 20 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 17 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 17 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 17 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 17 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow49 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker49 = new google.maps.Marker({position: {lat: 19.37973  , lng: 99.162406 }, map: map, title: 'Pin X!'}); 
+
+
+	marker49.addListener('click', function() {
+    infowindow49.open(map, marker49);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,120,116</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,567 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 144.06 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 70.85 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 80 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow50 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker50 = new google.maps.Marker({position: {lat: 19.384297  , lng: 99.161537 }, map: map, title: 'Pin X!'}); 
+
+
+	marker50.addListener('click', function() {
+    infowindow50.open(map, marker50);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,057,538</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,594 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 51.35 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 18.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 720 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 100 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 480 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 290 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 480 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 480 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 480 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 480 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow51 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker51 = new google.maps.Marker({position: {lat: 19.3941139  , lng: 99.1566722 }, map: map, title: 'Pin X!'}); 
+
+
+	marker51.addListener('click', function() {
+    infowindow51.open(map, marker51);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,739,088</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,727 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 125.78 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 42.14 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 800 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 150 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 300 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 300 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 300 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow52 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker52 = new google.maps.Marker({position: {lat: 19.399347  , lng: 99.163189 }, map: map, title: 'Pin X!'}); 
+
+
+	marker52.addListener('click', function() {
+    infowindow52.open(map, marker52);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,860,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $25,710 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 150.2 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 43.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 630 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 50 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 800 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 65 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 65 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 65 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 65 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow53 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker53 = new google.maps.Marker({position: {lat: 19.385447  , lng: -99.160337 }, map: map, title: 'Pin X!'}); 
+
+
+	marker53.addListener('click', function() {
+    infowindow53.open(map, marker53);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,160,429</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $25,210 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 44.84 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 16.6 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3104 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 1 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow54 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker54 = new google.maps.Marker({position: {lat: 19.370932  , lng: 99.166193 }, map: map, title: 'Pin X!'}); 
+
+
+	marker54.addListener('click', function() {
+    infowindow54.open(map, marker54);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,759,054</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $24,363 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 72.2 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 30.45 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow55 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker55 = new google.maps.Marker({position: {lat: 19.3633583  , lng: 99.1716806 }, map: map, title: 'Pin X!'}); 
+
+
+	marker55.addListener('click', function() {
+    infowindow55.open(map, marker55);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,150,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,663 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 96.32 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 31.37 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 1 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 5 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 800 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 800 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 800 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 800 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 800 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 800 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow56 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker56 = new google.maps.Marker({position: {lat: 19.385575  , lng: 99.1613639 }, map: map, title: 'Pin X!'}); 
+
+
+	marker56.addListener('click', function() {
+    infowindow56.open(map, marker56);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,180,522</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $26,321 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 44.85 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 16.29 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 1 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow57 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker57 = new google.maps.Marker({position: {lat: 19.370916  , lng: 99.166099 }, map: map, title: 'Pin X!'}); 
+
+
+	marker57.addListener('click', function() {
+    infowindow57.open(map, marker57);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,589,108</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,223 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 111.38 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 40.24 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow58 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker58 = new google.maps.Marker({position: {lat: 19.386955  , lng: 99.163444 }, map: map, title: 'Pin X!'}); 
+
+
+	marker58.addListener('click', function() {
+    infowindow58.open(map, marker58);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,691,861</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $38,155 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 68.55 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 25.39 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 5 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow59 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker59 = new google.maps.Marker({position: {lat: 19.390249  , lng: 99.165093 }, map: map, title: 'Pin X!'}); 
+
+
+	marker59.addListener('click', function() {
+    infowindow59.open(map, marker59);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,614,694</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $24,293 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 107.63 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 38.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow60 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker60 = new google.maps.Marker({position: {lat: 19.3948389  , lng: 99.1624972 }, map: map, title: 'Pin X!'}); 
+
+
+	marker60.addListener('click', function() {
+    infowindow60.open(map, marker60);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 7,352,999</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,149 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 203.32 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 104.36 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow61 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker61 = new google.maps.Marker({position: {lat: 19.387842  , lng: 99.165577 }, map: map, title: 'Pin X!'}); 
+
+
+	marker61.addListener('click', function() {
+    infowindow61.open(map, marker61);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 7,870,500</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $26,500 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 297.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 618.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 4000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 200 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 4000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 4000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 4000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 4000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow62 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker62 = new google.maps.Marker({position: {lat: 19.3803416  , lng: -99.1727416 }, map: map, title: 'Pin X!'}); 
+
+
+	marker62.addListener('click', function() {
+    infowindow62.open(map, marker62);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,089,275</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,769 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 95.2 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 27.29 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3240 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 90 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 1000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow63 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker63 = new google.maps.Marker({position: {lat: 19.362779  , lng: 99.174373 }, map: map, title: 'Pin X!'}); 
+
+
+	marker63.addListener('click', function() {
+    infowindow63.open(map, marker63);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 5,064,556</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $34,703 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 145.94 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 65.14 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 2 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 400 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 400 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 400 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 400 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 400 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow64 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker64 = new google.maps.Marker({position: {lat: 19.3869611  , lng: 99.1635028 }, map: map, title: 'Pin X!'}); 
+
+
+	marker64.addListener('click', function() {
+    infowindow64.open(map, marker64);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,821,004</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $33,185 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 84.97 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 51.28 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 200 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow65 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker65 = new google.maps.Marker({position: {lat: 19.385345  , lng: 99.166155 }, map: map, title: 'Pin X!'}); 
+
+
+	marker65.addListener('click', function() {
+    infowindow65.open(map, marker65);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,560,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $33,670 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 76.17 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 890.35 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 745 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 30 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 30 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 30 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 30 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 30 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 30 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow66 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker66 = new google.maps.Marker({position: {lat: 19.379684  , lng: -99.162363 }, map: map, title: 'Pin X!'}); 
+
+
+	marker66.addListener('click', function() {
+    infowindow66.open(map, marker66);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,691,861</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $38,155 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 68.55 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 25.39 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 5 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow67 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker67 = new google.maps.Marker({position: {lat: 19.390249  , lng: 99.165093 }, map: map, title: 'Pin X!'}); 
+
+
+	marker67.addListener('click', function() {
+    infowindow67.open(map, marker67);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,573,505</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $21,103 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 74.56 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 23.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 401 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 300 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 197 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1871 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 197 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 197 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 197 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 197 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow68 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker68 = new google.maps.Marker({position: {lat: 19.374845  , lng: 99.175466 }, map: map, title: 'Pin X!'}); 
+
+
+	marker68.addListener('click', function() {
+    infowindow68.open(map, marker68);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,660,177</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,626 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 64.7 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 36.94 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1500 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 4000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow69 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker69 = new google.maps.Marker({position: {lat: 19.385335  , lng: 99.165233 }, map: map, title: 'Pin X!'}); 
+
+
+	marker69.addListener('click', function() {
+    infowindow69.open(map, marker69);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,214,058</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $31,849 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 132.31 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 47.97 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 5 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow70 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker70 = new google.maps.Marker({position: {lat: 19.388115  , lng: 99.169875 }, map: map, title: 'Pin X!'}); 
+
+
+	marker70.addListener('click', function() {
+    infowindow70.open(map, marker70);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,792,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $33,231 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 84.02 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 28.74 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 1 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 98 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 304 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 100 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 394 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 300 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 300 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow71 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker71 = new google.maps.Marker({position: {lat: 19.386936  , lng: 99.163435 }, map: map, title: 'Pin X!'}); 
+
+
+	marker71.addListener('click', function() {
+    infowindow71.open(map, marker71);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,390,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,170 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 145.5 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 392.03 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 5 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 300 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 800 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow72 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker72 = new google.maps.Marker({position: {lat: 19.3923167  , lng: -99.1696083 }, map: map, title: 'Pin X!'}); 
+
+
+	marker72.addListener('click', function() {
+    infowindow72.open(map, marker72);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,880,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $21,150 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 136.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 49.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 600 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 10 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 100 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 200 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 200 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 200 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 200 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow73 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker73 = new google.maps.Marker({position: {lat: 19.3729194  , lng: -99.1776944 }, map: map, title: 'Pin X!'}); 
+
+
+	marker73.addListener('click', function() {
+    infowindow73.open(map, marker73);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,398,354</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,266 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 69.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 29.99 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 3 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 7 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 800 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 50 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow74 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker74 = new google.maps.Marker({position: {lat: 19.390729  , lng: 99.165441 }, map: map, title: 'Pin X!'}); 
+
+
+	marker74.addListener('click', function() {
+    infowindow74.open(map, marker74);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,790,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,840 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 100.2 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 413.7 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3240 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 0 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 1 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 500 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 350 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 350 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 350 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 350 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow75 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker75 = new google.maps.Marker({position: {lat: 19.3674222  , lng: -99.1740111 }, map: map, title: 'Pin X!'}); 
+
+
+	marker75.addListener('click', function() {
+    infowindow75.open(map, marker75);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,524,059</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $34,192 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 132.31 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 47.97 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 5 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow76 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker76 = new google.maps.Marker({position: {lat: 19.388115  , lng: 99.169875 }, map: map, title: 'Pin X!'}); 
+
+
+	marker76.addListener('click', function() {
+    infowindow76.open(map, marker76);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 2,829,634</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $22,697 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 124.67 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 47.38 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 3 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 200 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 500 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow77 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker77 = new google.maps.Marker({position: {lat: 19.3788083  , lng: 99.1757611 }, map: map, title: 'Pin X!'}); 
+
+
+	marker77.addListener('click', function() {
+    infowindow77.open(map, marker77);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 4,281,192</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $35,091 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 122.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 29.01 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3103 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 300 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 200 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 450 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 450 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 450 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 450 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 450 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow78 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker78 = new google.maps.Marker({position: {lat: 19.3986306  , lng: 99.163 }, map: map, title: 'Pin X!'}); 
+
+
+	marker78.addListener('click', function() {
+    infowindow78.open(map, marker78);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 3,348,397</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $36,395 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 92.0 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 22.52 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 3100 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2 </h2>' +
+      '<h3> NUMERO_BANIOS: 2 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 1 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 5 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 6 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 95 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 300 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 200 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 450 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1100 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 450 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 450 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 450 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 450 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow79 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker79 = new google.maps.Marker({position: {lat: 19.3977139  , lng: 99.1634583 }, map: map, title: 'Pin X!'}); 
+
+
+	marker79.addListener('click', function() {
+    infowindow79.open(map, marker79);
+  });
+
+
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZh54ICKZAQiPQ_-_ECdaEtWx_pcecJrM&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
+
+		

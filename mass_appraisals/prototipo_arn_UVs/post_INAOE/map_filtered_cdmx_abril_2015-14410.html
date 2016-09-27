@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>UVs go4it</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+function initMap() {
+
+  var myLatLng = {lat: 19.37620830, lng: -99.1616527};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: myLatLng
+  });
+		
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,216,755</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $18,788 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 64.76 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 65.29 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 14410 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 0 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 5 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 99 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2700 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 250 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 130 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1200 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 100 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 100 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 100 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow0 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker0 = new google.maps.Marker({position: {lat: 19.285199  , lng: -99.183079 }, map: map, title: 'Pin X!'}); 
+
+
+	marker0.addListener('click', function() {
+    infowindow0.open(map, marker0);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 904,227</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $12,775 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 70.78 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 23.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 14410 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 0 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 4000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 2000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow1 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker1 = new google.maps.Marker({position: {lat: 19.2823361  , lng: 99.1845528 }, map: map, title: 'Pin X!'}); 
+
+
+	marker1.addListener('click', function() {
+    infowindow1.open(map, marker1);
+  });
+
+
+  	var contentString = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 1,412,910</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $15,658 </h2>' +
+      '<h2> SUPERFICIE PRIVATIVAS: 90.23 m2 </h2>' +
+      '<h2> SUPERFICIE TERRENO: 27.0 m2 </h2>' +
+      '<h2> CODIGO POSTAL: 14410 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1 </h2>' +
+      '<h3> NUMERO_BANIOS: 1 </h2>' +
+      '<h3> NUMERO_MEDIOS_BANOS: 1 </h2>' +
+      '<h3> ELEVADOR: 2 </h2>' +
+      '<h2> -----------:  </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 4 </h2>' +
+      '<h3> CVE_DENSIDAD_HABITACIONAL: 4 </h2>' +
+      '<h3> CVE_ESTADO_CONSERVACION: 4 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> INDICE_SATURACION_ZONA: 100 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000 m </h2>' +
+      '<h3> DISTANCIA_LOCALES_COMERCIALES: 850 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 850 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000 m </h2>' +
+      '<h3> DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_: 1000 m </h2>' +
+
+      
+      '</div>'+
+      '</div>';
+
+  	var infowindow2 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
+	var marker2 = new google.maps.Marker({position: {lat: 19.283396  , lng: 99.185595 }, map: map, title: 'Pin X!'}); 
+
+
+	marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+  });
+
+
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZh54ICKZAQiPQ_-_ECdaEtWx_pcecJrM&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
+
+		

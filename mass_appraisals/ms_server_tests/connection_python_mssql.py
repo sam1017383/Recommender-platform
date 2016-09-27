@@ -77,5 +77,11 @@ Select
 
 
 
+MuestraAvualuos (pequeña)
+ExtracAvaluo (grande)
+
+
+
+
 
 

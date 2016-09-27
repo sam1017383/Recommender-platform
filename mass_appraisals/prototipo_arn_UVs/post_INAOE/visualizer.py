@@ -14,82 +14,6 @@ import random
 
 
 
-# Cat.ClasesConstruccion  
-# 0 NO APLICA
-# 1 Mínima
-# 2 Económica
-# 3 Interés Social
-# 4 Media
-# 5 Semilujo
-# 6 Residencial
-# 7 Residencial Plus
-# 7 Residencial Plus +
-# 8 Única
-
-
-# Cat.NivelInfraestructura  
-# 1 No tiene alguno de los tres servicios básicos del nivel 2
-# 2 Cuenta con agua potable, drenaje y luz en la zona
-# 3 Cuenta con alumbrado público y vialidades terminadas (con banquetas) además de los servicios del nivel 2
-# 4 Cuenta con gas natural y vigilancia privada además de los servicios del nivel 3.
-
-
-
-# Cat.EstadoConservacion  
-# 0 NO APLICA
-# 1 RUINOSO
-# 2 MALO
-# 3 REGULAR
-# 4 BUENO
-# 5 MUY BUENO
-# 6 NUEVO
-# 7 RECIENTEMENTE REMODELADO
-
-
-
-# Cat.NivelSocioeconomico 
-# 0 No aplica
-# 1 E Más bajo
-# 2 D Bajo
-# 3 D+ Medio Bajo
-# 4 C Medio
-# 5 C+ Medio Alto
-# 6 A/B Alto
-
-
-# Cat.NivelEquipamiento 
-# 1 CUANDO EN LA ZONA EXISTAN DOS ELEMENTOS O MENOS DEL NIVEL 2.
-# 2 CUANDO LA ZONA CUENTE CON  IGLESIA, MERCADO O COMERCIOS, ESCUELAS Y PARQUES Y JARDINES.
-# 3 CUANDO LA ZONA TENGA LOS ELEMENTOS  DEL NIVEL 2 MÁS ACCESO O ESTACIÓN  DE TRANSPORTE PÚBLICO
-# 4 CUANDO EN LA ZONA SE ENCUENTREN LOS ELEMENTOS DEL NIVEL 3 MÁS HOSPITALES Y BANCOS, MÁS OTROS EQUIPAMIENTOS
-
-
-
-# Cat.DensidadHabitacional  
-# 0 No aplica
-# 1 Muy baja, 10 hab/ha una vivienda por lote de 1,000 m² 
-# 2 Baja, 50 hab/ha una vivienda por lote de 500 m² 
-# 3 Baja, 100 a 200 hab/ha una vivienda por lote de 250 m² 
-# 4 Media, 400 hab/ha una vivienda por lote de 125 m² 
-# 5 Alta, 800 hab/ha 
-
-
-# Cat.Regimen 
-# 1 PRIVADA
-# 2 CONDOMINAL
-# 3 COPROPIEDAD
-# 4 PÚBLICA
-
-# Cat.TipoInmueble  
-# 1 TERRENO
-# 2 CASA HABITACIÓN
-# 3 CASA EN CONDOMINIO
-# 4 DEPARTAMENTO EN CONDOMINIO
-# 5 OTRO
-
-
-
-
 
 
 
@@ -102,37 +26,37 @@ def list_formated_appraisal(appraisal_dict):
   used_fields = []
   for each_field in fields:
     if each_field.startswith("IM_VENTAS_VALOR_") and each_field not in used_fields:
-      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) + "   type: " + str(type(appraisal_dict[each_field])))
+      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]))
       used_fields.append(each_field)
 
   for each_field in fields:
     if each_field.startswith("CVE_") and each_field not in used_fields:
-      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) + "   type: " + str(type(appraisal_dict[each_field])))
+      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]))
       used_fields.append(each_field)
 
   for each_field in fields:
     if each_field.startswith("CAT_") and each_field not in used_fields:
-      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) + "   type: " + str(type(appraisal_dict[each_field])))
+      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]))
       used_fields.append(each_field)
 
   for each_field in fields:
     if (each_field == "LATITUD" or each_field == "LONGITUD") and each_field not in used_fields:
-      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) + "   type: " + str(type(appraisal_dict[each_field])))
+      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]))
       used_fields.append(each_field)
 
   for each_field in fields:
     if each_field.startswith("NUMERO_") and each_field not in used_fields:
-      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) + "   type: " + str(type(appraisal_dict[each_field])))
+      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]))
       used_fields.append(each_field)
 
   for each_field in fields:
     if each_field.startswith("DISTANCIA_") and each_field not in used_fields:
-      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) + "   type: " + str(type(appraisal_dict[each_field])))
+      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) )
       used_fields.append(each_field)
 
   for each_field in fields:
     if each_field not in used_fields:
-      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) + "   type: " + str(type(appraisal_dict[each_field])))
+      formated_list.append(each_field + ": " + str(appraisal_dict[each_field]) )
 
   return formated_list
     
