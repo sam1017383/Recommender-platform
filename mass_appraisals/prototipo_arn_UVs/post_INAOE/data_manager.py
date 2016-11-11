@@ -10,6 +10,9 @@ import random
 import matplotlib
 import matplotlib.pyplot as plt
 from itertools import cycle
+sys.path.insert(0, '/Library/Python/2.7/site-packages/pybrain-master')
+sys.path.insert(0, '/usr/local/lib/python2.7/site-packages')
+import pymssql  
 
 import csv
 import re
@@ -124,14 +127,144 @@ input_fields = ["CVE_CLASE_INMUEBLE",
 						"DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_",
 						"DISTANCIA_SERVICIOS_SALUD_SEGUNDO_NIVEL_",
 						"DENSIDAD_HABITACIONAL_VIVIENDAS",
-						"SUPERFICIE_PRIVATIVAS",
-						"SUPERFICIE_TERRENO",
 						"NUMERO_RECAMARAS",
 						"NIVEL_INFRAESTRUCTURA",
 						"INDICE_SATURACION_ZONA",
-						"ELEVADOR"]
-						
+						"ELEVADOR",
+						"NUMEROEXTERIORNUM",
+						"NUMEROEXTERIORALFA",
+						"NUMEROEXTERIORANT",
+						"NUMEROINTERIORNUM",
+						"NUMEROINTERIORALFA",
+						"TIPOASENTAMIENTO",
+						"NOMBREASENTAMIENTO",
+						"CODIGOPOSTAL",
+						"CVELOCALIDAD",
+						"CVEMUNICIPIO",
+						"CVEESTADO"
+						"CVETIPOVIALIDADREF1",
+						"SUPERFICIE_TOTAL_CONSTRUCCIONES_PRIVATIVAS",
+						"SUPERFICIE_TOTAL_CONSTRUCCIONES_COMUNES",
+						"CVE_CLASE_INMUEBLE",
+						"CVE_CLASE_PRIVATIVAS",
+						"CVE_ESTADO_CONSERVACION",
+						"NUMERO_NIVELES",
+						"NIVEL_EDIFICIO",
+						"ANIO_TERMINACION_OBRA",
+						"FZO",
+						"FUB",
+						"FFR",
+						"FFO",
+						"FSU",
+						"FOT",
+						"USO_SUELO"
+						]
 
+
+
+
+
+def is_num(s):
+	if s != "" and s != None:
+		try: 
+			int(s)
+			return True
+		except ValueError:
+			try: 
+				float(s)
+				return True
+			except ValueError:
+				return False
+	else:
+		return False
+
+def get_inputs_dicionaries_from_server(server, user, passw, db, filter_stm, filters):
+	'load csv file to list of dictionaries'
+	
+	conn = pymssql.connect(server=server, user=user, password=passw, database=db)  
+
+	cursor = conn.cursor(as_dict=True)
+
+	cursor.execute("""Select 
+						CVE_CLASE_INMUEBLE,
+						CVE_ESTADO_CONSERVACION,
+						CVE_DENSIDAD_HABITACIONAL,
+						CVE_NIVEL_SOCIO_ECONOMICO_ZONA,
+						CVE_NIVEL_INFRAESTR_URBANA,
+						CVE_NIVEL_EQUIPAMIENTO_URBANO,
+						CAT_REGIMEN_PROPIEDAD,
+						CAT_TIPO_INMUEBLE,
+						NUMERO_RECAMARAS,
+						NUMERO_BANIOS,
+						NUMERO_MEDIOS_BANOS,
+						NUMERO_ESTACIONAMIENTOS,
+						ELEVADOR,
+						INDICE_SATURACION_ZONA,
+						DENSIDAD_HABITACIONAL_VIVIENDAS,
+						NIVEL_INFRAESTRUCTURA,
+						DISTANCIA_IGLESIA,
+						DISTANCIA_BANCOS,
+						DISTANCIA_CANCHAS_DEPORTIVAS,
+						DISTANCIA_CENTRO_DEPORTIVO,
+						DISTANCIA_PLAZASPUBLICAS,
+						DISTANCIA_PARQUES,
+						DISTANCIA_JARDINES,
+						DISTANCIA_MERCADOS,
+						DISTANCIA_SUPERMERCADOS,
+						DISTANCIA_LOCALES_COMERCIALES,
+						DISTANCIA_SERVICIOS_SALUD_PRIMER_NIVEL_,
+						DISTANCIA_SERVICIOS_SALUD_SEGUNDO_NIVEL_,
+						DISTANCIA_SERVICIOS_SALUD_TERCER_NIVEL_,
+						DISTANCIA_ESCUELAS_PRIMARIAS,
+						DISTANCIA_ESCUELAS_SECUNDARIAS,
+						DISTANCIA_ESCUELAS_PREPARATORIA,
+						DISTANCIA_UNIVERSIDAD,
+						LONGITUD,
+						LATITUD,
+						codigo_postal_ubicacion_inmueble,
+						SUPERFICIE_TOTAL_CONSTRUCCIONES_PRIVATIVAS,
+						SUPERFICIE_TOTAL_CONSTRUCCIONES_COMUNES,
+						CVE_CLASE_INMUEBLE,
+						CVE_CLASE_PRIVATIVAS,
+						CVE_ESTADO_CONSERVACION,
+						NUMERO_NIVELES,
+						NIVEL_EDIFICIO,
+						ANIO_TERMINACION_OBRA,
+						FZO,
+						FUB,
+						FFR,
+						FFO,
+						FSU,
+						FOT,
+						w_avaluo2.VALOR_FISICO_TERRENO,
+						w_avaluo2.VALOR_FISICO_TERRENO_M2,
+						w_avaluo2.VALOR_FISICO_CONSTRUCCION,
+						w_avaluo2.IMPORTE_VALOR_CONCLUIDO
+					From w_avaluo1 join w_avaluo2 on w_avaluo1.id2 = w_avaluo2.id2
+				Where """ + filter_stm + """
+				;
+				""")
+
+
+	
+	filtered_appraisals = []
+	for row in cursor:
+		new_train = {}
+		for each_field in row:
+			if is_num(row[each_field]):
+				new_train[each_field] = row[each_field]
+			else:
+				print "campo: ", each_field, " no es numerico"
+				new_train[each_field] = '0'
+		print "-----> INMUEBLE  agregado con ", len(new_train), "  campos"
+		filtered_appraisals.append(new_train)
+
+	print " avalUO:::: ", filtered_appraisals[0]
+	normalised_appraisals = []
+	for each_appraisal in filtered_appraisals:
+		normalised_appraisals.append(normalise(each_appraisal))
+
+	return normalised_appraisals
 
 
 
@@ -147,6 +280,7 @@ def load_csv(csv_file):
 	except ValueError:
 		print "Error: " + str(ValueError)	
 		return []
+
 
 
 def get_inputs_dicionaries(csv_file, filters):
@@ -170,10 +304,6 @@ def get_inputs_dicionaries(csv_file, filters):
 	return normalised_appraisals
 
 
-
-	return normalised_appraisals
-
-
 def filter_appraisals(data, filters): 
 	filtered_appraisals = []
 	for each_appraisal in data:
@@ -191,38 +321,46 @@ def normalise(each_appraisal):
 		#print "normalizing field: ", each_field
 		# evitar que la distancia desconocida sea 0
 		if str(each_field).startswith("DISTANCIA"):
-			each_appraisal[each_field] = int(each_appraisal[each_field])
-			if each_appraisal[each_field] == 0:
-				each_appraisal[each_field] = 4000
+			each_appraisal[each_field] = float(each_appraisal[each_field])/4000
+			if each_appraisal[each_field] == 0 or each_appraisal[each_field] >= 4000:
+				each_appraisal[each_field] = 1.0
 
-		elif (each_field == "codigo_postal_ubicacion_inmueble" or
-							each_field == "CVE_CLASE_INMUEBLE" or
-							each_field == "CVE_NIVEL_INFRAESTR_URBANA" or
-							each_field == "CVE_ESTADO_CONSERVACION" or
-							each_field == "NUMERO_MEDIOS_BANOS" or
-							each_field == "DENSIDAD_HABITACIONAL_VIVIENDAS" or
-							each_field == "NUMERO_RECAMARAS" or
-							each_field == "NUMERO_ESTACIONAMIENTOS" or
-							each_field == "CAT_REGIMEN_PROPIEDAD" or
-							each_field == "CVE_NIVEL_SOCIO_ECONOMICO_ZONA" or
-							each_field == "NUMERO_RECAMARAS" or
-							each_field == "CAT_TIPO_INMUEBLE" or
-							each_field == "CVE_NIVEL_EQUIPAMIENTO_URBANO" or
-							each_field == "CVE_DENSIDAD_HABITACIONAL" or
-							each_field == "INDICE_SATURACION_ZONA" or
-							each_field == "NUMERO_BANIOS" or
-							each_field == "ELEVADOR"):
-			each_appraisal[each_field] = int(each_appraisal[each_field])
-
-		elif (each_field == "LATITUD" or
-							each_field == "IM_VENTAS_VALOR_MERCADO_INMUEBLE" or
-							each_field == "IM_VENTAS_VALOR_UNITARIO_APLICABLE_AVALUO_M2" or
-							each_field == "LONGITUD" or
-							each_field == "SUPERFICIE_TERRENO" or
-							each_field == "NIVEL_INFRAESTRUCTURA" or
-							each_field == "SUPERFICIE_PRIVATIVAS"):
-
-			each_appraisal[each_field] = float(each_appraisal[each_field])
+	each_appraisal["codigo_postal_ubicacion_inmueble"] = str(each_appraisal["codigo_postal_ubicacion_inmueble"])
+	each_appraisal["CVE_CLASE_INMUEBLE"] = float(each_appraisal["CVE_CLASE_INMUEBLE"])/8
+	each_appraisal["CVE_ESTADO_CONSERVACION"] = float(each_appraisal["CVE_ESTADO_CONSERVACION"])/7
+	each_appraisal["CVE_DENSIDAD_HABITACIONAL"] = float(each_appraisal["CVE_DENSIDAD_HABITACIONAL"])/5
+	each_appraisal["CVE_NIVEL_SOCIO_ECONOMICO_ZONA"] = float(each_appraisal["CVE_NIVEL_SOCIO_ECONOMICO_ZONA"])/6
+	each_appraisal["CVE_NIVEL_INFRAESTR_URBANA"] = float(each_appraisal["CVE_NIVEL_INFRAESTR_URBANA"])/4
+	each_appraisal["CVE_NIVEL_EQUIPAMIENTO_URBANO"] = float(each_appraisal["CVE_NIVEL_EQUIPAMIENTO_URBANO"])/4
+	each_appraisal["CVE_CLASE_INMUEBLE"] = float(each_appraisal["CVE_CLASE_INMUEBLE"])/8
+	each_appraisal["CVE_CLASE_PRIVATIVAS"] = float(each_appraisal["CVE_CLASE_PRIVATIVAS"])/8
+	each_appraisal["INDICE_SATURACION_ZONA"] = float(each_appraisal["INDICE_SATURACION_ZONA"])/100
+	each_appraisal["DENSIDAD_HABITACIONAL_VIVIENDAS"] = float(each_appraisal["DENSIDAD_HABITACIONAL_VIVIENDAS"])/7
+	each_appraisal["NIVEL_INFRAESTRUCTURA"] = float(each_appraisal["NIVEL_INFRAESTRUCTURA"])/4
+	each_appraisal["CAT_REGIMEN_PROPIEDAD"] = float(each_appraisal["CAT_REGIMEN_PROPIEDAD"])/4
+	each_appraisal["CAT_TIPO_INMUEBLE"] = float(each_appraisal["CAT_TIPO_INMUEBLE"])/5
+	each_appraisal["LONGITUD"] = float(each_appraisal["LONGITUD"])
+	each_appraisal["LATITUD"] = float(each_appraisal["LATITUD"])
+	each_appraisal["NUMERO_RECAMARAS"] = float(each_appraisal["NUMERO_RECAMARAS"])
+	each_appraisal["NUMERO_BANIOS"] = float(each_appraisal["NUMERO_BANIOS"])
+	each_appraisal["NUMERO_MEDIOS_BANOS"] = float(each_appraisal["NUMERO_MEDIOS_BANOS"])
+	each_appraisal["NUMERO_ESTACIONAMIENTOS"] = float(each_appraisal["NUMERO_ESTACIONAMIENTOS"])
+	each_appraisal["ELEVADOR"] = float(each_appraisal["ELEVADOR"])
+	each_appraisal["SUPERFICIE_TOTAL_CONSTRUCCIONES_PRIVATIVAS"] = float(each_appraisal["SUPERFICIE_TOTAL_CONSTRUCCIONES_PRIVATIVAS"])
+	each_appraisal["SUPERFICIE_TOTAL_CONSTRUCCIONES_COMUNES"] = float(each_appraisal["SUPERFICIE_TOTAL_CONSTRUCCIONES_COMUNES"])
+	each_appraisal["NUMERO_NIVELES"] = float(each_appraisal["NUMERO_NIVELES"])
+	each_appraisal["NIVEL_EDIFICIO"] = float(each_appraisal["NIVEL_EDIFICIO"])
+	each_appraisal["ANIO_TERMINACION_OBRA"] = (2016 - float(each_appraisal["ANIO_TERMINACION_OBRA"]))/100.0
+	each_appraisal["FZO"] = float(each_appraisal["FZO"])
+	each_appraisal["FUB"] = float(each_appraisal["FUB"])
+	each_appraisal["FFR"] = float(each_appraisal["FFR"])
+	each_appraisal["FFO"] = float(each_appraisal["FFO"])
+	each_appraisal["FSU"] = float(each_appraisal["FSU"])
+	each_appraisal["FOT"] = float(each_appraisal["FOT"])
+	each_appraisal["VALOR_FISICO_TERRENO"] = float(each_appraisal["VALOR_FISICO_TERRENO"])
+	each_appraisal["VALOR_FISICO_TERRENO_M2"] = float(each_appraisal["VALOR_FISICO_TERRENO_M2"])
+	each_appraisal["VALOR_FISICO_CONSTRUCCION"] = float(each_appraisal["VALOR_FISICO_CONSTRUCCION"])
+	each_appraisal["IMPORTE_VALOR_CONCLUIDO"] = float(each_appraisal["IMPORTE_VALOR_CONCLUIDO"])
 
 	return each_appraisal
 

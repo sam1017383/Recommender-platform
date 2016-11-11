@@ -1,0 +1,98 @@
+1 CUANDO EN LA ZONA EXISTAN DOS ELEMENTOS O MENOS DEL NIVEL 2.
+2 CUANDO LA ZONA CUENTE CON  IGLESIA, MERCADO O COMERCIOS, ESCUELAS Y PARQUES Y JARDINES.
+3 CUANDO LA ZONA TENGA LOS ELEMENTOS  DEL NIVEL 2 MÁS ACCESO O ESTACIÓN  DE TRANSPORTE PÚBLICO
+4 CUANDO EN LA ZONA SE ENCUENTREN LOS ELEMENTOS DEL NIVEL 3 MÁS HOSPITALES Y BANCOS, MÁS OTROS EQUIPAMIENTOS
+
+
+Cat.ClasesConstruccion
+0	No aplica
+1	Mínima
+2	Económica
+3	Interés Social
+4	Media
+5	Semilujo
+6	Residencial
+7	Residencial Plus
+7	Residencial Plus +
+8	Única
+
+
+
+
+0	NO APLICA
+1	HABITACIONAL
+2	INDUSTRIAL
+3	COMERCIAL
+4	MIXTA
+5	OTRO
+
+
+LONGITUD
+LATITUD
+CAT_TIPO_INMUEBLE
+CVE_NIVEL_INFRAESTR_URBANA
+CVE_NIVEL_EQUIPAMIENTO_URBANO
+CVE_CLASE_INMUEBLE
+CVE_USO_CONSTRUCCION
+GRADO_TERMINACION_OBRA
+AVANCE_OBRA_PRIVATIVAS
+
+
+
+TOTAL_VALOR_TERRENO
+VALOR_TOTAL_CONSTRUCCIONES_PRIVATIVAS
+IM_VENTAS_VALOR_UNITARIO_APLICABLE_AVALUO_M2
+IMPORTE_TOTAL_INSTALACIONES_ACCESORIOS_COMPLEMENTARIAS_COMUNES
+IMPORTE_INDIVISO_INSTALACIONES_ESPECIALES_OBRAS_COMPLEMENTARIAS_Y_ELEMENTOS_ACCESORIOS_COMUNES
+IMPORTE_VALOR_CONCLUIDO
+
+
+
+
+
+
+
+
+
+
+
+
+Cat.CalidadProyeco	
+0	NO APLICA
+1	FUCIONAL
+2	NO FUNCIONAL
+3	ADECUADO A SU EPOCA
+
+
+
+Cat.ClasificacionZona	
+0	No aplica
+1	Habitacional de lujo
+2	Habitacional de primer orden
+3	Habitacional de segundo orden
+4	Habitacional de tercer orden
+5	Habitacional de interés social
+6	Habitacional de popular
+7	Habitacional de campestre
+8	Comercial de lujo
+9	Comercial de primer orden
+10	Comercial de segundo orden
+11	Comercial de tercer orden
+12	Industrial
+13	Mixta habitacional y comercial
+14	Mixta industrial y comercial
+15	Mixta habitacional e industria vecina
+16	Mixta habitacional y servicios
+17	Mixta industrial y servicios
+
+
+Cat.DensidadPoblacion	
+0	NO APLICA
+1	NULA
+2	ESCASA
+3	NORMAL
+4	MEDIA
+5	SEMIDENSA
+6	DENSA
+7	FLOTANTE
+

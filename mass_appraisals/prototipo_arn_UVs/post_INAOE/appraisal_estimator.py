@@ -11,6 +11,11 @@ import ann_engine
 import data_manager
 import visualizer
 
+server='192.168.0.172'
+user='userAvaluos'
+password='M3x1c087'
+database='ExtracAvaluo'
+
 
 report_fields = ["Fecha_experimento",
 			"Clave_experimento",
@@ -41,7 +46,7 @@ report_fields = ["Fecha_experimento",
 report_file_name = "report_ANN_UVs_go4it_sin_normalizar_sept_2016"
 
 # Nombre del archivo .CSV que contiene la informacion de entrenamiento y pruebas
-file_name_examples = "cdmx_abril_2015"
+file_name_examples = "from_"
 #file_name = "quintanaroo_abril_2015"
 
 # Define filtros sobre los campos del avaluo (query con la estructura (campo1=value11 or campo1=value12  or ... ) AND (campo2=value21 or campo2=value22  or ... ) 
@@ -56,14 +61,39 @@ filters = {"codigo_postal_ubicacion_inmueble": ['03103', '03100', '03104', '0320
 
 
 filter_string_msg = "-" + "-".join(filters["codigo_postal_ubicacion_inmueble"])
+
+#filters = {"codigo_postal_ubicacion_inmueble": ['03103', '03100', '03104', '03200', '03230', '03240', '03023', '03000','03020', '03023', '03600']}
+
+#filters = {"codigo_postal_ubicacion_inmueble": ['77710', '77712', '77713', '77714', '77716', '77717', '77718', '77720', '77723', '77724', '77725', '77726' ]}
+#filters = {"codigo_postal_ubicacion_inmueble": ['77710']}
+
+#filters = {"codigo_postal_ubicacion_inmueble": ['14410']}
+
+
+
+filter_string_msg = "-" + "-".join(filters["codigo_postal_ubicacion_inmueble"])
+
+filter_stm = ""
+for each_field in filters:
+	element = "("
+	for each_value in filters[each_field]:
+		element += str(each_field) + "='"+str(each_value)+"' OR "
+	element = element[:-3]
+	element += ")"
+	filter_stm += element + " AND "
+
+filter_stm = filter_stm[:-4]
+
+
+print "filter stm: ", filter_stm
+
 # Avaluos como una lista de diccionarios
-appraisals = data_manager.get_inputs_dicionaries(file_name_examples+'.csv', filters)
+#appraisals = data_manager.get_inputs_dicionaries(file_name_examples+'.csv', filters)
+appraisals = data_manager.get_inputs_dicionaries_from_server(server, user, password, database, filter_stm, filters)
+
 num_appraisals = len(appraisals)
 generated_ints = random.sample(xrange(0,num_appraisals), num_appraisals)
 appraisals_random_sorted = [appraisals[i] for i in generated_ints]
-
-# creacion del mapa de avaluos filtrados
-visualizer.dot_infomap_from_appraisals(appraisals, "map_filtered_"+file_name_examples + filter_string_msg)
 
 # salia a consula del primer avaluo
 formated_list = visualizer.list_formated_appraisal(appraisals[0])
@@ -94,7 +124,7 @@ else:
 	writer = csv.DictWriter(csvfile, fieldnames=report_fields)
 
 
-for hidden_size in range(25,35):
+for hidden_size in range(50,51):
 
 	#print "numero de ejemplos para entrenamiento: ", data_slice*9
 	#print "numero de ejemplos para pruebas: ", data_slice
@@ -123,7 +153,7 @@ for hidden_size in range(25,35):
 
 
 		report_values = {
-				"Fecha_experimento":time.strftime("%d/%m/%Y"),
+				"Fecha_experimento":time.strftime("%d-%m-%Y"),
 				"Clave_experimento":exp_stats["Clave_experimento"],
 				"Archivo_CSV_ejemplos":exp_stats["Archivo_CSV_ejemplos"], 
 				"CP":exp_stats["CP"], 
@@ -152,6 +182,9 @@ for hidden_size in range(25,35):
 
 	
 	
+# creacion del mapa de avaluos filtrados
+visualizer.dot_infomap_from_appraisals(appraisals, "map_filtered_"+file_name_examples + filter_string_msg)
+
 
 
 

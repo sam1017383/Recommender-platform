@@ -45,18 +45,32 @@ from pybrain.structure import FullConnection
 
 def dicts_to_np_array(dicts, input_fields):
 	matrix = []
+	order_1 = []
+	order = []
 	for each_dict in dicts:
+		order = []
 		# agregate row
 		row = []
 		for each_field in each_dict:
 				# outputs to the left of columns
-			if each_field.startswith("IM_VENTAS_VALOR"):
+			if each_field.startswith("VALOR_FISICO") or each_field.startswith("IMPORTE_"):
+				if each_field not in order:
+					order = [each_field] + order
 				row = [each_dict[each_field]] + row
 			elif each_field in input_fields:
+				if each_field not in order:
+					order.append(each_field)
 				# inputs to the rigth
 				row.append(each_dict[each_field])
 		matrix.append(row)
 		# return numpy array
+
+		if order_1 == []:
+			order_1 = order
+		if order != order_1:
+			print "aaacchtunngggg vectores en distinto orden!"
+
+	print "NUMPY ORDER: ---->", order
 	return np.array(matrix)
 
 
@@ -85,15 +99,15 @@ def train_ann(data_dicts, input_fields, hidden_size, epochs):
 	# regresa un ndarray de numpy
 	train = dicts_to_np_array(data_dicts, input_fields)
 
-	#print "data loaded to a ", type(train),   " of size: ", train.shape, " and type:", train.dtype
-	#print "Spliting inputs and output for training..."
+	print "data loaded to a ", type(train),   " of size: ", train.shape, " and type:", train.dtype
+	print "Spliting inputs and output for training..."
 
-	inputs_train = train[:,2:]
-	outputs_train = train[:,:2]
-	outputs_train = outputs_train.reshape( -1, 2 )
+	inputs_train = train[:,4:]
+	outputs_train = train[:,:4]
+	outputs_train = outputs_train.reshape( -1, 4 )
 
-	#print "inputs in a ", type(inputs_train),   " of size: ", inputs_train.shape, " and type:", inputs_train.dtype
-	#print "output in a ", type(outputs_train),   " of size: ", outputs_train.shape, " and type:", outputs_train.dtype
+	print "inputs in a ", type(inputs_train),   " of size: ", inputs_train.shape, " and type:", inputs_train.dtype
+	print "output in a ", type(outputs_train),   " of size: ", outputs_train.shape, " and type:", outputs_train.dtype
 
 	# Setting up supervised dataset por pyBrain training...
 	input_size = inputs_train.shape[1]
@@ -133,7 +147,7 @@ def train_ann(data_dicts, input_fields, hidden_size, epochs):
 
 		if rmse < rmse_min:
 			rmse_min = rmse
-			#print "training RMSE, epoch {}: {}".format( i + 1, rmse )
+			print "training RMSE, epoch {}: {}".format( i + 1, rmse )
 		
 	elapsed_time = time.time() - start_time
 
@@ -180,62 +194,110 @@ def activate_network(trained_network, data_dicts, input_fields):
 	#print "data loaded to a ", type(test),   " of size: ", test.shape, " and type:", test.dtype
 	#print "Spliting inputs and output for testing..."
 
- 	inputs_train = test[:,2:]
- 	outputs_train = test[:,:2]
- 	outputs_train = outputs_train.reshape( -1, 2 )
+ 	inputs_train = test[:,4:]
+ 	outputs_train = test[:,:4]
+ 	outputs_train = outputs_train.reshape( -1, 4 )
 
- 	#print "inputs in a ", type(inputs_train),   " of size: ", inputs_train.shape, " and type:", inputs_train.dtype
- 	#print "output in a ", type(outputs_train),   " of size: ", outputs_train.shape, " and type:", outputs_train.dtype
- 	#print "-------------------------------------------------"
- 	#print "primeros vectores de inputs: ", inputs_train[0:2,:]
- 	#print "primeros vectores de outputs: ", outputs_train[0:2,:]
+ 	print "inputs in a ", type(inputs_train),   " of size: ", inputs_train.shape, " and type:", inputs_train.dtype
+ 	print "output in a ", type(outputs_train),   " of size: ", outputs_train.shape, " and type:", outputs_train.dtype
+ 	print "-------------------------------------------------"
+ 	print "primeros vectores 4 de inputs: ", inputs_train[0:4,:]
+ 	print "primeros vectores 4 de outputs: ", outputs_train[0:4,:]
 
 	
-	max_error = 0.0
-	average_error = 0.0
-	regression_list_m2 = []
-	regression_list_total = []
-	regression_m2_privativas = []
-	factual_data_list_m2 = []
-	factual_data_list_total = []
+	regression_list_VALOR_FISICO_TERRENO = []
+	regression_list_VALOR_FISICO_TERRENO_M2 = []
+	regression_list_VALOR_FISICO_CONSTRUCCION = []
+	regression_list_IMPORTE_VALOR_CONCLUIDO = []
+
+	factual_data_list_VALOR_FISICO_TERRENO = []
+	factual_data_list_VALOR_FISICO_TERRENO_M2 = []
+	factual_data_list_VALOR_FISICO_CONSTRUCCION = []
+	factual_data_list_IMPORTE_VALOR_CONCLUIDO = []
+
+	errors_list_VALOR_FISICO_TERRENO = []
+	errors_list_VALOR_FISICO_TERRENO_M2 = []
+	errors_list_VALOR_FISICO_CONSTRUCCION = []
+	errors_list_IMPORTE_VALOR_CONCLUIDO = []
+	
 
 	#"testing trained model..."
-	error_min_costo_total = sys.float_info.max
-	error_max_costo_total = 0
-	error_promedio_costo_total = 0
-	error_varianza_costo_total = 0
-	error_desviacion_std_costo_total = 0
-	errores_costo_total = []
+	error_min_VALOR_FISICO_TERRENO = sys.float_info.max
+	error_min_VALOR_FISICO_TERRENO_M2 = sys.float_info.max
+	error_min_VALOR_FISICO_CONSTRUCCION = sys.float_info.max
+	error_min_IMPORTE_VALOR_CONCLUIDO = sys.float_info.max
 
-	error_min_costo_m2 = sys.float_info.max
-	error_max_costo_m2 = 0
-	error_promedio_costo_m2 = 0
-	error_varianza_costo_m2 = 0
-	error_desviacion_std_costo_m2 = 0
-	errores_costo_m2 = []
+	error_max_VALOR_FISICO_TERRENO = 0
+	error_max_VALOR_FISICO_TERRENO_M2 = 0
+	error_max_VALOR_FISICO_CONSTRUCCION = 0
+	error_max_IMPORTE_VALOR_CONCLUIDO = 0
+
+	error_avg_VALOR_FISICO_TERRENO = 0
+	error_avg_VALOR_FISICO_TERRENO_M2 = 0
+	error_avg_VALOR_FISICO_CONSTRUCCION = 0
+	error_avg_IMPORTE_VALOR_CONCLUIDO = 0
+
+	error_dstd_VALOR_FISICO_TERRENO = 0
+	error_dstd_VALOR_FISICO_TERRENO_M2 = 0
+	error_dstd_VALOR_FISICO_CONSTRUCCION = 0
+	error_dstd_IMPORTE_VALOR_CONCLUIDO = 0
 
 
 	for i in range(inputs_train.shape[0]):
 		regression = trained_network.activate(inputs_train[i])
 		
-		regression_list_m2.append(regression[0])
-		regression_list_total.append(regression[1])
-		factual_data_list_m2.append(outputs_train[i][0])
-		factual_data_list_total.append(outputs_train[i][1])
+		# posiciones en el vector de salida
+		IMPORTE_VALOR_CONCLUIDO = 0
+		VALOR_FISICO_CONSTRUCCION = 1
+		VALOR_FISICO_TERRENO = 2
+		VALOR_FISICO_TERRENO_M2 = 3
 
-		current_error_total = abs(regression[1]-outputs_train[i][1])
-		errores_costo_total.append(current_error_total)
-		if current_error_total < error_min_costo_total:
-			error_min_costo_total = current_error_total
-		if current_error_total > error_max_costo_total:
-			error_max_costo_total = current_error_total
 
-		current_error_m2 = abs(regression[0]-outputs_train[i][0])
-		errores_costo_m2.append(current_error_m2)
-		if current_error_m2 < error_min_costo_m2:
-			error_min_costo_m2 = current_error_m2
-		if current_error_m2 > error_max_costo_m2:
-			error_max_costo_m2 = current_error_m2
+		regression_list_VALOR_FISICO_TERRENO.append(regression[VALOR_FISICO_TERRENO])
+		regression_list_VALOR_FISICO_TERRENO_M2.append(regression[VALOR_FISICO_TERRENO_M2])
+		regression_list_VALOR_FISICO_CONSTRUCCION.append(regression[VALOR_FISICO_CONSTRUCCION])
+		regression_list_IMPORTE_VALOR_CONCLUIDO.append(regression[IMPORTE_VALOR_CONCLUIDO])
+		
+
+		factual_data_list_VALOR_FISICO_TERRENO.append(outputs_train[i][VALOR_FISICO_TERRENO])
+		factual_data_list_VALOR_FISICO_TERRENO_M2.append(outputs_train[i][VALOR_FISICO_TERRENO_M2])
+		factual_data_list_VALOR_FISICO_CONSTRUCCION.append(outputs_train[i][VALOR_FISICO_CONSTRUCCION])
+		factual_data_list_IMPORTE_VALOR_CONCLUIDO.append(outputs_train[i][IMPORTE_VALOR_CONCLUIDO])
+
+
+		current_error_IMPORTE_VALOR_CONCLUIDO = abs(regression[IMPORTE_VALOR_CONCLUIDO]-outputs_train[i][IMPORTE_VALOR_CONCLUIDO])
+		errors_list_IMPORTE_VALOR_CONCLUIDO.append(current_error_IMPORTE_VALOR_CONCLUIDO)
+		if current_error_IMPORTE_VALOR_CONCLUIDO < error_min_VALOR_FISICO_TERRENO:
+			error_min_VALOR_FISICO_TERRENO = current_error_IMPORTE_VALOR_CONCLUIDO
+		if current_error_IMPORTE_VALOR_CONCLUIDO > error_max_VALOR_FISICO_TERRENO:
+			error_max_VALOR_FISICO_TERRENO = current_error_IMPORTE_VALOR_CONCLUIDO
+
+
+		current_error_VALOR_FISICO_CONSTRUCCION = abs(regression[VALOR_FISICO_CONSTRUCCION]-outputs_train[i][VALOR_FISICO_CONSTRUCCION])
+		errors_list_VALOR_FISICO_CONSTRUCCION.append(current_error_VALOR_FISICO_CONSTRUCCION)
+		if current_error_VALOR_FISICO_CONSTRUCCION < error_min_VALOR_FISICO_CONSTRUCCION:
+			error_min_VALOR_FISICO_CONSTRUCCION = current_error_VALOR_FISICO_CONSTRUCCION
+		if current_error_VALOR_FISICO_CONSTRUCCION > error_max_VALOR_FISICO_CONSTRUCCION:
+			error_max_VALOR_FISICO_CONSTRUCCION = current_error_VALOR_FISICO_CONSTRUCCION
+
+
+		current_error_VALOR_FISICO_CONSTRUCCION = abs(regression[VALOR_FISICO_CONSTRUCCION]-outputs_train[i][VALOR_FISICO_CONSTRUCCION])
+		errors_list_VALOR_FISICO_CONSTRUCCION.append(current_error_VALOR_FISICO_CONSTRUCCION)
+		if current_error_VALOR_FISICO_CONSTRUCCION < error_min_VALOR_FISICO_CONSTRUCCION:
+			error_min_VALOR_FISICO_CONSTRUCCION = current_error_VALOR_FISICO_CONSTRUCCION
+		if current_error_VALOR_FISICO_CONSTRUCCION > error_max_VALOR_FISICO_CONSTRUCCION:
+			error_max_VALOR_FISICO_CONSTRUCCION = current_error_VALOR_FISICO_CONSTRUCCION
+
+
+
+		current_error_VALOR_FISICO_CONSTRUCCION = abs(regression[VALOR_FISICO_CONSTRUCCION]-outputs_train[i][VALOR_FISICO_CONSTRUCCION])
+		errors_list_VALOR_FISICO_CONSTRUCCION.append(current_error_VALOR_FISICO_CONSTRUCCION)
+		if current_error_VALOR_FISICO_CONSTRUCCION < error_min_VALOR_FISICO_CONSTRUCCION:
+			error_min_VALOR_FISICO_CONSTRUCCION = current_error_VALOR_FISICO_CONSTRUCCION
+		if current_error_VALOR_FISICO_CONSTRUCCION > error_max_VALOR_FISICO_CONSTRUCCION:
+			error_max_VALOR_FISICO_CONSTRUCCION = current_error_VALOR_FISICO_CONSTRUCCION
+
+
 
 	promedio_costo_total = statistics.mean(factual_data_list_total)
 	error_promedio_costo_total = statistics.mean(errores_costo_total)
