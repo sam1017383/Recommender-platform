@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="weka.core.Instances"/>
+<fullyQualifiedTypeName name="weka.core.converters.ArffSaver"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="weka.filters.supervised.attribute.AttributeSelection"/>
+<fullyQualifiedTypeName name="weka.attributeSelection.InfoGainAttributeEval"/>
+<fullyQualifiedTypeName name="weka.attributeSelection.Ranker"/>
+<fullyQualifiedTypeName name="weka.attributeSelection.ReliefFAttributeEval"/>
+<fullyQualifiedTypeName name="weka.classifiers.functions.SMOreg"/>
+<fullyQualifiedTypeName name="weka.classifiers.functions.MultilayerPerceptron"/>
+</qualifiedTypeNameHistroy>

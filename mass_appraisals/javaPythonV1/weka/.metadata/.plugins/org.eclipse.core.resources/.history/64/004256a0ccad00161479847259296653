@@ -1,0 +1,57 @@
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import weka.*;
+import weka.filters.Filter;
+import weka.filters.unsupervised.attribute.Remove;
+import weka.core.Instances;
+
+
+import java.util.*;
+import java.util.List;
+
+
+public class go4itEngine {
+
+	public static void main(String[] args) throws Exception{
+		System.out.println("hola java-weka");
+		
+		String File = "/Users/sam/Github/Recommender-platform/mass_appraisals/java/clusterFileNames.txt";
+		
+		loadClusters(File); 
+	}
+	
+	
+	public static void loadClusters(String namesFile) throws Exception{
+		
+		List<String> clusterNames = LoadSaveData.loadClusterFileNames(namesFile);
+		int i = 0;
+		for (String clusterFileName : clusterNames) {
+			if (i<10){
+				i++;
+				System.out.println("Archivo del cluster:");
+		        System.out.println(clusterFileName);
+		        Instances dataset = LoadSaveData.loadArff(clusterFileName);
+				System.out.println(dataset.toSummaryString());
+
+			}else{
+				break;
+			}
+		}
+	}
+	
+	public static Instances filterAttributes(Instances dataset) throws Exception{
+		
+		String[] opts = new String[]{"-R", "1"};
+		
+		Remove remove = new Remove();
+		remove.setOptions(opts);
+		remove.setInputFormat(dataset);
+		Instances filteredData = Filter.useFilter(dataset, remove);
+		System.out.println(filteredData.toSummaryString());
+		return filteredData;
+	}
+	
+
+}

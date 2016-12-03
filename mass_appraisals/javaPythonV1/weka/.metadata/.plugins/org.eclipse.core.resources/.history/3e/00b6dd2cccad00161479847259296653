@@ -1,0 +1,41 @@
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import weka.*;
+import weka.core.Instances;
+
+
+import java.util.*;
+import java.util.List;
+
+
+public class go4itEngine {
+
+	public static void main(String[] args) throws Exception{
+		System.out.println("hola java-weka");
+		
+		String File = "/Users/sam/Github/Recommender-platform/mass_appraisals/java/clusterFileNames.txt";
+		
+		loadClusters(File); 
+	}
+	
+	
+	public static void loadClusters(String namesFile) throws Exception{
+		
+		List<String> clusterNames = LoadSaveData.loadClusterFileNames(namesFile);
+		
+		for (String clusterFileName : clusterNames) {
+			System.out.println("Archivo del cluster:");
+	        System.out.println(clusterFileName);
+	        Instances dataset = LoadSaveData.loadArff(clusterFileName);
+			System.out.println(dataset.toSummaryString());
+	    } 
+				
+		
+		
+	}
+	
+	
+
+}

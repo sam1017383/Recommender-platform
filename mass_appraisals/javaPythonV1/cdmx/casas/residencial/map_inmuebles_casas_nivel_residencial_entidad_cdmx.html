@@ -1,0 +1,2355 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>UVs go4it</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+function initMap() {
+
+  var myLatLng = {lat: 19.37620830, lng: -99.1616527};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: myLatLng
+  });
+		
+      var contentString0 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 11,397,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $40,735 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 9,395,996 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 279.77 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 5.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 900.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 600.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 550.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 750.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 400.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 400.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow0 = new google.maps.InfoWindow({
+    content: contentString0
+  });
+	var marker0 = new google.maps.Marker({position: {lat: 19.4308139  , lng: -99.1904528 }, map: map, title: 'Avaluo 0', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker0.addListener('click', function() {
+    infowindow0.open(map, marker0);
+  });	
+
+      var contentString1 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,139,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $22,404 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 4,942,855 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 274.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1400.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1900.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 300.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 980.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1400.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+  });
+	var marker1 = new google.maps.Marker({position: {lat: 19.398527  , lng: -99.239439 }, map: map, title: 'Avaluo 1', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker1.addListener('click', function() {
+    infowindow1.open(map, marker1);
+  });	
+
+      var contentString2 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 14,005,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $34,666 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 12,147,963 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 404.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 9.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 6.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 2.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1380.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 880.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 350.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 650.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 600.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1900.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 690.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow2 = new google.maps.InfoWindow({
+    content: contentString2
+  });
+	var marker2 = new google.maps.Marker({position: {lat: 19.417792  , lng: -99.20982 }, map: map, title: 'Avaluo 2', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+  });	
+
+      var contentString3 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 15,388,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $25,020 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 15,062,245 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 615.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 2 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 3.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1600.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1600.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 850.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 600.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 850.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2600.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow3 = new google.maps.InfoWindow({
+    content: contentString3
+  });
+	var marker3 = new google.maps.Marker({position: {lat: 19.4011083  , lng: -99.2495139 }, map: map, title: 'Avaluo 3', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker3.addListener('click', function() {
+    infowindow3.open(map, marker3);
+  });	
+
+      var contentString4 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 66,330,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $55,500 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 60,985,754 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 1195.16 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 2.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 2.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 600.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 350.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow4 = new google.maps.InfoWindow({
+    content: contentString4
+  });
+	var marker4 = new google.maps.Marker({position: {lat: 19.4214611  , lng: -99.2168027 }, map: map, title: 'Avaluo 4', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker4.addListener('click', function() {
+    infowindow4.open(map, marker4);
+  });	
+
+      var contentString5 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 12,918,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $25,283 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 11,719,885 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 510.6 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 6.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow5 = new google.maps.InfoWindow({
+    content: contentString5
+  });
+	var marker5 = new google.maps.Marker({position: {lat: 19.400841  , lng: -99.236366 }, map: map, title: 'Avaluo 5', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker5.addListener('click', function() {
+    infowindow5.open(map, marker5);
+  });	
+
+      var contentString6 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 9,062,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $22,487 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 8,624,222 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 403.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1400.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1900.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 300.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 980.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1400.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow6 = new google.maps.InfoWindow({
+    content: contentString6
+  });
+	var marker6 = new google.maps.Marker({position: {lat: 19.399516  , lng: -99.241312 }, map: map, title: 'Avaluo 6', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker6.addListener('click', function() {
+    infowindow6.open(map, marker6);
+  });	
+
+      var contentString7 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 27,397,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $49,585 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 22,736,464 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 552.53 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 500.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow7 = new google.maps.InfoWindow({
+    content: contentString7
+  });
+	var marker7 = new google.maps.Marker({position: {lat: 19.418274  , lng: -99.210802 }, map: map, title: 'Avaluo 7', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker7.addListener('click', function() {
+    infowindow7.open(map, marker7);
+  });	
+
+      var contentString8 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 23,698,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,000 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 23,291,942 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 640.49 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 6.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 1.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1470.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1660.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1950.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 680.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow8 = new google.maps.InfoWindow({
+    content: contentString8
+  });
+	var marker8 = new google.maps.Marker({position: {lat: 19.4077  , lng: -99.2297028 }, map: map, title: 'Avaluo 8', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker8.addListener('click', function() {
+    infowindow8.open(map, marker8);
+  });	
+
+      var contentString9 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 23,730,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $45,948 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 22,106,091 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 573.83 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 8.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 650.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1800.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 650.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 850.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow9 = new google.maps.InfoWindow({
+    content: contentString9
+  });
+	var marker9 = new google.maps.Marker({position: {lat: 19.4141331  , lng: -99.2218871 }, map: map, title: 'Avaluo 9', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker9.addListener('click', function() {
+    infowindow9.open(map, marker9);
+  });	
+
+      var contentString10 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 37,700,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,250 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 31,999,716 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 1335.43 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 5.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 0.92 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 1.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 210.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1500.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow10 = new google.maps.InfoWindow({
+    content: contentString10
+  });
+	var marker10 = new google.maps.Marker({position: {lat: 19.3971472  , lng: -99.2498583 }, map: map, title: 'Avaluo 10', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker10.addListener('click', function() {
+    infowindow10.open(map, marker10);
+  });	
+
+      var contentString11 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 24,560,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $33,900 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 24,564,462 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 724.7 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 0.92 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow11 = new google.maps.InfoWindow({
+    content: contentString11
+  });
+	var marker11 = new google.maps.Marker({position: {lat: 19.3947444  , lng: -99.2391805 }, map: map, title: 'Avaluo 11', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker11.addListener('click', function() {
+    infowindow11.open(map, marker11);
+  });	
+
+      var contentString12 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,366,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $18,193 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 5,680,658 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 349.89 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow12 = new google.maps.InfoWindow({
+    content: contentString12
+  });
+	var marker12 = new google.maps.Marker({position: {lat: 19.386739  , lng: -99.242537 }, map: map, title: 'Avaluo 12', icon:  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' }); 
+
+	marker12.addListener('click', function() {
+    infowindow12.open(map, marker12);
+  });	
+
+      var contentString13 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 15,181,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $21,588 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 14,764,743 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 703.23 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 6.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow13 = new google.maps.InfoWindow({
+    content: contentString13
+  });
+	var marker13 = new google.maps.Marker({position: {lat: 19.314458  , lng: -99.213903 }, map: map, title: 'Avaluo 13', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker13.addListener('click', function() {
+    infowindow13.open(map, marker13);
+  });	
+
+      var contentString14 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 19,753,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,866 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 18,358,915 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 639.96 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 5.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow14 = new google.maps.InfoWindow({
+    content: contentString14
+  });
+	var marker14 = new google.maps.Marker({position: {lat: 19.321094  , lng: -99.1985 }, map: map, title: 'Avaluo 14', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker14.addListener('click', function() {
+    infowindow14.open(map, marker14);
+  });	
+
+      var contentString15 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 10,272,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,454 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 7,875,451 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 348.74 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow15 = new google.maps.InfoWindow({
+    content: contentString15
+  });
+	var marker15 = new google.maps.Marker({position: {lat: 19.3561167  , lng: -99.1833333 }, map: map, title: 'Avaluo 15', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker15.addListener('click', function() {
+    infowindow15.open(map, marker15);
+  });	
+
+      var contentString16 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 10,272,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,454 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 7,875,451 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 348.74 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow16 = new google.maps.InfoWindow({
+    content: contentString16
+  });
+	var marker16 = new google.maps.Marker({position: {lat: 19.3561167  , lng: -99.1833333 }, map: map, title: 'Avaluo 16', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker16.addListener('click', function() {
+    infowindow16.open(map, marker16);
+  });	
+
+      var contentString17 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 12,880,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $33,300 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 11,375,441 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 386.87 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 2.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow17 = new google.maps.InfoWindow({
+    content: contentString17
+  });
+	var marker17 = new google.maps.Marker({position: {lat: 19.3559861  , lng: -99.1838527 }, map: map, title: 'Avaluo 17', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker17.addListener('click', function() {
+    infowindow17.open(map, marker17);
+  });	
+
+      var contentString18 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 7,307,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,100 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 7,291,645 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 260.04 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 0.82 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 800.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 800.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 800.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow18 = new google.maps.InfoWindow({
+    content: contentString18
+  });
+	var marker18 = new google.maps.Marker({position: {lat: 19.3404641  , lng: -99.1692113 }, map: map, title: 'Avaluo 18', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker18.addListener('click', function() {
+    infowindow18.open(map, marker18);
+  });	
+
+      var contentString19 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 8,871,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $27,608 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 7,808,780 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 321.33 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 195.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1060.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 260.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 455.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 260.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 455.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1500.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow19 = new google.maps.InfoWindow({
+    content: contentString19
+  });
+	var marker19 = new google.maps.Marker({position: {lat: 19.30004  , lng: -99.208249 }, map: map, title: 'Avaluo 19', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker19.addListener('click', function() {
+    infowindow19.open(map, marker19);
+  });	
+
+      var contentString20 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 23,019,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $57,284 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 19,205,047 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 395.72 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 6.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 2.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1200.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 600.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 900.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 600.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 900.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 900.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 600.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 900.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 400.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow20 = new google.maps.InfoWindow({
+    content: contentString20
+  });
+	var marker20 = new google.maps.Marker({position: {lat: 19.344009  , lng: -99.187601 }, map: map, title: 'Avaluo 20', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker20.addListener('click', function() {
+    infowindow20.open(map, marker20);
+  });	
+
+      var contentString21 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 12,335,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $26,725 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 11,936,600 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 462.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 5.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 2.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 800.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 200.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 400.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1300.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 600.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow21 = new google.maps.InfoWindow({
+    content: contentString21
+  });
+	var marker21 = new google.maps.Marker({position: {lat: 19.330535  , lng: -99.195906 }, map: map, title: 'Avaluo 21', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker21.addListener('click', function() {
+    infowindow21.open(map, marker21);
+  });	
+
+      var contentString22 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 13,295,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,820 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 12,095,302 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 638.57 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 5.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 60.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1538.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 230.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1271.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 230.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1351.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1120.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow22 = new google.maps.InfoWindow({
+    content: contentString22
+  });
+	var marker22 = new google.maps.Marker({position: {lat: 19.3107241  , lng: -99.1985591 }, map: map, title: 'Avaluo 22', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker22.addListener('click', function() {
+    infowindow22.open(map, marker22);
+  });	
+
+      var contentString23 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,830,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $16,538 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 5,199,467 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 412.96 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 7.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1800.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow23 = new google.maps.InfoWindow({
+    content: contentString23
+  });
+	var marker23 = new google.maps.Marker({position: {lat: 19.3420556  , lng: -99.1692111 }, map: map, title: 'Avaluo 23', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker23.addListener('click', function() {
+    infowindow23.open(map, marker23);
+  });	
+
+      var contentString24 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,830,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $16,538 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 5,199,467 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 412.96 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 7.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1800.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 300.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 500.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow24 = new google.maps.InfoWindow({
+    content: contentString24
+  });
+	var marker24 = new google.maps.Marker({position: {lat: 19.3420556  , lng: -99.1692111 }, map: map, title: 'Avaluo 24', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker24.addListener('click', function() {
+    infowindow24.open(map, marker24);
+  });	
+
+      var contentString25 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 19,180,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $25,560 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 18,055,580 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 750.46 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 0.92 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 500.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 50.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 150.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 300.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow25 = new google.maps.InfoWindow({
+    content: contentString25
+  });
+	var marker25 = new google.maps.Marker({position: {lat: 19.2898058  , lng: -99.193544 }, map: map, title: 'Avaluo 25', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker25.addListener('click', function() {
+    infowindow25.open(map, marker25);
+  });	
+
+      var contentString26 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 14,076,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,226 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 14,397,116 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 498.68 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 5.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 9.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow26 = new google.maps.InfoWindow({
+    content: contentString26
+  });
+	var marker26 = new google.maps.Marker({position: {lat: 19.324259  , lng: -99.211697 }, map: map, title: 'Avaluo 26', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker26.addListener('click', function() {
+    infowindow26.open(map, marker26);
+  });	
+
+      var contentString27 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 7,330,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,160 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 5,388,574 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 251.38 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 6.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1820.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1240.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 665.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 440.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 200.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 440.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 468.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 231.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow27 = new google.maps.InfoWindow({
+    content: contentString27
+  });
+	var marker27 = new google.maps.Marker({position: {lat: 19.3526901  , lng: -99.1846341 }, map: map, title: 'Avaluo 27', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker27.addListener('click', function() {
+    infowindow27.open(map, marker27);
+  });	
+
+      var contentString28 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 9,801,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $24,491 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 9,559,394 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 400.03 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1200.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 525.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 525.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 640.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 640.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 640.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 300.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 820.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow28 = new google.maps.InfoWindow({
+    content: contentString28
+  });
+	var marker28 = new google.maps.Marker({position: {lat: 19.326862  , lng: -99.210069 }, map: map, title: 'Avaluo 28', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker28.addListener('click', function() {
+    infowindow28.open(map, marker28);
+  });	
+
+      var contentString29 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 16,764,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $30,946 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 16,263,726 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 541.72 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 378.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 458.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 250.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 250.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 180.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 687.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 10.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 687.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 820.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow29 = new google.maps.InfoWindow({
+    content: contentString29
+  });
+	var marker29 = new google.maps.Marker({position: {lat: 19.331333  , lng: -99.198535 }, map: map, title: 'Avaluo 29', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker29.addListener('click', function() {
+    infowindow29.open(map, marker29);
+  });	
+
+      var contentString30 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 33,398,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,600 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 31,364,537 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 1128.3 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 6.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 0.98 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 950.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 400.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1100.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow30 = new google.maps.InfoWindow({
+    content: contentString30
+  });
+	var marker30 = new google.maps.Marker({position: {lat: 19.3220138  , lng: -99.1978555 }, map: map, title: 'Avaluo 30', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker30.addListener('click', function() {
+    infowindow30.open(map, marker30);
+  });	
+
+      var contentString31 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 20,663,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,021 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 17,529,327 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 727.39 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow31 = new google.maps.InfoWindow({
+    content: contentString31
+  });
+	var marker31 = new google.maps.Marker({position: {lat: 19.339451  , lng: -99.163888 }, map: map, title: 'Avaluo 31', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker31.addListener('click', function() {
+    infowindow31.open(map, marker31);
+  });	
+
+      var contentString32 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 12,561,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $28,098 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 10,734,910 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 447.02 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 700.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 900.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 80.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 680.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 700.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 20.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 700.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 700.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow32 = new google.maps.InfoWindow({
+    content: contentString32
+  });
+	var marker32 = new google.maps.Marker({position: {lat: 19.321325  , lng: -99.2086722 }, map: map, title: 'Avaluo 32', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker32.addListener('click', function() {
+    infowindow32.open(map, marker32);
+  });	
+
+      var contentString33 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 17,238,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $22,374 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 16,842,795 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 770.46 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 5.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 1.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 750.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1100.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 300.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 300.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 900.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 500.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 300.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 450.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 475.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow33 = new google.maps.InfoWindow({
+    content: contentString33
+  });
+	var marker33 = new google.maps.Marker({position: {lat: 19.3308889  , lng: -99.19715 }, map: map, title: 'Avaluo 33', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker33.addListener('click', function() {
+    infowindow33.open(map, marker33);
+  });	
+
+      var contentString34 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 12,885,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,260 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 12,731,939 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 636.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1240.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1590.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 270.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 270.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 85.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 333.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 85.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 773.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 120.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow34 = new google.maps.InfoWindow({
+    content: contentString34
+  });
+	var marker34 = new google.maps.Marker({position: {lat: 19.3004541  , lng: -99.1920271 }, map: map, title: 'Avaluo 34', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker34.addListener('click', function() {
+    infowindow34.open(map, marker34);
+  });	
+
+      var contentString35 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 5,440,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $22,963 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 2,364,063 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 237.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 650.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 500.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow35 = new google.maps.InfoWindow({
+    content: contentString35
+  });
+	var marker35 = new google.maps.Marker({position: {lat: 19.284933  , lng: -99.167978 }, map: map, title: 'Avaluo 35', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker35.addListener('click', function() {
+    infowindow35.open(map, marker35);
+  });	
+
+      var contentString36 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 36,000,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $27,200 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 34,933,154 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 1323.69 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 5.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 13.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 0.98 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 900.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 200.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 900.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 460.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow36 = new google.maps.InfoWindow({
+    content: contentString36
+  });
+	var marker36 = new google.maps.Marker({position: {lat: 19.3114722  , lng: -99.2122083 }, map: map, title: 'Avaluo 36', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker36.addListener('click', function() {
+    infowindow36.open(map, marker36);
+  });	
+
+      var contentString37 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 10,375,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $21,130 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 9,189,648 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 491.02 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 724.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 903.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 903.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1130.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 513.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow37 = new google.maps.InfoWindow({
+    content: contentString37
+  });
+	var marker37 = new google.maps.Marker({position: {lat: 19.2971611  , lng: -99.1931561 }, map: map, title: 'Avaluo 37', icon:  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' }); 
+
+	marker37.addListener('click', function() {
+    infowindow37.open(map, marker37);
+  });	
+
+      var contentString38 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 15,260,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $24,930 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 8,753,085 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 612.01 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 3.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 655.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1865.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1865.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 654.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 568.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow38 = new google.maps.InfoWindow({
+    content: contentString38
+  });
+	var marker38 = new google.maps.Marker({position: {lat: 19.3851981  , lng: -99.2618381 }, map: map, title: 'Avaluo 38', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker38.addListener('click', function() {
+    infowindow38.open(map, marker38);
+  });	
+
+      var contentString39 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 16,347,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $23,154 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 16,070,549 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 706.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1900.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1900.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 100.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 300.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 650.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1800.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow39 = new google.maps.InfoWindow({
+    content: contentString39
+  });
+	var marker39 = new google.maps.Marker({position: {lat: 19.379529  , lng: -99.258545 }, map: map, title: 'Avaluo 39', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker39.addListener('click', function() {
+    infowindow39.open(map, marker39);
+  });	
+
+      var contentString40 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 16,128,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $22,220 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 15,930,557 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 445.45 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 858.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 903.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 800.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 849.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 613.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow40 = new google.maps.InfoWindow({
+    content: contentString40
+  });
+	var marker40 = new google.maps.Marker({position: {lat: 19.3658354  , lng: -99.2763302 }, map: map, title: 'Avaluo 40', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker40.addListener('click', function() {
+    infowindow40.open(map, marker40);
+  });	
+
+      var contentString41 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,894,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $18,980 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 8,771,473 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 279.07 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 738.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 123.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 123.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 715.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 544.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 15.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 544.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 482.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow41 = new google.maps.InfoWindow({
+    content: contentString41
+  });
+	var marker41 = new google.maps.Marker({position: {lat: 19.3646159  , lng: -99.2828179 }, map: map, title: 'Avaluo 41', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker41.addListener('click', function() {
+    infowindow41.open(map, marker41);
+  });	
+
+      var contentString42 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 8,826,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $20,600 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 8,175,621 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 428.45 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 0.92 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1900.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1850.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow42 = new google.maps.InfoWindow({
+    content: contentString42
+  });
+	var marker42 = new google.maps.Marker({position: {lat: 19.3944444  , lng: -99.2591666 }, map: map, title: 'Avaluo 42', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker42.addListener('click', function() {
+    infowindow42.open(map, marker42);
+  });	
+
+      var contentString43 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 11,541,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $31,882 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 9,132,224 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 362.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 3.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow43 = new google.maps.InfoWindow({
+    content: contentString43
+  });
+	var marker43 = new google.maps.Marker({position: {lat: 19.3650777  , lng: -99.2540977 }, map: map, title: 'Avaluo 43', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker43.addListener('click', function() {
+    infowindow43.open(map, marker43);
+  });	
+
+      var contentString44 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 23,675,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $38,171 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 16,187,312 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 620.23 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1200.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 400.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow44 = new google.maps.InfoWindow({
+    content: contentString44
+  });
+	var marker44 = new google.maps.Marker({position: {lat: 19.38485  , lng: -99.27632 }, map: map, title: 'Avaluo 44', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker44.addListener('click', function() {
+    infowindow44.open(map, marker44);
+  });	
+
+      var contentString45 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,947,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $21,250 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 6,906,956 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 326.93 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 940.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 490.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 490.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 490.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 405.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 490.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 405.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 408.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow45 = new google.maps.InfoWindow({
+    content: contentString45
+  });
+	var marker45 = new google.maps.Marker({position: {lat: 19.3627521  , lng: -99.2836971 }, map: map, title: 'Avaluo 45', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker45.addListener('click', function() {
+    infowindow45.open(map, marker45);
+  });	
+
+      var contentString46 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 16,356,251</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,027 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 14,798,318 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 510.69 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2500.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 450.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 450.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 540.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 650.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 450.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 650.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow46 = new google.maps.InfoWindow({
+    content: contentString46
+  });
+	var marker46 = new google.maps.Marker({position: {lat: 19.371283  , lng: -99.267294 }, map: map, title: 'Avaluo 46', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker46.addListener('click', function() {
+    infowindow46.open(map, marker46);
+  });	
+
+      var contentString47 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 8,392,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $23,336 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 6,922,905 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 359.6 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 500.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 800.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow47 = new google.maps.InfoWindow({
+    content: contentString47
+  });
+	var marker47 = new google.maps.Marker({position: {lat: 19.36893  , lng: -99.268421 }, map: map, title: 'Avaluo 47', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker47.addListener('click', function() {
+    infowindow47.open(map, marker47);
+  });	
+
+      var contentString48 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 19,022,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $41,583 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 17,259,636 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 457.44 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 5.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1800.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow48 = new google.maps.InfoWindow({
+    content: contentString48
+  });
+	var marker48 = new google.maps.Marker({position: {lat: 19.3499194  , lng: -99.2658806 }, map: map, title: 'Avaluo 48', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker48.addListener('click', function() {
+    infowindow48.open(map, marker48);
+  });	
+
+      var contentString49 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 16,356,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,027 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 14,798,318 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 510.69 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2500.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 450.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 450.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 540.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 650.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 250.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 450.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 650.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow49 = new google.maps.InfoWindow({
+    content: contentString49
+  });
+	var marker49 = new google.maps.Marker({position: {lat: 19.371283  , lng: -99.267294 }, map: map, title: 'Avaluo 49', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker49.addListener('click', function() {
+    infowindow49.open(map, marker49);
+  });	
+
+      var contentString50 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 28,639,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $47,002 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 17,649,416 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 609.32 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 6.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 450.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 450.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 450.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 950.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 850.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 850.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow50 = new google.maps.InfoWindow({
+    content: contentString50
+  });
+	var marker50 = new google.maps.Marker({position: {lat: 19.385725  , lng: -99.274774 }, map: map, title: 'Avaluo 50', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker50.addListener('click', function() {
+    infowindow50.open(map, marker50);
+  });	
+
+      var contentString51 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 14,872,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,461 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 11,543,508 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 397.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 950.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1449.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 450.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 350.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 350.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 250.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 815.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow51 = new google.maps.InfoWindow({
+    content: contentString51
+  });
+	var marker51 = new google.maps.Marker({position: {lat: 19.365372  , lng: -99.278274 }, map: map, title: 'Avaluo 51', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker51.addListener('click', function() {
+    infowindow51.open(map, marker51);
+  });	
+
+      var contentString52 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 19,533,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $41,457 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 14,907,053 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 471.16 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 3.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1600.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 550.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 550.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 650.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 850.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 950.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 850.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 650.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow52 = new google.maps.InfoWindow({
+    content: contentString52
+  });
+	var marker52 = new google.maps.Marker({position: {lat: 19.375917  , lng: -99.241051 }, map: map, title: 'Avaluo 52', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker52.addListener('click', function() {
+    infowindow52.open(map, marker52);
+  });	
+
+      var contentString53 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 6,894,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $18,980 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 8,771,473 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 279.07 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 0.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 5.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 738.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 123.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 123.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 715.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 544.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 15.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 544.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 482.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow53 = new google.maps.InfoWindow({
+    content: contentString53
+  });
+	var marker53 = new google.maps.Marker({position: {lat: 19.3646159  , lng: -99.2828179 }, map: map, title: 'Avaluo 53', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker53.addListener('click', function() {
+    infowindow53.open(map, marker53);
+  });	
+
+      var contentString54 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 5,125,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $19,167 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 3,935,549 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 266.92 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 2.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 2.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow54 = new google.maps.InfoWindow({
+    content: contentString54
+  });
+	var marker54 = new google.maps.Marker({position: {lat: 19.326731  , lng: -99.327161 }, map: map, title: 'Avaluo 54', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker54.addListener('click', function() {
+    infowindow54.open(map, marker54);
+  });	
+
+      var contentString55 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 15,429,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $32,261 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 14,172,405 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 478.24 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 6.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 4 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1200.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 400.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 2000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow55 = new google.maps.InfoWindow({
+    content: contentString55
+  });
+	var marker55 = new google.maps.Marker({position: {lat: 19.36549  , lng: -99.27826 }, map: map, title: 'Avaluo 55', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker55.addListener('click', function() {
+    infowindow55.open(map, marker55);
+  });	
+
+      var contentString56 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 9,407,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $18,663 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 8,959,488 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 504.0 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 6.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 900.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1500.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 231.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 231.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 300.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 231.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 502.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 224.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow56 = new google.maps.InfoWindow({
+    content: contentString56
+  });
+	var marker56 = new google.maps.Marker({position: {lat: 19.391325  , lng: -99.255975 }, map: map, title: 'Avaluo 56', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker56.addListener('click', function() {
+    infowindow56.open(map, marker56);
+  });	
+
+      var contentString57 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 19,533,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $41,457 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 14,907,053 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 471.16 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 3.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1600.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 550.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 550.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 650.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 850.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 950.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 850.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 650.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow57 = new google.maps.InfoWindow({
+    content: contentString57
+  });
+	var marker57 = new google.maps.Marker({position: {lat: 19.375917  , lng: -99.241051 }, map: map, title: 'Avaluo 57', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker57.addListener('click', function() {
+    infowindow57.open(map, marker57);
+  });	
+
+      var contentString58 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 11,815,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $26,372 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 9,300,924 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 447.98 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 4.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 4.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1200.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1200.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 2000 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 500.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 1000.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 500.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 800.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1200.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow58 = new google.maps.InfoWindow({
+    content: contentString58
+  });
+	var marker58 = new google.maps.Marker({position: {lat: 19.36592  , lng: -99.278193 }, map: map, title: 'Avaluo 58', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker58.addListener('click', function() {
+    infowindow58.open(map, marker58);
+  });	
+
+      var contentString59 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 8,454,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $29,738 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 8,128,529 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 284.28 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 3.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1700.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 680.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 400.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 400.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 970.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 910.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow59 = new google.maps.InfoWindow({
+    content: contentString59
+  });
+	var marker59 = new google.maps.Marker({position: {lat: 19.3650472  , lng: -99.2791056 }, map: map, title: 'Avaluo 59', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker59.addListener('click', function() {
+    infowindow59.open(map, marker59);
+  });	
+
+      var contentString60 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> $ 14,808,000</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: $37,934 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> IMPORTE_TOTAL_ENFOQUE_DE_COSTOS: 9,194,276 m2 </h2>' +
+      '<h2> SUPERFICIE_VENDIBLE: 390.35 m2 </h2>' +
+      '<h3> NUMERO_RECAMARAS: 3.0 </h2>' +
+      '<h3> NUMERO_ESTACIONAMIENTOS: 4.0 </h2>' +
+      '<h3> CVE_NIVEL_SOCIO_ECONOMICO_ZONA: 	 6.0 </h2>' +
+      '<h3> CVE_DENSIDAD_POBLACION: 3.0 </h2>' +
+      '<h3> FACTOR_CONSERVACION_PRIVATIVAS: 1.0 </h2>' +
+      '<h3> CVE_NIVEL_INFRAESTR_URBANA: 3 </h2>' +
+      '<h3> CVE_NIVEL_EQUIPAMIENTO_URBANO: 4.0 </h2>' +
+      '<h3> DISTANCIA_UNIVERSIDAD: 1300.0 m </h2>' +
+      '<h3> DISTANCIA_MERCADOS: 2000.0 m </h2>' +
+      '<h3> DISTANCIA_CENTRO_DEPORTIVO: 1800.0 m </h2>' +
+      '<h3> DISTANCIA_CANCHAS_DEPORTIVAS: 1800.0 m </h2>' +
+      '<h3> DISTANCIA_PARQUES: 100.0 m </h2>' +
+      '<h3> DISTANCIA_PLAZASPUBLICAS: 100.0 m </h2>' +
+      '<h3> DISTANCIA_JARDINES: 100.0 m </h2>' +
+      '<h3> DISTANCIA_SUPERMERCADOS: 1100.0 m </h2>' +
+      '<h3> DISTANCIA_IGLESIA: 1000.0 m </h2>' +
+      '</div>'+
+      '</div>';
+  	var infowindow60 = new google.maps.InfoWindow({
+    content: contentString60
+  });
+	var marker60 = new google.maps.Marker({position: {lat: 19.3653194  , lng: -99.2779417 }, map: map, title: 'Avaluo 60', icon:  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }); 
+
+	marker60.addListener('click', function() {
+    infowindow60.open(map, marker60);
+  });	
+
+      var contentStringc0 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> PROMEDIO $ 21,437,692</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: PROMEDIO $33,767 </h2>' +
+      '<h2> GRUPO: 0 </h2>' +
+      '<h2> NUM_INMUEBLES_ASOCIADOS: 13 Avaluos </h2>' +
+      '</div>';
+      var infowindowc0 = new google.maps.InfoWindow({
+      content: contentStringc0
+      });
+	  var markerc0 = new google.maps.Marker({position: {lat: 19.4068305385  , lng: -99.2290518538 }, map: map, title: 'cluster 61'}); 
+
+	  markerc0.addListener('click', function() {
+      infowindowc0.open(map, markerc0);
+      });	
+
+      var contentStringc1 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> PROMEDIO $ 14,502,240</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: PROMEDIO $27,052 </h2>' +
+      '<h2> GRUPO: 1 </h2>' +
+      '<h2> NUM_INMUEBLES_ASOCIADOS: 25 Avaluos </h2>' +
+      '</div>';
+      var infowindowc1 = new google.maps.InfoWindow({
+      content: contentStringc1
+      });
+	  var markerc1 = new google.maps.Marker({position: {lat: 19.325852156  , lng: -99.191691408 }, map: map, title: 'cluster 61'}); 
+
+	  markerc1.addListener('click', function() {
+      infowindowc1.open(map, markerc1);
+      });	
+
+      var contentStringc2 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> PROMEDIO $ 14,323,333</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: PROMEDIO $29,216 </h2>' +
+      '<h2> GRUPO: 2 </h2>' +
+      '<h2> NUM_INMUEBLES_ASOCIADOS: 3 Avaluos </h2>' +
+      '</div>';
+      var infowindowc2 = new google.maps.InfoWindow({
+      content: contentStringc2
+      });
+	  var markerc2 = new google.maps.Marker({position: {lat: 19.3297349333  , lng: -99.2518117 }, map: map, title: 'cluster 61'}); 
+
+	  markerc2.addListener('click', function() {
+      infowindowc2.open(map, markerc2);
+      });	
+
+      var contentStringc3 = '<div id="content">'+
+      '<div id="inmueble">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading"> PROMEDIO $ 13,924,054</h1>'+
+      '<div id="bodyContent">'+
+      '<h2> M2: PROMEDIO $29,594 </h2>' +
+      '<h2> GRUPO: 3 </h2>' +
+      '<h2> NUM_INMUEBLES_ASOCIADOS: 23 Avaluos </h2>' +
+      '</div>';
+      var infowindowc3 = new google.maps.InfoWindow({
+      content: contentStringc3
+      });
+	  var markerc3 = new google.maps.Marker({position: {lat: 19.3700477174  , lng: -99.2711437565 }, map: map, title: 'cluster 61'}); 
+
+	  markerc3.addListener('click', function() {
+      infowindowc3.open(map, markerc3);
+      });	
+
+      var clusterCircle0 = new google.maps.Circle({
+      strokeColor: '#de1d1d',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#de1d1d',
+      fillOpacity: 0.5,
+      map: map,
+      center: {lat: 19.4068305385, lng: -99.2290518538},
+      radius: 130
+      });
+
+			
+      var clusterCircle1 = new google.maps.Circle({
+      strokeColor: '#1815ed',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#1815ed',
+      fillOpacity: 0.5,
+      map: map,
+      center: {lat: 19.325852156, lng: -99.191691408},
+      radius: 250
+      });
+
+			
+      var clusterCircle2 = new google.maps.Circle({
+      strokeColor: '#fbcd06',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#fbcd06',
+      fillOpacity: 0.5,
+      map: map,
+      center: {lat: 19.3297349333, lng: -99.2518117},
+      radius: 30
+      });
+
+			
+      var clusterCircle3 = new google.maps.Circle({
+      strokeColor: '#6ced00',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#6ced00',
+      fillOpacity: 0.5,
+      map: map,
+      center: {lat: 19.3700477174, lng: -99.2711437565},
+      radius: 230
+      });
+
+			
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZh54ICKZAQiPQ_-_ECdaEtWx_pcecJrM&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
+
+		

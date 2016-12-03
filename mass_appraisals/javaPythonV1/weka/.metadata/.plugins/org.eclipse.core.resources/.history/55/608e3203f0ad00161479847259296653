@@ -1,0 +1,114 @@
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import weka.*;
+import weka.filters.supervised.attribute.AttributeSelection;
+import weka.attributeSelection.ReliefFAttributeEval;
+import weka.attributeSelection.CfsSubsetEval;
+import weka.attributeSelection.Ranker;
+import weka.attributeSelection.GreedyStepwise;
+
+import weka.classifiers.functions.LinearRegression;
+import weka.classifiers.functions.SMOreg;
+
+import weka.filters.Filter;
+import weka.filters.unsupervised.attribute.Remove;
+import weka.core.Instances;
+
+
+import java.util.*;
+import java.util.List;
+
+
+public class go4itEngine {
+
+	public static void main(String[] args) throws Exception{
+		System.out.println("hola java-weka");
+		
+		String File = "/Users/sam/Github/Recommender-platform/mass_appraisals/java/clusterFileNames.txt";
+		
+		loadClusters(File); 
+	}
+	
+	
+	public static void loadClusters(String namesFile) throws Exception{
+		
+		List<String> clusterNames = LoadSaveData.loadClusterFileNames(namesFile);
+		int i = 0;
+		for (String clusterFileName : clusterNames) {
+			if (i<10){
+				i++;
+				System.out.println(":::::::::::::::::::::");
+				System.out.println("Archivo del cluster:");
+		        Instances dataset = LoadSaveData.loadArff(clusterFileName);
+				
+				int numInstances = dataset.numInstances();
+				
+				if (numInstances > 30){
+					System.out.println("Entrenando cluster:");
+					System.out.println("filtrando atributos principales");
+					Instances filteredAtt = filterAttributes(dataset);
+					System.out.println(filteredAtt.toSummaryString());
+					
+					System.out.println("Regresion lineal multi-dimensional..");
+					LinearRegression lr = buildLinearModel(filteredAtt);
+					System.out.println(lr);
+					
+					System.out.println("Maquina de soporte vectorial..");
+					SMOreg smo = buildSMOModel(filteredAtt);
+					System.out.println(smo);
+					
+					
+				}else{
+					System.out.println("Cluster con muy pocos ejemplos:");
+				}
+				System.out.println(":::::::::::::::::::::");
+			}else{
+				break;
+			}
+		}
+	}
+	
+	public static Instances filterAttributes(Instances dataset) throws Exception{
+		
+		// quitar attributo 30: $m2
+		String[] opts = new String[]{"-R", "30"};
+		Remove remove = new Remove();
+		remove.setOptions(opts);
+		remove.setInputFormat(dataset);
+		Instances filteredData = Filter.useFilter(dataset, remove);
+		
+		
+		AttributeSelection filter = new AttributeSelection();
+		CfsSubsetEval eval = new CfsSubsetEval();
+		GreedyStepwise search = new GreedyStepwise();
+		filter.setEvaluator(eval);
+		filter.setSearch(search);
+		filter.setInputFormat(filteredData);
+		Instances filteredDataset = Filter.useFilter(filteredData, filter);
+		
+		return filteredDataset;
+	}
+	
+	
+public static LinearRegression buildLinearModel(Instances dataset) throws Exception{
+		
+		dataset.setClassIndex(dataset.numAttributes()-1);
+		
+		LinearRegression lr = new LinearRegression();
+		lr.buildClassifier(dataset);
+		return lr;
+	}
+
+
+public static SMOreg buildSMOModel(Instances dataset) throws Exception{
+	
+	dataset.setClassIndex(dataset.numAttributes()-1);
+	SMOreg smo = new SMOreg();
+	smo.buildClassifier(dataset);
+	return smo;
+}
+	
+
+}

@@ -1,0 +1,3 @@
+/Users/sam/Github/Recommender-platform/mass_appraisals/javaPythonV1/python/inmuebles_casas_nivel_residencial_entidad_cdmx_1_de_4.arff
+/Users/sam/Github/Recommender-platform/mass_appraisals/javaPythonV1/python/inmuebles_casas_nivel_residencial_entidad_cdmx_2_de_4.arff
+/Users/sam/Github/Recommender-platform/mass_appraisals/javaPythonV1/python/inmuebles_casas_nivel_residencial_entidad_cdmx_4_de_4.arff

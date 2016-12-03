@@ -1,0 +1,20 @@
+
+import weka.*;
+import weka.core.Instances;
+
+public class go4itEngine {
+
+	public static void main(String[] args) throws Exception{
+		// TODO Auto-generated method stub
+		System.out.println("hola mundo");
+		
+		String File = "/Users/sam/Github/Recommender-platform/mass_appraisals/java/arffs/filtros_cubo_cdmx_departamentos_media33.arff";
+		
+		Instances dataset = LoadSaveData.loadArff(File);
+		
+		System.out.println(dataset.toSummaryString());
+	}
+	
+	
+
+}

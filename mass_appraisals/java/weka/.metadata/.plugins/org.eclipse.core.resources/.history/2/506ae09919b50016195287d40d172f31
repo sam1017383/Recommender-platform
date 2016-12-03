@@ -1,0 +1,211 @@
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import weka.*;
+import weka.filters.supervised.attribute.AttributeSelection;
+import weka.attributeSelection.ReliefFAttributeEval;
+import weka.attributeSelection.CfsSubsetEval;
+import weka.attributeSelection.Ranker;
+import weka.attributeSelection.GreedyStepwise;
+
+import weka.classifiers.functions.LinearRegression;
+import weka.classifiers.functions.SMOreg;
+import weka.classifiers.functions.MultilayerPerceptron;
+
+import weka.classifiers.Evaluation;
+import java.util.Random;
+
+import weka.filters.Filter;
+import weka.filters.unsupervised.attribute.Remove;
+import weka.core.Instances;
+
+
+import java.util.*;
+import java.util.List;
+
+
+public class go4itEngine {
+
+	public static void main(String[] args) throws Exception{
+		System.out.println("hola java-weka");
+		
+		String File = "/Users/sam/Github/Recommender-platform/mass_appraisals/javaPythonV1/python/cluster_files_inmuebles_casas_nivel_medio_entidad_cdmx.txt";
+		
+		loadClusters(File); 
+	}
+	
+	
+	public static void loadClusters(String namesFile) throws Exception{
+		
+		List<String> clusterNames = LoadSaveData.loadClusterFileNames(namesFile);
+		int i = 0;
+		for (String clusterFileName : clusterNames) {
+			//if (i<clusterNames.size()){
+			if (i<20000){
+				i++;
+				System.out.println("::::::::::::::::::::: " +Integer.toString(i));
+		        Instances dataset = LoadSaveData.loadArff(clusterFileName);
+				int numInstances = dataset.numInstances();
+				if (numInstances > 5){
+					Instances filteredSimple = filterAttributesSimple(dataset);
+					Instances filteredAtt = filterAttributes(filteredSimple);
+					
+					
+					//////////////////////// CSV STATS filteredSimple
+					String rel_name = filteredSimple.relationName();
+					System.out.println("NOMBRE_CLUSTER: " + rel_name);
+
+					int num_instances = filteredSimple.numInstances();
+					System.out.println("NUM_AVALUOS: " + Integer.toString(num_instances));
+					
+					int num_att = filteredSimple.numAttributes();
+					System.out.println("NUM_ATT: " + Integer.toString(num_att));
+					
+					int num_att_filt = filteredAtt.numAttributes();
+					System.out.println("NUM_ATT_FILT: " + Integer.toString(num_att_filt));
+					
+					int avgConclu = (int) filteredSimple.meanOrMode(35);
+					System.out.println("PROMEDIO_IMP_CONCLUIDO: " + Integer.toString(avgConclu));
+					int stdDerConclu = (int) Math.sqrt(filteredSimple.variance(35));
+					System.out.println("DSVEST_IMP_CONCLUIDO: " + Integer.toString(stdDerConclu));
+					int varIndex = (int) ((stdDerConclu/avgConclu)*100);
+					System.out.println("COEFICIENTE_PORCENTUAL_DESV_ENTRE_PROMEDIO: " + Integer.toString(varIndex));
+					
+					int stdDerLat = (int) (Math.sqrt(filteredSimple.variance(1))*111320);
+					System.out.println("DSVEST_LAT: " + Integer.toString(stdDerLat));
+					int stdDerLong = (int) (Math.sqrt(filteredSimple.variance(0))*111320);
+					System.out.println("DSVEST_LONG: " + Integer.toString(stdDerLong));
+					int varArea = stdDerLat*stdDerLong;
+					System.out.println("LAT_LONG_STD_AREA: " + Integer.toString(varArea));
+					
+					
+					Evaluation lr = evalLinearModel(filteredSimple);
+					Evaluation lrAttFiltered = evalLinearModel(filteredAtt);
+					System.out.println("LR_ERROR_ABS_PROM: " + Double.toString(lr.meanAbsoluteError()));
+					System.out.println("LR_ERROR_ABS_PROM_FILT: " + Double.toString(lrAttFiltered.meanAbsoluteError()));
+					
+					Evaluation smo = evalSMOModel(filteredSimple);
+					Evaluation smoAttFiltered = evalSMOModel(filteredAtt);
+					System.out.println("MSV_ERROR_ABS_PROM: " + Double.toString(smo.meanAbsoluteError()));
+					System.out.println("MSV_ERROR_ABS_PROM_FILT: " + Double.toString(smoAttFiltered.meanAbsoluteError()));
+					
+					Evaluation neuralNet = evalNeuralModel(filteredSimple);
+					Evaluation neuralNetAttFiltered = evalNeuralModel(filteredAtt);
+					System.out.println("RNA_ERROR_ABS_PROM: " + Double.toString(neuralNet.meanAbsoluteError()));
+					System.out.println("RNA_ERROR_ABS_PROM_FILT: " + Double.toString(neuralNetAttFiltered.meanAbsoluteError()));
+					
+
+					
+					//System.out.println(neuralNet);
+				}else{
+					System.out.println("Cluster con muy pocos ejemplos:");
+				}
+				System.out.println(":::::::::::::::::::::");
+			}else{
+				break;
+			}
+		}
+	}
+	
+	public static Instances filterAttributes(Instances dataset) throws Exception{
+		AttributeSelection filter = new AttributeSelection();
+		CfsSubsetEval eval = new CfsSubsetEval();
+		GreedyStepwise search = new GreedyStepwise();
+		filter.setEvaluator(eval);
+		filter.setSearch(search);
+		filter.setInputFormat(dataset);
+		Instances filteredDataset = Filter.useFilter(dataset, filter);
+		return filteredDataset;
+	}
+	
+	public static Instances filterAttributesSimple(Instances dataset) throws Exception{
+		
+		// quitar attributo 35: $m2
+		String[] opts = new String[]{"-R", "1,2,3,4,5,33,35"};
+		Remove remove = new Remove();
+		remove.setOptions(opts);
+		remove.setInputFormat(dataset);
+		Instances filteredData = Filter.useFilter(dataset, remove);
+		return filteredData;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	public static LinearRegression buildLinearModel(Instances dataset) throws Exception{
+			dataset.setClassIndex(dataset.numAttributes()-1);
+			LinearRegression lr = new LinearRegression();
+			lr.buildClassifier(dataset);
+			return lr;
+		}
+	
+	
+	
+	public static SMOreg buildSMOModel(Instances dataset) throws Exception{
+		dataset.setClassIndex(dataset.numAttributes()-1);
+		SMOreg smo = new SMOreg();
+		smo.buildClassifier(dataset);
+		return smo;
+	}
+	
+	
+	public static MultilayerPerceptron buildNeuralModel(Instances dataset) throws Exception{
+		dataset.setClassIndex(dataset.numAttributes()-1);
+		MultilayerPerceptron neuralNet = new MultilayerPerceptron();
+		neuralNet.buildClassifier(dataset);
+		return neuralNet;
+	}
+		
+	
+
+	public static Evaluation evalLinearModel(Instances dataset) throws Exception{
+			dataset.setClassIndex(dataset.numAttributes()-1);
+			LinearRegression lr = new LinearRegression();
+			Evaluation eval = new Evaluation(dataset);
+			int folds = 10;
+			if (dataset.numInstances()<10){
+				folds = dataset.numInstances();
+			}
+			eval.crossValidateModel(lr, dataset, folds, new Random(1));
+			//System.out.println("Mean absolute error:     " + eval.meanAbsoluteError());
+			//System.out.println("Relative absolute error: " + eval.relativeAbsoluteError());
+			
+			return eval;
+		}
+	
+	
+	
+	public static Evaluation evalSMOModel(Instances dataset) throws Exception{
+		dataset.setClassIndex(dataset.numAttributes()-1);
+		SMOreg smo = new SMOreg();
+		Evaluation eval = new Evaluation(dataset);
+		int folds = 10;
+		if (dataset.numInstances()<10){
+			folds = dataset.numInstances();
+		}		 
+		eval.crossValidateModel(smo, dataset, folds, new Random(1));
+		return eval;
+	}
+	
+	
+	public static Evaluation evalNeuralModel(Instances dataset) throws Exception{
+		dataset.setClassIndex(dataset.numAttributes()-1);
+		MultilayerPerceptron neuralNet = new MultilayerPerceptron();
+		Evaluation eval = new Evaluation(dataset);
+		int folds = 10;
+		if (dataset.numInstances()<10){
+			folds = dataset.numInstances();
+		}
+		eval.crossValidateModel(neuralNet, dataset, folds, new Random(1));
+		return eval;
+	}
+
+}
